@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: ArticleTest
   m_EditorClassIdentifier: 
-  headline: Headline Example
+  headline: SOMETHING HAPPENED!
   bodyText: Hello there. So much has happened.
   climateChange: 100
   moneyChange: 23
   reachChange: 24
   articleArt: {fileID: -4528830608231651361, guid: 6d95650cc66853a48b4ff8f614921f1e, type: 3}
+  articleCategory: 0
