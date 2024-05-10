@@ -64,8 +64,16 @@ public class EconomyUIManager : MonoBehaviour
 
         //Takes the image and scales it to 1.1 and then returns back to it's original. 
         //Create a tween and add it to a list 
-       var tween = image.transform.DOScale(1.1f,.5f).SetLoops(-1,LoopType.Yoyo);
-        activeTweens.Add(tween);
+        if(image != null)
+        {
+            var tween = image.transform.DOScale(1.1f, .5f).SetLoops(-1, LoopType.Yoyo);
+            activeTweens.Add(tween);
+        }
+        else
+        {
+            Debug.LogWarning("No image referenced. Check the inspector.");
+        }
+       
     }
 
     //When we are not focused on an article anymore, stop all tweens. 
