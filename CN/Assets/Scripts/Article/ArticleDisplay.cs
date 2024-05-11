@@ -14,11 +14,13 @@ public class ArticleDisplay : MonoBehaviour
     public Image artUI;
     public TMP_Text headlineUI;
     public TMP_Text bodyUI;
+    
+    private ArticleCloseUpDisplay closeUpDisplay;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        closeUpDisplay = FindObjectOfType<ArticleCloseUpDisplay>();
     }
 
     // Update is called once per frame
@@ -40,9 +42,14 @@ public class ArticleDisplay : MonoBehaviour
     }
 
 
-public void ChangeArticle(ArticleScriptableObject newArticle)
+    public void ChangeArticle(ArticleScriptableObject newArticle)
     {
         article = newArticle;
         UpdateUI();
+    }
+
+    public void CloseUpView()
+    {
+        closeUpDisplay.DisplayArticle(article);
     }
 }

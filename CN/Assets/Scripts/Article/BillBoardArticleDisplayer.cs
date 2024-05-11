@@ -10,6 +10,7 @@ public class BillBoardArticleDisplayer : MonoBehaviour
     public List<ArticleDisplay> displays;
     [Tooltip("The articles to be displayed")]
     public List<ArticleScriptableObject> articlesToDisplay;
+
     
     
     
@@ -24,6 +25,9 @@ public class BillBoardArticleDisplayer : MonoBehaviour
     {
         
     }
+
+    
+    
 
     public void AddArticleToDisplay(ArticleScriptableObject article)
     {
