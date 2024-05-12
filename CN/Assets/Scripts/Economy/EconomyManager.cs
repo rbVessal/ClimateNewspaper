@@ -20,7 +20,6 @@ public class EconomyManager : MonoBehaviour
         //instantiate Economy class
         economy = new GameEconomy(moneyBase, reachBase, impactBase);
         //Testing
-        economy.UpdateValues(0, 15, 20.0f);
         economy.GetValues();
         SendToUI();
     }

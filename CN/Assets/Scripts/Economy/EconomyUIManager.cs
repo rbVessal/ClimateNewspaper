@@ -7,115 +7,80 @@ using DG.Tweening;
 
 public class EconomyUIManager : MonoBehaviour
 {
-    //References to the UI components
-    [Header("Text for numerical values")]
-    public TMP_Text moneyValue;
-    public TMP_Text reachValue;
-    public TMP_Text impactValue;
-    [Header("Visual representations for economy")]
-    public Image moneyImage;
-    public Image reachImage;
-    public Image impactImage;
+    public GameObject moneyParent;
+    public GameObject reachParent;
+    public GameObject impactParent;
+
+    TMP_Text moneyText;
+    TMP_Text reachText;
+    TMP_Text impactText;
+
+    private Image moneyIndicator;
+    private Image reachIndicator;
+    private Image impactIndicator;
 
     private List<Tween> activeTweens = new List<Tween>();
-    private float maxScale;
-    private float scaleSpeed;
-    private float baseScale = 1.0f;
     private bool isFocused = false;
 
     private void Start()
     {
-        //Testing focusing
-        //ElementFocus(reachImage);
-        //ElementFocus(moneyImage);
+        GetRefs();
     }
 
     private void Update()
     {
-        //Testing purposes
-        if(Input.GetKeyDown(KeyCode.T))
-        {
-            if(isFocused)
-            {
-                ElementUnfocus();
-                isFocused = false;
-            }
-            else
-            {
-                ElementFocus(impactImage);
-                ElementFocus(moneyImage);
-                isFocused = true;
-            }
-            
-        }
+       
     }
+
+
 
     //Sets the text fields in the economy display UI to the current values for money, reach and climate impact. 
     public void SetValues(GameEconomy economy)
     {
-        moneyValue.text  = economy.Money.ToString();
-        reachValue.text  = economy.Reach.ToString(); 
-        impactValue.text = economy.ClimateImpact.ToString();
+        moneyText.text  = economy.Money.ToString();
+        reachText.text  = economy.Reach.ToString();
+        impactText.text = economy.ClimateImpact.ToString();
     }
 
     private void ElementFocus(Image image)
     {
-        //Place logic here for signaling to the player that certain values in the game economy wil be affected. This could be anything we want. For testing purposes, I am using a simple scaling. 
 
-        //Takes the image and scales it to 1.1 and then returns back to it's original. 
-        //Create a tween and add it to a list 
-        if(image != null)
-        {
-            var tween = image.transform.DOScale(1.1f, .5f).SetLoops(-1, LoopType.Yoyo);
-            activeTweens.Add(tween);
-        }
-        else
-        {
-            Debug.LogWarning("No image referenced. Check the inspector.");
-        }
-       
+        //Use tween function 
+        //Tween tween  = image.DOFade(1,.25f);
+        //activeTweens.Add(tween);    
     }
 
     //When we are not focused on an article anymore, stop all tweens. 
-    private void ElementUnfocus()
-    {
-        //This could change based on our needs and design
-
-        //Example implementation using a tween scale approach
-        if (activeTweens.Count > 0)
-        {
-            // Iterate over the list in reverse order to avoid Invalid Operation Exception (just learned about this)
-            for (int i = activeTweens.Count - 1; i >= 0; i--)
-            {
-                Tween tween = activeTweens[i];
-                if (tween.IsActive())
-                {
-                    tween.Restart(); //Resets the scale of the images
-                    tween.Kill();    //Stops the tween
-                }
-                // Remove the tween from the list
-                activeTweens.RemoveAt(i);
-            }
-        }
-    }
+    
 
 
     //This would determine to focus the economy images if the selected article has non-zero changes to any of the values. 
     public void DetermineFocus(ArticleScriptableObject article)
     {
-        if(article.moneyChange != 0)
-        {
-            ElementFocus(moneyImage);
-        }
+        //if(article.moneyChange != 0)
+        //{
+        //    ElementFocus(moneyIndicator);
+        //}
 
-        if(article.reachChange != 0)
-        {
-            ElementFocus(reachImage);
-        }
+        //if(article.reachChange != 0)
+        //{
+        //    ElementFocus(reachIndicator);
+        //}
 
-        if(article.climateChange != 0)
-        {
-            ElementFocus(impactImage);
-        }
+        //if(article.climateChange != 0)
+        //{
+        //    ElementFocus(impactIndicator);
+        //}
+    }
+
+    private void GetRefs()
+    {
+        moneyText  = moneyParent.transform.Find("Value_text").GetComponent<TMP_Text>();
+        reachText  = reachParent.transform.Find("Value_text").GetComponent<TMP_Text>();
+        impactText = impactParent.transform.Find("Value_text").GetComponent<TMP_Text>();
+
+        moneyIndicator  = moneyParent.transform.Find("Indicator").GetComponent<Image>();
+        reachIndicator  = reachParent.transform.Find("Indicator").GetComponent<Image>();
+        impactIndicator = impactParent.transform.Find("Indicator").GetComponent<Image>();
     }
 }
