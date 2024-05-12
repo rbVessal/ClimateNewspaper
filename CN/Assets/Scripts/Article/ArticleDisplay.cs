@@ -17,6 +17,8 @@ public class ArticleDisplay : MonoBehaviour
     
     private ArticleCloseUpDisplay closeUpDisplay;
 
+    [SerializeField] private ArticleScriptableObject emptyArticle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +50,12 @@ public class ArticleDisplay : MonoBehaviour
         UpdateUI();
     }
 
+    public void MoveToComputer()
+    {
+        if(FindObjectOfType<ArticleManager>().AddToComputer(article) && FindObjectOfType<ArticleManager>().RemoveFromBillBoard(article)) 
+            article = emptyArticle;
+    }
+    
     public void CloseUpView()
     {
         closeUpDisplay.DisplayArticle(article);
