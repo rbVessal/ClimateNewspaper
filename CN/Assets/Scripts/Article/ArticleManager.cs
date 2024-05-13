@@ -80,6 +80,7 @@ public class ArticleManager : MonoBehaviour
         if (computerArticles.Count < computerArticleMax)
         {
             computerArticles.Add(article);
+            //TODO add to the actual computer class
             return true;
         }
         else
@@ -93,14 +94,15 @@ public class ArticleManager : MonoBehaviour
     public bool RemoveFromComputer(ArticleScriptableObject article)
     {
 
-        if (!computerArticles.Remove(article))
+        if (computerArticles.Remove(article))
         {
-            Debug.Log("Article does not exist on computer!");
-            return false;
+            //TODO remove from the actual computer class
+            return true;
         }
         else
         {
-            return true;
+            Debug.Log("Article does not exist on computer!");
+            return false;
         }
     }
 }
