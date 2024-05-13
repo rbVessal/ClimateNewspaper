@@ -7,12 +7,6 @@ public class CoDropItemSlot : MonoBehaviour, IDropHandler
 {
     public bool isDebug = false;
     public bool shouldSnap = true;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
     
     // Drop interface
     public void OnDrop(PointerEventData eventData)
@@ -23,14 +17,17 @@ public class CoDropItemSlot : MonoBehaviour, IDropHandler
         }
 
         if (shouldSnap && eventData.pointerDrag != null)
-        { 
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-        }
-    }
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            GameObject draggedGameObject = eventData.pointerDrag;
+            draggedGameObject.GetComponent<RectTransform>().SetParent(GetComponent<RectTransform>().transform);
+            //draggedGameObject.transform.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+            draggedGameObject.transform.GetComponent<RectTransform>().localPosition = Vector3.zero;
+
+            if (isDebug)
+            {
+                Debug.Log("Slotted");
+            }
+        }
     }
 }

@@ -7,13 +7,17 @@ public class CoDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
 {
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
+    private Canvas canvas;
+
     public bool isDebug = false;
+    public bool isDraggable = true;
 
     // Start is called before the first frame update
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+        canvas = GetComponentInParent<Canvas>();
     }
 
     // Interfaces for pointer
@@ -33,7 +37,10 @@ public class CoDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
             Debug.Log("OnBeginDrag");
         }
 
-        canvasGroup.blocksRaycasts = false;
+        if (isDraggable)
+        {
+            canvasGroup.blocksRaycasts = false;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -43,7 +50,10 @@ public class CoDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
             Debug.Log("OnDrag");
         }
 
-        rectTransform.anchoredPosition += eventData.delta;
+        if (isDraggable)
+        {
+            rectTransform.anchoredPosition += eventData.delta /  canvas.scaleFactor;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -53,14 +63,9 @@ public class CoDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
             Debug.Log("OnEndDrag");
         }
 
-        canvasGroup.blocksRaycasts = true;
+        if (isDraggable)
+        {
+            canvasGroup.blocksRaycasts = true;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
 }
