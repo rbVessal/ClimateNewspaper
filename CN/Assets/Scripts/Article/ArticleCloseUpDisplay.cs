@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,11 +7,14 @@ using UnityEngine.UI;
 
 public class ArticleCloseUpDisplay : MonoBehaviour
 {
+    public static event Action<ArticleScriptableObject> SignalUIFocus;
     [SerializeField] TMP_Text headline;
     [SerializeField] TMP_Text body;
     [SerializeField] Image art;
 
     [SerializeField]private GameObject displayer;
+
+
     
     // Start is called before the first frame update
     void Start()
@@ -29,6 +33,7 @@ public class ArticleCloseUpDisplay : MonoBehaviour
         headline.text = article.headline;
         body.text = article.bodyText;
         art.sprite = article.articleArt;
+        SignalUIFocus?.Invoke(article);
         displayer.SetActive(true);
     }
 }

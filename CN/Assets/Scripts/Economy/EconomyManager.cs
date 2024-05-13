@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class EconomyManager : MonoBehaviour
 {
-    //Set this up in the inspector
+    //Link this with the EconomyUIManager
     public UnityEvent<GameEconomy> Link;
     private GameEconomy economy;
 
@@ -19,8 +19,7 @@ public class EconomyManager : MonoBehaviour
     {
         //instantiate Economy class
         economy = new GameEconomy(moneyBase, reachBase, impactBase);
-        //Testing
-        economy.GetValues();
+        //Send those values to EconomyUI for display
         SendToUI();
     }
 
@@ -33,6 +32,7 @@ public class EconomyManager : MonoBehaviour
             SendToUI();
         }
     }
+    //Sends economy values to UI
     public void SendToUI()
     {
         Link.Invoke(economy);

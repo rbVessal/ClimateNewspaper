@@ -4,9 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.Events;
+using System;
+using static UnityEditor.Rendering.FilterWindow;
 
 public class EconomyUIManager : MonoBehaviour
 {
+    
     public GameObject moneyParent;
     public GameObject reachParent;
     public GameObject impactParent;
@@ -14,22 +18,35 @@ public class EconomyUIManager : MonoBehaviour
     TMP_Text moneyText;
     TMP_Text reachText;
     TMP_Text impactText;
+    private List<GameObject> values = new List<GameObject>();
 
-    private Image moneyIndicator;
-    private Image reachIndicator;
-    private Image impactIndicator;
-
-    private List<Tween> activeTweens = new List<Tween>();
-    private bool isFocused = false;
-
+    //Subscribe to article pop up display event
+    private void OnEnable() => ArticleCloseUpDisplay.SignalUIFocus += DetermineFocus;
+    private void OnDisable() => ArticleCloseUpDisplay.SignalUIFocus -= DetermineFocus;
+    private void Awake()
+    {
+        GetTextRefs();
+    }
     private void Start()
     {
-        GetRefs();
+        //Add UI element parent objects to a list for easy un-focusing
+        if(values.Count== 0)
+        {
+            values.Add(moneyParent);
+            values.Add(reachParent);
+            values.Add(impactParent);
+        }
     }
 
     private void Update()
     {
-       
+        //Testing
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Debug.Log("ToggleFocus");
+            FocusElement(moneyParent);
+            FocusElement(impactParent);
+        }
     }
 
 
@@ -42,45 +59,57 @@ public class EconomyUIManager : MonoBehaviour
         impactText.text = economy.ClimateImpact.ToString();
     }
 
-    private void ElementFocus(Image image)
+    public void FocusElement(GameObject parent)
     {
-
-        //Use tween function 
-        //Tween tween  = image.DOFade(1,.25f);
-        //activeTweens.Add(tween);    
+        UIElementManager element = parent.GetComponentInChildren<UIElementManager>();
+        if(element.isFocused)
+        {
+            element.indicator.DOFade(0, .1f);
+            element.isFocused = false;
+        }
+        else
+        {
+            element.indicator.DOFade(1,.25f);
+            element.isFocused = true;
+        }
     }
 
-    //When we are not focused on an article anymore, stop all tweens. 
-    
-
+    public void UnfocusElement()
+    {
+        foreach(GameObject obj in values)
+        {
+            UIElementManager value = obj.GetComponentInChildren<UIElementManager>();
+            if (value.isFocused)
+            {
+                value.indicator.DOFade(0, .1f);
+                value.isFocused = false;
+            }
+        }
+    }
 
     //This would determine to focus the economy images if the selected article has non-zero changes to any of the values. 
     public void DetermineFocus(ArticleScriptableObject article)
     {
-        //if(article.moneyChange != 0)
-        //{
-        //    ElementFocus(moneyIndicator);
-        //}
+        if (article.moneyChange != 0)
+        {
+            FocusElement(moneyParent);
+        }
 
-        //if(article.reachChange != 0)
-        //{
-        //    ElementFocus(reachIndicator);
-        //}
+        if (article.reachChange != 0)
+        {
+            FocusElement(reachParent);
+        }
 
-        //if(article.climateChange != 0)
-        //{
-        //    ElementFocus(impactIndicator);
-        //}
+        if (article.climateChange != 0)
+        {
+            FocusElement(impactParent);
+        }
     }
 
-    private void GetRefs()
+    private void GetTextRefs()
     {
         moneyText  = moneyParent.transform.Find("Value_text").GetComponent<TMP_Text>();
         reachText  = reachParent.transform.Find("Value_text").GetComponent<TMP_Text>();
         impactText = impactParent.transform.Find("Value_text").GetComponent<TMP_Text>();
-
-        moneyIndicator  = moneyParent.transform.Find("Indicator").GetComponent<Image>();
-        reachIndicator  = reachParent.transform.Find("Indicator").GetComponent<Image>();
-        impactIndicator = impactParent.transform.Find("Indicator").GetComponent<Image>();
     }
 }
