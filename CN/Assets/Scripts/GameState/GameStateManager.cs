@@ -14,7 +14,9 @@ public class GameStateManager : MonoBehaviour
 {
   
     [SerializeField] private GameState currentState;
-
+    [SerializeField] private GameObject EditorCanvas;
+    [SerializeField] private GameObject BillboardCanvas;
+    [SerializeField] private GameObject TownCanvas;
 
     public static GameStateManager Main;
     
@@ -26,7 +28,7 @@ public class GameStateManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-           
+           ChangeStateToTown();
     }
 
     // Update is called once per frame
@@ -40,6 +42,9 @@ public class GameStateManager : MonoBehaviour
         if(currentState!=GameState.Editing)
         {
             currentState = GameState.Editing;
+            EditorCanvas.SetActive(true);
+            TownCanvas.SetActive(false);
+            BillboardCanvas.SetActive(false);
             Debug.Log("Game state changed to editing");
         }
     }
@@ -48,6 +53,9 @@ public class GameStateManager : MonoBehaviour
         if(currentState!=GameState.Billboard)
         {
             currentState = GameState.Billboard;
+            EditorCanvas.SetActive(false);
+            TownCanvas.SetActive(false);
+            BillboardCanvas.SetActive(true);
             Debug.Log("Game state changed to Billboard");
         }
     }
@@ -56,6 +64,9 @@ public class GameStateManager : MonoBehaviour
         if(currentState!=GameState.Town)
         {
             currentState = GameState.Town;
+            EditorCanvas.SetActive(false);
+            TownCanvas.SetActive(true);
+            BillboardCanvas.SetActive(false);
             Debug.Log("Game state changed to town");
         }
     }

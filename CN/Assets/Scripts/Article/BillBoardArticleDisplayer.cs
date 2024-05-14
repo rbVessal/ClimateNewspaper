@@ -27,11 +27,12 @@ public class BillBoardArticleDisplayer : MonoBehaviour
         
     }
     
-    public void AddArticleToDisplay(ArticleScriptableObject article)
+    public void AddArticleToDisplay(ArticleScriptableObject article, bool existing=false)
     {
         foreach (var display in displays)
         {
-            if (display.article == emptyArticle)
+            
+            if (display.added|| display.article==emptyArticle)
             {
                 display.article = article;
                 break;

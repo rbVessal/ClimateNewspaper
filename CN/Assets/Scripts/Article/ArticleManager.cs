@@ -48,24 +48,27 @@ public class ArticleManager : MonoBehaviour
         for (int i = 1; i <= numberToAdd; i++)
         {
             ArticleScriptableObject article = leftOverArticles[Random.Range(0, leftOverArticles.Count)];
-            leftOverArticles.Remove(article);
-            AddToBillBoard(article);
+            if(AddToBillBoard(article))
+                leftOverArticles.Remove(article);
+
         }
     }
 
 
     //called when the day starts to add articles to the ones on the billboard
     //can be used for just adding back from the computer as well
-    public void AddToBillBoard(ArticleScriptableObject article)
+    public bool AddToBillBoard(ArticleScriptableObject article)
     {
-        if (billBoardArticles.Count <= billBoardArticleMax)
+        if (billBoardArticles.Count < billBoardArticleMax)
         {
             billBoardArticles.Add(article);
             billBoard.AddArticleToDisplay(article);
+            return true;
         }
         else
         {
             Debug.Log("Max bill board articles reached! No space available.");
+            return false;
         }
     }
 

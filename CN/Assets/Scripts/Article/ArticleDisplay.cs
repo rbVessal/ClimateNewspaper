@@ -19,6 +19,11 @@ public class ArticleDisplay : MonoBehaviour
 
     [SerializeField] private ArticleScriptableObject emptyArticle;
 
+    public bool added = false;
+    [SerializeField] private GameObject addButton;
+    [SerializeField] private GameObject removeButton;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -52,8 +57,25 @@ public class ArticleDisplay : MonoBehaviour
 
     public void MoveToComputer()
     {
-        if(FindObjectOfType<ArticleManager>().AddToComputer(article) && FindObjectOfType<ArticleManager>().RemoveFromBillBoard(article)) 
-            article = emptyArticle;
+        if(article!=emptyArticle)
+            if (FindObjectOfType<ArticleManager>().AddToComputer(article))
+            {
+            
+                removeButton.SetActive(true);
+                addButton.SetActive(false);
+                added = true;
+            }
+            
+    }
+
+    public void MoveToBillBoard()
+    {
+        if (FindObjectOfType<ArticleManager>().RemoveFromComputer(article))
+        {
+            added = false;
+            removeButton.SetActive(false);
+            addButton.SetActive(true);
+        }
     }
     
     public void CloseUpView()
