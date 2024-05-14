@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class NewspaperEditor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    [SerializeField] public GameObject FrontPage;
+    [SerializeField] public GameObject BackPage;
+
+    public void OnPublishButtonClicked()
+    { 
         
     }
 
-    // Update is called once per frame
-    void Update()
+    // Delegate method for on dropped article event from CoDragDrop
+    public void OnDroppedArticle(GameObject gameObject)
     {
-        
+        if (gameObject != null)
+        {
+            ArticleScriptableObject articleScriptObject = gameObject.GetComponent<ArticleScriptableObject>();
+            if (articleScriptObject != null)
+            {
+                // TODO:  Make the economy UI update based on whatever article just dropped
+            }
+        }
     }
 }
