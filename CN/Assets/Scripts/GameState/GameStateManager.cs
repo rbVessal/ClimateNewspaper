@@ -45,6 +45,7 @@ public class GameStateManager : MonoBehaviour
             EditorCanvas.SetActive(true);
             TownCanvas.SetActive(false);
             BillboardCanvas.SetActive(false);
+            FindObjectOfType<NewspaperManager>().UpdateArticles();
             Debug.Log("Game state changed to editing");
         }
     }

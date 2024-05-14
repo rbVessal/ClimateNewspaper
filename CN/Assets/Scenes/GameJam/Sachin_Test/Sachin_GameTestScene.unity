@@ -596,6 +596,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 657064652953553819, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 725967661990817259, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -776,6 +780,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -6
       objectReference: {fileID: 0}
+    - target: {fileID: 6489863101738568587, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6865506280640549496, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7285066109152398814, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -791,6 +803,26 @@ PrefabInstance:
     - target: {fileID: 7285066109152398814, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7671370305081935231, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
+      propertyPath: m_Color.a
+      value: 0.77254903
+      objectReference: {fileID: 0}
+    - target: {fileID: 7671370305081935231, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7671370305081935231, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7671370305081935231, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7671370305081935231, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8072594641399775677, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
       propertyPath: m_Pivot.x
@@ -872,16 +904,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8568415824812909688, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8572088757512313025, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
       propertyPath: m_Name
       value: EditorCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 8572088757512313025, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 632357332445109765, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
+    - {fileID: 3821945714083685075, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
+    - {fileID: 6883536881853558299, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
@@ -2193,7 +2232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5446604918500548163, guid: 1a611fb48d1660742bb250702b539899, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6945089192604631114, guid: 1a611fb48d1660742bb250702b539899, type: 3}
       propertyPath: m_LocalScale.x

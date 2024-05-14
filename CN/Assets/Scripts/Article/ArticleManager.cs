@@ -23,6 +23,8 @@ public class ArticleManager : MonoBehaviour
 
 
     private BillBoardArticleDisplayer billBoard;
+
+    private NewspaperManager newspaper;
     //TODO: Add PC display
 
     // Start is called before the first frame update
@@ -30,8 +32,8 @@ public class ArticleManager : MonoBehaviour
     {
         billBoard = FindObjectOfType<BillBoardArticleDisplayer>();
         leftOverArticles=new List<ArticleScriptableObject>(allArticles);
-        //TODO add PC reference so it can send data to there
-
+        newspaper = FindObjectOfType<NewspaperManager>();
+        
         ChooseArticlesRandomlyForBillboard(5);
     }
 
@@ -84,6 +86,7 @@ public class ArticleManager : MonoBehaviour
         {
             computerArticles.Add(article);
             //TODO add to the actual computer class
+            newspaper.AddArticle(article);
             return true;
         }
         else
@@ -100,6 +103,7 @@ public class ArticleManager : MonoBehaviour
         if (computerArticles.Remove(article))
         {
             //TODO remove from the actual computer class
+            newspaper.RemoveArticle(article);
             return true;
         }
         else
