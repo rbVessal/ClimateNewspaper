@@ -29,12 +29,15 @@ public class NewspaperManager : MonoBehaviour
         foreach (var article in articles)
         {
             displays[i].article = article;
+            displays[i].gameObject.SetActive(true);
+            
                 i++;
         }
 
         for (; i < displays.Count; i++)
         {
             displays[i].article = emptyArticle;
+            displays[i].gameObject.SetActive(false);
         }
     }
 
