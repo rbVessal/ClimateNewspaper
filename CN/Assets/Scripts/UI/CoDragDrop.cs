@@ -12,6 +12,9 @@ public class CoDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
     public bool isDebug = false;
     public bool isDraggable = true;
 
+    public delegate void OnEndDragDelegate();
+    public OnEndDragDelegate onEndDragDelegate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +69,8 @@ public class CoDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
         if (isDraggable)
         {
             canvasGroup.blocksRaycasts = true;
+            
+            onEndDragDelegate();
         }
     }
 }
