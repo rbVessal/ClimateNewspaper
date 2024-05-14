@@ -13,4 +13,9 @@ public class Town_timepass : TownStateBase
     {
         
     }
+
+    void ExitCondition(TownStateManager town)
+    {
+
+    }
 }
