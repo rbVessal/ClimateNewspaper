@@ -60,7 +60,7 @@ public class ArticleManager : MonoBehaviour
     //can be used for just adding back from the computer as well
     public bool AddToBillBoard(ArticleScriptableObject article)
     {
-        if (billBoardArticles.Count < billBoardArticleMax)
+        if (FindObjectOfType<BillBoardArticleDisplayer>().count < billBoardArticleMax)
         {
             billBoardArticles.Add(article);
             FindObjectOfType<BillBoardArticleDisplayer>().AddArticleToDisplay(article);

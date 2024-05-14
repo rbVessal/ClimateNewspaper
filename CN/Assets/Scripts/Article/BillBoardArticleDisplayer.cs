@@ -13,12 +13,14 @@ public class BillBoardArticleDisplayer : MonoBehaviour
 
     [Tooltip("Default article when nothing is to be displayed")]
     [SerializeField] private ArticleScriptableObject emptyArticle;
-    
+
+    public int count = 0;
     
     
     // Start is called before the first frame update
     void Start()
     {
+        count = 0;
     }
 
     // Update is called once per frame
@@ -31,11 +33,17 @@ public class BillBoardArticleDisplayer : MonoBehaviour
     {
         foreach (var display in displays)
         {
-            
-            if (display.added|| display.article==emptyArticle)
+            if (display.added)
             {
                 display.article = article;
                 display.ResetButtons();
+                break;
+            }
+            else if (display.article == emptyArticle)
+            {
+                display.article = article;
+                display.ResetButtons();
+                count++;
                 break;
             }
         }
