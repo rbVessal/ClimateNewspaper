@@ -63,7 +63,7 @@ public class ArticleManager : MonoBehaviour
         if (billBoardArticles.Count < billBoardArticleMax)
         {
             billBoardArticles.Add(article);
-            billBoard.AddArticleToDisplay(article);
+            FindObjectOfType<BillBoardArticleDisplayer>().AddArticleToDisplay(article);
             return true;
         }
         else
