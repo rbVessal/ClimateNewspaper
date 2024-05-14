@@ -10,6 +10,7 @@ public class ArticleManager : MonoBehaviour
     [Tooltip("Articles for the entire game")]
     [SerializeField] private List<ArticleScriptableObject> allArticles;
 
+    [SerializeField]
     private List<ArticleScriptableObject> leftOverArticles;
 
     [Tooltip("Articles that go to the billboard")]
@@ -21,20 +22,17 @@ public class ArticleManager : MonoBehaviour
     [SerializeField] private int billBoardArticleMax;
     [SerializeField] private int computerArticleMax;
 
-
-    private BillBoardArticleDisplayer billBoard;
+    [SerializeField] private BillBoardArticleDisplayer billBoard;
 
     private NewspaperManager newspaper;
-    //TODO: Add PC display
 
     // Start is called before the first frame update
     void Start()
     {
-        billBoard = FindObjectOfType<BillBoardArticleDisplayer>();
         leftOverArticles=new List<ArticleScriptableObject>(allArticles);
         newspaper = FindObjectOfType<NewspaperManager>();
         
-        ChooseArticlesRandomlyForBillboard(5);
+        //ChooseArticlesRandomlyForBillboard(0);
     }
 
     // Update is called once per frame
@@ -45,8 +43,9 @@ public class ArticleManager : MonoBehaviour
     
 
     //randomly add articles to the billboard
-    void ChooseArticlesRandomlyForBillboard(int numberToAdd = 1)
+    public void ChooseArticlesRandomlyForBillboard(int numberToAdd = 1)
     {
+
         for (int i = 1; i <= numberToAdd; i++)
         {
             ArticleScriptableObject article = leftOverArticles[Random.Range(0, leftOverArticles.Count)];

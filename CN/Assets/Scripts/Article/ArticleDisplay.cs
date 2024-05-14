@@ -55,6 +55,7 @@ public class ArticleDisplay : MonoBehaviour
         UpdateUI();
     }
 
+    
     public void MoveToComputer()
     {
         if(article!=emptyArticle)
@@ -68,6 +69,11 @@ public class ArticleDisplay : MonoBehaviour
             
     }
 
+    public void ResetButtons()
+    {
+        removeButton.SetActive(false);
+        addButton.SetActive(true);
+    }
     public void MoveToBillBoard()
     {
         if (FindObjectOfType<ArticleManager>().RemoveFromComputer(article))

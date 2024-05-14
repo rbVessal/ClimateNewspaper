@@ -28,7 +28,7 @@ public class GameStateManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-           ChangeStateToTown();
+           //ChangeStateToTown();
     }
 
     // Update is called once per frame
@@ -71,5 +71,6 @@ public class GameStateManager : MonoBehaviour
             Debug.Log("Game state changed to town");
         }
     }
+
     
 }

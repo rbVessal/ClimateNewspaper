@@ -27,7 +27,7 @@ public class BillBoardArticleDisplayer : MonoBehaviour
         
     }
     
-    public void AddArticleToDisplay(ArticleScriptableObject article, bool existing=false)
+    public void AddArticleToDisplay(ArticleScriptableObject article)
     {
         foreach (var display in displays)
         {
@@ -35,6 +35,7 @@ public class BillBoardArticleDisplayer : MonoBehaviour
             if (display.added|| display.article==emptyArticle)
             {
                 display.article = article;
+                display.ResetButtons();
                 break;
             }
         }
