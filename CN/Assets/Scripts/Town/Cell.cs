@@ -12,6 +12,6 @@ public class Cell
         this.spaceType = spaceType;
         this.isOccupied = isOccupied;
 
-        Debug.Log("Cell is occupied?" + this.isOccupied + "Cell is type: " + this.spaceType);
+        //Debug.Log("Cell is occupied?" + this.isOccupied + "Cell is type: " + this.spaceType);
     }
 }

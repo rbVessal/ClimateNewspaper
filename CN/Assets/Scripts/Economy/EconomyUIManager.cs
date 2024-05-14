@@ -21,8 +21,16 @@ public class EconomyUIManager : MonoBehaviour
     private List<GameObject> values = new List<GameObject>();
 
     //Subscribe to article pop up display event
-    private void OnEnable() => ArticleCloseUpDisplay.SignalUIFocus += DetermineFocus;
-    private void OnDisable() => ArticleCloseUpDisplay.SignalUIFocus -= DetermineFocus;
+    private void OnEnable()
+    {
+        ArticleCloseUpDisplay.SignalUIFocus += DetermineFocus;
+        EconomyManager.Link += SetValues;
+    } 
+    private void OnDisable()
+    {
+        ArticleCloseUpDisplay.SignalUIFocus -= DetermineFocus;
+        EconomyManager.Link -= SetValues;
+    }
     private void Awake()
     {
         GetTextRefs();

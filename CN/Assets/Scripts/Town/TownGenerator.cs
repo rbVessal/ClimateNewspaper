@@ -64,14 +64,7 @@ public class TownGenerator : MonoBehaviour
                     occupied = true;
 
                 }
-                else
-                {
-                    build = Instantiate(roadPrefab, new Vector3(startPos.position.x + i, 0, startPos.position.z - j), Quaternion.identity);
-                    buildings.Add(build);
-                    Cell cell = new Cell(SpaceType.Building, true);
-                    type = SpaceType.Road;
-                    occupied = true;
-                }
+               
 
                 grid.Add(new Cell(type,occupied));
 
