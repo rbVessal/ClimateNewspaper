@@ -17,7 +17,7 @@ public class TownStateManager : MonoBehaviour
 
     public Town_idle idle         = new Town_idle();
     public Town_timepass timepass = new Town_timepass();
-    public Town_pause pause       = new Town_pause();
+    public Town_calculate calculate       = new Town_calculate();
 
 
     [Header("Climate Percentage")]
@@ -59,6 +59,7 @@ public class TownStateManager : MonoBehaviour
     {
         if(econManager != null)
         {
+            climateImpact = econManager.GetEconomy().ClimateImpact;
             econManager.SetEconomy(0, 0, climateImpact);
             AdjustFog();
         }
@@ -87,9 +88,9 @@ public class TownStateManager : MonoBehaviour
                 break;
 
             case TownState.Paused:
-                if (state != pause)
+                if (state != calculate)
                 {
-                    ChangeState(pause);
+                    ChangeState(calculate);
                 }
                 break;
 
@@ -103,9 +104,6 @@ public class TownStateManager : MonoBehaviour
         float normalizedValue = Mathf.Clamp01(climateImpact / 100f);
         // Adjust the alpha based on the normalized value (0 to 1)
         float alpha = normalizedValue;
-
-        
-
         // Get the color from the gradient based on the normalized value
         Color fogColor = fogGradient.Evaluate(normalizedValue);
         // Set the color with the adjusted alpha

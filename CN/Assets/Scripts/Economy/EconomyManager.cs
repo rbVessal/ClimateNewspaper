@@ -6,11 +6,12 @@ using UnityEngine.Events;
 
 public class EconomyManager : MonoBehaviour
 {
+    //Updates Economy Display UI
     public static event Action<GameEconomy> Link;
-    //Link this with the EconomyUIManager
     
     private GameEconomy economy;
 
+    [Header("Starting Values")]
     //base values
     public int moneyBase;
     public int reachBase;
@@ -31,6 +32,7 @@ public class EconomyManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             UpdateEconomy(-20, 100, 5);
+            Debug.Log("Debug input 'space' detected.");
         }
     }
     //Sends economy values to UI
