@@ -11,6 +11,14 @@ public class NewspaperManager : MonoBehaviour
     [SerializeField] private List<ArticleScriptableObject> articles;
     [SerializeField] private ArticleScriptableObject emptyArticle;
 
+    private void Start()
+    {
+        foreach(ArticleDisplay display in displays) 
+        {
+            display.gameObject.SetActive(false);
+        }
+    }
+
     public void UpdateArticles()
     {
         if (articles.Count > 0)
