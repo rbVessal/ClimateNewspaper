@@ -41,7 +41,7 @@ public class EconomyManager : MonoBehaviour
     //Sends economy values to UI
     public void SendToUI()
     {
-        Link.Invoke(economy);
+        Link?.Invoke(economy);
     }
 
     //Updates the economy additively 

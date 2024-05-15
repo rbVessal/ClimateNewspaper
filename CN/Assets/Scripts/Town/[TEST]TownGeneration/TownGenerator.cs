@@ -56,7 +56,8 @@ public class TownGenerator : MonoBehaviour
                 GameObject build = null;
                 if(Random.Range(0,2) == 0)
                 {
-                    build = Instantiate(randomBuilding, new Vector3(startPos.position.x + i + (padding * i), 0, startPos.position.z - j - (padding * j)), Quaternion.identity);
+                    build = Instantiate(randomBuilding, new Vector3(startPos.position.x + i + (padding * i), startPos.position.y, startPos.position.z - j - (padding * j)), Quaternion.identity);
+                    build.transform.SetParent(transform);
                     buildings.Add(build);
 
                     Cell cell = new Cell(SpaceType.Building, true);
