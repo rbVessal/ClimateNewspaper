@@ -20,7 +20,6 @@ public class ArticleManager : MonoBehaviour
     [SerializeField] private List<ArticleScriptableObject> computerArticles;
 
     [SerializeField] private int billBoardArticleMax;
-    [SerializeField] private int computerArticleMax;
 
     [SerializeField] private BillBoardArticleDisplayer billBoard;
 
@@ -74,19 +73,24 @@ public class ArticleManager : MonoBehaviour
     
     public bool AddToComputer(ArticleScriptableObject article)
     {
-        if (computerArticles.Count < computerArticleMax)
+        NewspaperManager newspaperManager = FindAnyObjectByType<NewspaperManager>();
+        if (newspaperManager != null)
         {
-            computerArticles.Add(article);
-            //TODO add to the actual computer class
-            newspaper.AddArticle(article);
-            return true;
+            if (computerArticles.Count < newspaperManager.GetMaxSlots())
+            {
+                computerArticles.Add(article);
+                //TODO add to the actual computer class
+                newspaper.AddArticle(article);
+                return true;
+            }
+            else
+            {
+                Debug.Log("Maximum articles reached! No space available.");
+                return false;
+            }
         }
-        else
-        {
-            Debug.Log("Maximum articles reached! No space available.");
-            return false;
-        }
-        
+
+        return false;
     }
 
     public bool RemoveFromComputer(ArticleScriptableObject article)

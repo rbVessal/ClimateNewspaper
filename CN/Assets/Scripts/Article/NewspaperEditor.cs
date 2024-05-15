@@ -51,4 +51,17 @@ public class NewspaperEditor : MonoBehaviour
             }
         }
     }
+
+    public int GetMaxSlots()
+    { 
+        int maxSlots = 0;
+
+        CoDropItemSlot[] dropItemSlots = GetComponentsInChildren<CoDropItemSlot>();
+        maxSlots = dropItemSlots.Length;
+
+        Debug.LogFormat("Max slots: {0}", maxSlots);
+
+        return maxSlots;
+    }
+
 }

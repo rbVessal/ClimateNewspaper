@@ -11,12 +11,26 @@ public class NewspaperManager : MonoBehaviour
     [SerializeField] private List<ArticleScriptableObject> articles;
     [SerializeField] private ArticleScriptableObject emptyArticle;
 
+    [SerializeField] private NewspaperEditor editor;
+
     private void Start()
     {
         foreach(ArticleDisplay display in displays) 
         {
             display.gameObject.SetActive(false);
         }
+    }
+
+    public int GetMaxSlots()
+    {
+        int maxSlots = 0;
+
+        if(editor != null) 
+        { 
+            maxSlots = editor.GetMaxSlots();
+        }
+
+        return maxSlots;
     }
 
     public void UpdateArticles()

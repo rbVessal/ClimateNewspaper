@@ -1650,6 +1650,7 @@ MonoBehaviour:
   - {fileID: 1351672248}
   articles: []
   emptyArticle: {fileID: 11400000, guid: 85c5a32c74c8f894ab7aa693373407f9, type: 2}
+  editor: {fileID: 504369728}
 --- !u!1 &1468225146
 GameObject:
   m_ObjectHideFlags: 0

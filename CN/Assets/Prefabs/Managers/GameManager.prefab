@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dayNumber: 1
-  articlesToAddPerDay: 1
+  articlesToAddPerDay: 4

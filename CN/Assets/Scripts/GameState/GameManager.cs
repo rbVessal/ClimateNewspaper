@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     
-    [SerializeField] private int dayNumber=1;
-    [SerializeField] private int articlesToAddPerDay;
+    [SerializeField] private int dayNumber = 1;
+    [SerializeField] public int articlesToAddPerDay = 4;
 
     // Start is called before the first frame update
     void Start()
