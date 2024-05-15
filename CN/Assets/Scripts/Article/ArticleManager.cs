@@ -25,10 +25,14 @@ public class ArticleManager : MonoBehaviour
 
     private NewspaperManager newspaper;
 
+    private void Awake()
+    {
+        leftOverArticles = new List<ArticleScriptableObject>(allArticles);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        leftOverArticles=new List<ArticleScriptableObject>(allArticles);
         newspaper = FindObjectOfType<NewspaperManager>();
         
         //ChooseArticlesRandomlyForBillboard(0);
@@ -37,7 +41,6 @@ public class ArticleManager : MonoBehaviour
     //randomly add articles to the billboard
     public void ChooseArticlesRandomlyForBillboard(int numberToAdd = 1)
     {
-
         for (int i = 1; i <= numberToAdd; i++)
         {
             ArticleScriptableObject article = leftOverArticles[Random.Range(0, leftOverArticles.Count)];

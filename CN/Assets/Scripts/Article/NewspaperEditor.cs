@@ -14,7 +14,7 @@ public class NewspaperEditor : MonoBehaviour
         foreach(CoDropItemSlot slot in dropItemSlots)
         {
             slot.onDroppedItemEvent.AddListener(OnDroppedArticle);
-            //slot.onRemovedItemEvent.AddListener(OnRemovedArticle);
+            slot.onRemovedItemEvent.AddListener(OnRemovedArticle);
         }
     }
 
@@ -49,7 +49,7 @@ public class NewspaperEditor : MonoBehaviour
         }
     }
 
-    public void UpdateEconomyUI(bool wasArticleAdded)
+    public void UpdateEconomyUI(GameObject gameObject, bool wasArticleAdded)
     {
         // Make the economy UI update based on whatever article just dropped
         if (gameObject != null)
@@ -63,6 +63,7 @@ public class NewspaperEditor : MonoBehaviour
                     EconomyManager economyManager = FindAnyObjectByType<EconomyManager>();
                     if (economyManager != null)
                     {
+                        Debug.Log("Editor - economy manager");
                         if (wasArticleAdded)
                         {
                             economyManager.UpdateEconomy(articleSO.moneyChange, articleSO.reachChange, articleSO.climateChange);
@@ -82,7 +83,7 @@ public class NewspaperEditor : MonoBehaviour
     {
         Debug.Log("NewspaperEditor - dropped article");
         // Make the economy UI update based on whatever article just dropped
-        UpdateEconomyUI(true);
+        UpdateEconomyUI(gameObject, true);
     }
 
     // Delegate method for when an article is unslotted from CoDropItemSlot
@@ -90,7 +91,7 @@ public class NewspaperEditor : MonoBehaviour
     {
         Debug.Log("NewspaperEditor - removed article");
 
-        UpdateEconomyUI(false);
+        UpdateEconomyUI(gameObject, false);
     }
 
     public int GetMaxSlots()

@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 [System.Serializable]
 public class DroppedItemSlotEvent : UnityEvent<GameObject> { }
+
+[System.Serializable]
 public class RemovedItemSlotEvent : UnityEvent<GameObject> { }
 
 public class CoDropItemSlot : MonoBehaviour, IDropHandler
