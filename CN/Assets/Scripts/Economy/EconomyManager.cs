@@ -47,6 +47,7 @@ public class EconomyManager : MonoBehaviour
     //Updates the economy additively 
     public void UpdateEconomy(int money = 0, int reach = 0, float climateImpact = 0)
     {
+        Debug.LogFormat("Economy Manager: money: {0}, reach: {1}, climateImpact:{2}", money, reach, climateImpact);
         economy.UpdateValues(money, reach, climateImpact);
         SendToUI();
     }

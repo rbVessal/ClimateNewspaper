@@ -15,7 +15,7 @@ MonoBehaviour:
   headline: loiuyh
   bodyText: lkjhb
   climateChange: 0
-  moneyChange: 0
-  reachChange: 0
+  moneyChange: 15
+  reachChange: 20
   articleArt: {fileID: 21300000, guid: ff7bfa7addf40784d86f62b8e4a034a6, type: 3}
   articleCategory: 0

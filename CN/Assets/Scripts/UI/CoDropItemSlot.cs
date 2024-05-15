@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 [System.Serializable]
 public class DroppedItemSlotEvent : UnityEvent<GameObject> { }
+public class RemovedItemSlotEvent : UnityEvent<GameObject> { }
 
 public class CoDropItemSlot : MonoBehaviour, IDropHandler
 {
@@ -16,6 +17,7 @@ public class CoDropItemSlot : MonoBehaviour, IDropHandler
     private GameObject occupiedGameObject;
 
     public DroppedItemSlotEvent onDroppedItemEvent;
+    public RemovedItemSlotEvent onRemovedItemEvent;
     
     // Drop interface
     public void OnDrop(PointerEventData eventData)
@@ -91,6 +93,9 @@ public class CoDropItemSlot : MonoBehaviour, IDropHandler
                     { 
                         coDragDrop.onEndDragDelegate -= OnOccupiedObjectEndDrag;
                     }
+
+                    onRemovedItemEvent.Invoke(occupiedGameObject);
+
                     occupiedGameObject = null;
                 }
             }
