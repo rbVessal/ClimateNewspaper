@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -615,18 +615,18 @@ PrefabInstance:
     - target: {fileID: 1116798815181176, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1852499264}
+      objectReference: {fileID: 504369728}
     - target: {fileID: 1116798815181176, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1116798815181176, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartNewDay
+      value: OnPublishButtonClicked
       objectReference: {fileID: 0}
     - target: {fileID: 1116798815181176, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
+      value: NewspaperEditor, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1116798815181176, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1119,6 +1119,17 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &504369728 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9036481568355593900, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
+  m_PrefabInstance: {fileID: 370644344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b3f36811a46a74484b55f140345128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &522340305
 GameObject:
   m_ObjectHideFlags: 0
@@ -2218,17 +2229,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744958974}
   m_CullTransparentMesh: 1
---- !u!114 &1852499264 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3319949906184002557, guid: 205a0d8eb777c134a9ff952545874d97, type: 3}
-  m_PrefabInstance: {fileID: 712358480038361696}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 435e71ee26e6f4743ae3d76da2da7737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1932549526
 GameObject:
   m_ObjectHideFlags: 0
