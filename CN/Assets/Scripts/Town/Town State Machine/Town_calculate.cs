@@ -9,8 +9,6 @@ public class Town_calculate : TownStateBase
     {
         Debug.Log("Entered " + town.state + " state.");
         DetermineChanges(town);
-
-
     }
 
     public override void UpdateState(TownStateManager town)

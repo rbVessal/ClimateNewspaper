@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,8 @@ public class NewspaperEditor : MonoBehaviour
     [SerializeField] public GameObject BackPage;
 
     public void OnPublishButtonClicked()
-    { 
-        
+    {
+       
     }
 
     // Delegate method for on dropped article event from CoDragDrop

@@ -16,12 +16,15 @@ public class EconomyManager : MonoBehaviour
     public int moneyBase;
     public int reachBase;
     public float impactBase;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         //instantiate Economy class
         economy = new GameEconomy(moneyBase, reachBase, impactBase);
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        
         //Send those values to EconomyUI for display
         SendToUI();
     }
