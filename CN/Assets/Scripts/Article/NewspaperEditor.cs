@@ -10,7 +10,11 @@ public class NewspaperEditor : MonoBehaviour
 
     public void OnPublishButtonClicked()
     {
-       
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        if (gameManager != null)
+        {
+            gameManager.StartNewDay();
+        }
     }
 
     // Delegate method for on dropped article event from CoDragDrop
