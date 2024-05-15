@@ -1584,6 +1584,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -124.99982
       objectReference: {fileID: 0}
+    - target: {fileID: 4716407048686634569, guid: 3fdb805aabccdf443a1dfe006af35159, type: 3}
+      propertyPath: BackPage
+      value: 
+      objectReference: {fileID: 2789433438569566029}
+    - target: {fileID: 4716407048686634569, guid: 3fdb805aabccdf443a1dfe006af35159, type: 3}
+      propertyPath: FrontPage
+      value: 
+      objectReference: {fileID: 6174263146011528142}
     - target: {fileID: 7328987652071699080, guid: 3fdb805aabccdf443a1dfe006af35159, type: 3}
       propertyPath: m_Name
       value: Newspaper
@@ -1629,9 +1637,19 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fdb805aabccdf443a1dfe006af35159, type: 3}
+--- !u!1 &2789433438569566029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1921363368949032872, guid: 3fdb805aabccdf443a1dfe006af35159, type: 3}
+  m_PrefabInstance: {fileID: 4331340390686697701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4390713721097581965 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 68383020882255208, guid: 3fdb805aabccdf443a1dfe006af35159, type: 3}
+  m_PrefabInstance: {fileID: 4331340390686697701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6174263146011528142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7616537761086120747, guid: 3fdb805aabccdf443a1dfe006af35159, type: 3}
   m_PrefabInstance: {fileID: 4331340390686697701}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &9036481568355593900 stripped

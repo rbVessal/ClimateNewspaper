@@ -10,34 +10,26 @@ public class NewspaperManager : MonoBehaviour
 
     [SerializeField] private List<ArticleScriptableObject> articles;
     [SerializeField] private ArticleScriptableObject emptyArticle;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void UpdateArticles()
     {
-        int i = 0;
-        foreach (var article in articles)
+        if (articles.Count > 0)
         {
-            displays[i].article = article;
-            displays[i].gameObject.SetActive(true);
-            
-                i++;
-        }
+            int i = 0;
+            foreach (var article in articles)
+            {
+                displays[i].article = article;
+                displays[i].gameObject.SetActive(true);
 
-        for (; i < displays.Count; i++)
+                i++;
+            }
+        }
+        else
         {
-            displays[i].article = emptyArticle;
-            displays[i].gameObject.SetActive(false);
+            foreach (ArticleDisplay display in displays)
+            { 
+                display.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -49,5 +41,17 @@ public class NewspaperManager : MonoBehaviour
     public void RemoveArticle(ArticleScriptableObject article)
     {
         articles.Remove(article);
+    }
+
+    public void ClearAllArticles()
+    {
+        // TODO: Send unused articles back to the bulletin board
+
+        foreach (ArticleDisplay display in displays)
+        {
+            display.article = null;
+        }
+
+        articles.Clear();
     }
 }

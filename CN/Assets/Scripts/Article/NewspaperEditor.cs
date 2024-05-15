@@ -10,6 +10,28 @@ public class NewspaperEditor : MonoBehaviour
 
     public void OnPublishButtonClicked()
     {
+        // Clear all of the newspaper article display properly
+        NewspaperManager newsPaperManager = FindObjectOfType<NewspaperManager>();
+        if (newsPaperManager != null)
+        {
+            newsPaperManager.ClearAllArticles();
+        }
+
+        // Clear all of the computer articles stored in the article manager
+        ArticleManager articleManager = FindObjectOfType<ArticleManager>();
+        if (articleManager != null) 
+        {
+            articleManager.ClearAllComputerArticles();
+        }
+
+        // Do proper cleanup of resetting the article display and removing events
+        CoDropItemSlot[] dropItemSlots = GetComponentsInChildren<CoDropItemSlot>();
+        foreach (CoDropItemSlot dropItemSlot in dropItemSlots)
+        {
+            dropItemSlot.ClearItemInSlot();
+        }
+
+        // Now we can finally start the new day
         GameManager gameManager = FindObjectOfType<GameManager>();
         if (gameManager != null)
         {

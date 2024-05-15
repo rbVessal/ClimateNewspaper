@@ -35,13 +35,6 @@ public class ArticleManager : MonoBehaviour
         //ChooseArticlesRandomlyForBillboard(0);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
-
     //randomly add articles to the billboard
     public void ChooseArticlesRandomlyForBillboard(int numberToAdd = 1)
     {
@@ -111,5 +104,12 @@ public class ArticleManager : MonoBehaviour
             return false;
         }
     }
+
+    public void ClearAllComputerArticles()
+    {
+        // TODO:  Send remaining computer articles back to bulletin board
+        computerArticles.Clear();
+    }
+
 }
 

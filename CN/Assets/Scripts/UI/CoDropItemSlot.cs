@@ -28,9 +28,7 @@ public class CoDropItemSlot : MonoBehaviour, IDropHandler
         if (shouldSnap && eventData.pointerDrag != null)
         {
             GameObject droppedGameObject = eventData.pointerDrag;
-            droppedGameObject.GetComponent<RectTransform>().SetParent(GetComponent<RectTransform>().transform);
-            //draggedGameObject.transform.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            droppedGameObject.transform.GetComponent<RectTransform>().localPosition = Vector3.zero;
+            droppedGameObject.transform.GetComponent<RectTransform>().position = GetComponent<RectTransform>().position;
 
             if (droppedGameObject != occupiedGameObject)
             {
@@ -97,5 +95,22 @@ public class CoDropItemSlot : MonoBehaviour, IDropHandler
                 }
             }
         }
+    }
+
+    public void ClearItemInSlot()
+    {
+        if (occupiedGameObject != null)
+        {
+            CoDragDrop coDragDrop = occupiedGameObject.GetComponent<CoDragDrop>();
+            if (coDragDrop != null)
+            {
+                coDragDrop.onEndDragDelegate -= OnOccupiedObjectEndDrag;
+            }
+
+            // Reset the position otherwise it will look like it's still in the slot
+            occupiedGameObject.transform.localPosition = Vector3.zero;
+        }
+
+        isOccupied = false;
     }
 }
