@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1229,6 +1229,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
+--- !u!114 &1193815263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 830350762931832325, guid: a46017ba299a6154f9608045e3cd5bdd, type: 3}
+  m_PrefabInstance: {fileID: 1921437291}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f180cd7583f5048b0fb9a25b70b9a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1303777588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3498,6 +3509,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArticleCloseUpCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6812164496504472423, guid: 10c84d4b32b58d94c9713370697512e3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1193815263}
+    - target: {fileID: 6812164496504472423, guid: 10c84d4b32b58d94c9713370697512e3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnfocusElement
+      objectReference: {fileID: 0}
     - target: {fileID: 7003636013541907903, guid: 10c84d4b32b58d94c9713370697512e3, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3643,7 +3662,8 @@ PrefabInstance:
       value: -6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4549890657248855788, guid: 10c84d4b32b58d94c9713370697512e3, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10c84d4b32b58d94c9713370697512e3, type: 3}
