@@ -16,7 +16,7 @@ public class CoDropItemSlot : MonoBehaviour, IDropHandler
     public bool shouldSnap = true;
     public bool isOccupied = false;
 
-    private GameObject occupiedGameObject;
+    public GameObject occupiedGameObject;
 
     public DroppedItemSlotEvent onDroppedItemEvent;
     public RemovedItemSlotEvent onRemovedItemEvent;
@@ -119,5 +119,17 @@ public class CoDropItemSlot : MonoBehaviour, IDropHandler
         }
 
         isOccupied = false;
+    }
+
+    public GameObject GetSlottedArticle()
+    {
+        if (isOccupied)
+        {
+            return occupiedGameObject;
+        }
+        else
+        {
+            return null;
+        }
     }
 }

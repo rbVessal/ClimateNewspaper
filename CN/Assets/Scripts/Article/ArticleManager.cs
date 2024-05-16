@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -43,10 +44,16 @@ public class ArticleManager : MonoBehaviour
     {
         for (int i = 1; i <= numberToAdd; i++)
         {
-            ArticleScriptableObject article = leftOverArticles[Random.Range(0, leftOverArticles.Count)];
-            if(AddToBillBoard(article))
-                leftOverArticles.Remove(article);
-
+            if (leftOverArticles.Count > 0)
+            {
+                ArticleScriptableObject article = leftOverArticles[Random.Range(0, leftOverArticles.Count)];
+                if (AddToBillBoard(article))
+                    leftOverArticles.Remove(article);
+            }
+            else
+            {
+                Debug.Log("No more articles remaining!");
+            }
         }
     }
 
@@ -116,7 +123,20 @@ public class ArticleManager : MonoBehaviour
     public void ClearAllComputerArticles()
     {
         // TODO:  Send remaining computer articles back to bulletin board
+
+        foreach (var article in computerArticles)
+        {
+            billBoardArticles.Remove(article);
+            billBoard.RemoveArticle(article);
+        }
         computerArticles.Clear();
+        
+        
+    }
+
+    public void ClearUsedBillBoardArticles()
+    {
+        
     }
 
 }

@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<ArticleManager>().ChooseArticlesRandomlyForBillboard(articlesToAddPerDay);
 
         //begin at the billboard
-        GameStateManager.Main.ChangeStateToBillboard();
+        GameStateManager.Main.ChangeStateToBillboard(true);
         
         
         //pop up any text menus, other stuff if required

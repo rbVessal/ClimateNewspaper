@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class NewspaperEditor : MonoBehaviour
@@ -20,27 +21,52 @@ public class NewspaperEditor : MonoBehaviour
 
     public void OnPublishButtonClicked()
     {
-        // Clear all of the newspaper article display properly
+
         NewspaperManager newsPaperManager = FindObjectOfType<NewspaperManager>();
+        ArticleManager articleManager = FindObjectOfType<ArticleManager>();
+        CoDropItemSlot[] dropItemSlots = GetComponentsInChildren<CoDropItemSlot>();
+        List<ArticleScriptableObject> articlesOnComputer =new List<ArticleScriptableObject>( newsPaperManager.GetArticles());
+        List<ArticleScriptableObject> slottedArticles=new List<ArticleScriptableObject>();
+        
+        // Do proper cleanup of resetting the article display and removing events
+        foreach (CoDropItemSlot dropItemSlot in dropItemSlots)
+        {
+            GameObject articleObject = dropItemSlot.GetSlottedArticle();
+            if (articleObject != null)
+            {
+                slottedArticles.Add(articleObject.GetComponent<ArticleDisplay>().article);
+            }
+            dropItemSlot.ClearItemInSlot();
+        }
+        Debug.Log("---------------SLOTTED--------------");
+        foreach (var article in slottedArticles)
+        {
+            Debug.Log("ARTICLE IN SLOT: "+article.name);
+        }
+        Debug.Log("---------------SLOTTED--------------");
+        foreach (var article in articlesOnComputer)
+        {
+            Debug.Log(article.name);
+            if (!slottedArticles.Contains(article))
+            {
+                Debug.Log("Article removed");
+                articleManager.RemoveFromComputer(article);
+
+            }
+        }
+        
+        // Clear all of the newspaper article display properly
         if (newsPaperManager != null)
         {
             newsPaperManager.ClearAllArticles();
         }
 
         // Clear all of the computer articles stored in the article manager
-        ArticleManager articleManager = FindObjectOfType<ArticleManager>();
         if (articleManager != null) 
         {
             articleManager.ClearAllComputerArticles();
         }
-
-        // Do proper cleanup of resetting the article display and removing events
-        CoDropItemSlot[] dropItemSlots = GetComponentsInChildren<CoDropItemSlot>();
-        foreach (CoDropItemSlot dropItemSlot in dropItemSlots)
-        {
-            dropItemSlot.ClearItemInSlot();
-        }
-
+        
         // Now we can finally start the new day
         GameManager gameManager = FindObjectOfType<GameManager>();
         if (gameManager != null)

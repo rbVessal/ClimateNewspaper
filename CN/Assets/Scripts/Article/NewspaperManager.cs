@@ -45,6 +45,11 @@ public class NewspaperManager : MonoBehaviour
 
                 i++;
             }
+
+            for (; i < displays.Count; i++)
+            {
+                displays[i].gameObject.SetActive(false);
+            }
         }
         else
         {
@@ -64,6 +69,9 @@ public class NewspaperManager : MonoBehaviour
     {
         articles.Remove(article);
     }
+
+    public List<ArticleScriptableObject> GetArticles() => articles;
+   
 
     public void ClearAllArticles()
     {

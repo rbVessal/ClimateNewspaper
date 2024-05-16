@@ -49,7 +49,7 @@ public class GameStateManager : MonoBehaviour
             Debug.Log("Game state changed to editing");
         }
     }
-    public void ChangeStateToBillboard()
+    public void ChangeStateToBillboard(bool newDay=false)
     {
         if(currentState!=GameState.Billboard)
         {
@@ -58,6 +58,10 @@ public class GameStateManager : MonoBehaviour
             TownCanvas.SetActive(false);
             BillboardCanvas.SetActive(true);
             FindObjectOfType<BulletinManager>().UpdateBillBoardUI();
+            if (newDay)
+            {
+                FindObjectOfType<BulletinManager>().ResetButtons();
+            }
             Debug.Log("Game state changed to Billboard");
         }
     }

@@ -39,4 +39,9 @@ public class BulletinManager : MonoBehaviour
         billBoardCanvas.SetActive(true);
         billBoard.SetArticles(articles);
     }
+
+    public void ResetButtons()
+    {
+        billBoard.ResetButtons();
+    }
 }

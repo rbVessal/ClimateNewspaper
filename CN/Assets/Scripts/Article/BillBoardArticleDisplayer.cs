@@ -64,8 +64,14 @@ public class BillBoardArticleDisplayer : MonoBehaviour
             displays[i].article = emptyArticle;
         }
     }
-    
-    
+
+    public void ResetButtons()
+    {
+        foreach (var display in displays)
+        {
+            display.ResetButtons();
+        }
+    }
     
     //in case we want to remove articles through another script and not from the article display prefab itself
     public void RemoveArticleFromDisplay(int displayNumber)
