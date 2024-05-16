@@ -57,6 +57,7 @@ public class GameStateManager : MonoBehaviour
             EditorCanvas.SetActive(false);
             TownCanvas.SetActive(false);
             BillboardCanvas.SetActive(true);
+            FindObjectOfType<BulletinManager>().UpdateBillBoardUI();
             Debug.Log("Game state changed to Billboard");
         }
     }

@@ -58,10 +58,10 @@ public class ArticleDisplay : MonoBehaviour
     
     public void MoveToComputer()
     {
+        Debug.Log("move to computer called");
         if(article!=emptyArticle)
             if (FindObjectOfType<ArticleManager>().AddToComputer(article))
             {
-            
                 removeButton.SetActive(true);
                 addButton.SetActive(false);
                 added = true;
