@@ -49,12 +49,12 @@ public class NewspaperEditor : MonoBehaviour
         }
     }
 
-    public void UpdateEconomyUI(GameObject gameObject, bool wasArticleAdded)
+    public void UpdateEconomyUI(GameObject articleGameObject, GameObject articleSlotGameObject, bool wasArticleAdded)
     {
         // Make the economy UI update based on whatever article just dropped
-        if (gameObject != null)
+        if (articleGameObject != null)
         {
-            ArticleDisplay articleDisplay = gameObject.GetComponent<ArticleDisplay>();
+            ArticleDisplay articleDisplay = articleGameObject.GetComponent<ArticleDisplay>();
             if (articleDisplay != null)
             {
                 ArticleScriptableObject articleSO = articleDisplay.article;
@@ -63,14 +63,17 @@ public class NewspaperEditor : MonoBehaviour
                     EconomyManager economyManager = FindAnyObjectByType<EconomyManager>();
                     if (economyManager != null)
                     {
-                        Debug.Log("Editor - economy manager");
+                        //Debug.Log("Editor - economy manager");
+
+                        ArticleValues articleValues = CalculateArticleValues(articleSO, articleSlotGameObject.transform.parent.gameObject, articleSlotGameObject);
+
                         if (wasArticleAdded)
                         {
-                            economyManager.UpdateEconomy(articleSO.moneyChange, articleSO.reachChange, articleSO.climateChange);
+                            economyManager.UpdateEconomy(articleValues.money, articleValues.reach, articleValues.climate);
                         }
                         else
                         {
-                            economyManager.UpdateEconomy(-articleSO.moneyChange, -articleSO.reachChange, -articleSO.climateChange);
+                            economyManager.UpdateEconomy(-articleValues.money, -articleValues.reach, -articleValues.climate);
                         }
                     }
                 }
@@ -78,20 +81,45 @@ public class NewspaperEditor : MonoBehaviour
         }
     }
 
+    private ArticleValues CalculateArticleValues(ArticleScriptableObject articleSO, GameObject pageGameObject, GameObject articleSlotGameObject)
+    {
+        ArticleValues articleValues = new ArticleValues();
+
+        float pageMultiplier = 1.0f;
+        CoBonusStats pageMultiplierBonusStats = pageGameObject.GetComponent<CoBonusStats>();
+        if(pageMultiplierBonusStats != null) 
+        {
+            pageMultiplier = pageMultiplierBonusStats.multiplier;
+        }
+
+        float articleSlotMultiplier = 1.0f;
+        CoBonusStats articleBonusStats = articleSlotGameObject.GetComponent<CoBonusStats>();
+        if(articleBonusStats != null) 
+        {
+            articleSlotMultiplier = articleBonusStats.multiplier;
+        }
+
+        articleValues.money = (int)(articleSO.moneyChange * pageMultiplier * articleSlotMultiplier);
+        articleValues.reach = (int)(articleSO.reachChange * pageMultiplier * articleSlotMultiplier);
+        articleValues.climate = articleSO.climateChange * pageMultiplier * articleSlotMultiplier;
+
+        return articleValues;
+    }
+
     // Delegate method for on dropped article event from CoDropItemSlot
-    public void OnDroppedArticle(GameObject gameObject)
+    public void OnDroppedArticle(GameObject articleGameObject, GameObject slotGameObject)
     {
         Debug.Log("NewspaperEditor - dropped article");
         // Make the economy UI update based on whatever article just dropped
-        UpdateEconomyUI(gameObject, true);
+        UpdateEconomyUI(articleGameObject, slotGameObject, true);
     }
 
     // Delegate method for when an article is unslotted from CoDropItemSlot
-    public void OnRemovedArticle(GameObject gameObject)
+    public void OnRemovedArticle(GameObject articleGameObject, GameObject slotGameObject)
     {
         Debug.Log("NewspaperEditor - removed article");
 
-        UpdateEconomyUI(gameObject, false);
+        UpdateEconomyUI(articleGameObject, slotGameObject, false);
     }
 
     public int GetMaxSlots()
