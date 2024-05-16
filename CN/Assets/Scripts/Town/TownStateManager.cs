@@ -153,6 +153,9 @@ public class TownStateManager : MonoBehaviour
 
     public void PublishButtonEvent()
     {
-        
+        if(state == idle)
+        {
+            ChangeState(timepass);
+        }
     }
 }

@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public struct ArticleValues
+{
+    public float climate;
+    public int money;
+    public int reach;
+}
 public enum ArticleCategory
 {
     Advertisement,

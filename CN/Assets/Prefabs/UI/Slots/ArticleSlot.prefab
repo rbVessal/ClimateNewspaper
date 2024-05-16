@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 133356733387257097}
   - component: {fileID: 1957289208717618260}
   - component: {fileID: 576023523409155036}
+  - component: {fileID: 8694569651410862781}
   m_Layer: 0
   m_Name: ArticleSlot
   m_TagString: Untagged
@@ -90,3 +91,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDebug: 0
   shouldSnap: 1
+  isOccupied: 0
+  onDroppedItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onRemovedItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8694569651410862781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4428085790178264915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf2b1c3d59b04e4ab44a6b82499c738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplier: 1

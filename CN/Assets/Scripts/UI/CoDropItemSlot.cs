@@ -5,10 +5,10 @@ using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
 [System.Serializable]
-public class DroppedItemSlotEvent : UnityEvent<GameObject> { }
+public class DroppedItemSlotEvent : UnityEvent<GameObject, GameObject> { }
 
 [System.Serializable]
-public class RemovedItemSlotEvent : UnityEvent<GameObject> { }
+public class RemovedItemSlotEvent : UnityEvent<GameObject, GameObject> { }
 
 public class CoDropItemSlot : MonoBehaviour, IDropHandler
 {
@@ -44,7 +44,7 @@ public class CoDropItemSlot : MonoBehaviour, IDropHandler
                     dragDrop.onEndDragDelegate += OnOccupiedObjectEndDrag;
                 }
 
-                onDroppedItemEvent.Invoke(occupiedGameObject);
+                onDroppedItemEvent.Invoke(occupiedGameObject, this.gameObject);
             }
 
             if (isDebug)
@@ -96,7 +96,7 @@ public class CoDropItemSlot : MonoBehaviour, IDropHandler
                         coDragDrop.onEndDragDelegate -= OnOccupiedObjectEndDrag;
                     }
 
-                    onRemovedItemEvent.Invoke(occupiedGameObject);
+                    onRemovedItemEvent.Invoke(occupiedGameObject, this.gameObject);
 
                     occupiedGameObject = null;
                 }
