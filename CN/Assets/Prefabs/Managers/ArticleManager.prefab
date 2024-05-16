@@ -44,8 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae3a75444a175db4fad6b471b81e8be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allArticles: []
+  allArticles:
+  - {fileID: 11400000, guid: 593071b00bed34c4a87b428c2133a7c9, type: 2}
+  - {fileID: 11400000, guid: 50495c4f24c485c4dba9c87afb6512c9, type: 2}
+  - {fileID: 11400000, guid: f3cf858e2ead1f743b087b2381df4f86, type: 2}
+  - {fileID: 11400000, guid: 9b0c054a3794c8e4c9397ab9bb0042e8, type: 2}
+  - {fileID: 11400000, guid: 26c6bef5deb442a4fb4280ec318a2ab4, type: 2}
+  - {fileID: 11400000, guid: 9856e801b8ffade4094fb5bf01c5ff23, type: 2}
+  leftOverArticles: []
   billBoardArticles: []
   computerArticles: []
-  billBoardArticleMax: 0
-  computerArticleMax: 0
+  billBoardArticleMax: 4
+  billBoard: {fileID: 0}

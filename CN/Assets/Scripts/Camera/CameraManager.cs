@@ -76,4 +76,10 @@ public class CameraManager : MonoBehaviour
             }
         }
     }
+
+    public void ChangeCam(int camNumber) //mapped to the enum 
+    {
+        CurrentCamera changedCam = (CurrentCamera)(camNumber);
+        camera = changedCam;
+    }
 }
