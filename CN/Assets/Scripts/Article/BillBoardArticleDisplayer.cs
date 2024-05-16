@@ -49,6 +49,21 @@ public class BillBoardArticleDisplayer : MonoBehaviour
         }
         
     }
+
+    public void SetArticles(List<ArticleScriptableObject> articles)
+    {
+        int i = 0;
+        foreach (var article in articles)
+        {
+            displays[i].article = article;
+            i++;
+        }
+
+        for (; i < displays.Count; i++)
+        {
+            displays[i].article = emptyArticle;
+        }
+    }
     
     
     

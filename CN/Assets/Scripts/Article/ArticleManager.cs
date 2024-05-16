@@ -21,7 +21,7 @@ public class ArticleManager : MonoBehaviour
 
     [SerializeField] private int billBoardArticleMax;
 
-    [SerializeField] private BillBoardArticleDisplayer billBoard;
+    [SerializeField] private BulletinManager billBoard;
 
     private NewspaperManager newspaper;
 
@@ -55,10 +55,10 @@ public class ArticleManager : MonoBehaviour
     //can be used for just adding back from the computer as well
     public bool AddToBillBoard(ArticleScriptableObject article)
     {
-        if (FindObjectOfType<BillBoardArticleDisplayer>().count < billBoardArticleMax)
+        if (billBoardArticles.Count < billBoardArticleMax)
         {
             billBoardArticles.Add(article);
-            FindObjectOfType<BillBoardArticleDisplayer>().AddArticleToDisplay(article);
+            FindObjectOfType<BulletinManager>().AddArticle(article);
             return true;
         }
         else
@@ -70,6 +70,7 @@ public class ArticleManager : MonoBehaviour
 
     public bool RemoveFromBillBoard(ArticleScriptableObject article)
     {
+        //billBoard.RemoveArticle(article);
         return billBoardArticles.Remove(article);
     }
 
