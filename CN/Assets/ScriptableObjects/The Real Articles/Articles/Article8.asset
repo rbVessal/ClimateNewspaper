@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
+  m_Name: Article8
+  m_EditorClassIdentifier: 
+  headline: 'Unprepared and at Risk: Local Schools Lacking in Severe Weather Safety
+    Measures'
+  bodyText: 'A recent survey conducted by the Green Herald has revealed a concerning
+    lack of preparedness for severe weather events in schools across Palmer Springs,
+    putting students and staff at potential risk.
+
+    
+
+    Despite frequent severe
+    weather warnings last year, including tornadoes and severe thunderstorms, many
+    local schools have outdated or non-existent safety protocols. The survey found
+    that only 40% of schools have conducted severe weather drills in the past two
+    years.
+
+    
+
+    "Ensuring the safety of our children should be a top priority,"
+    said Emma Taylor, a parent and member of the school district''s safety committee.
+    "Our schools need the resources and plans to handle these potentially life-threatening
+    situations."
+
+    
+
+    The report has sparked a broader conversation about
+    funding and priorities in school safety measures. School board officials have
+    promised to review and update emergency preparedness protocols, a move welcomed
+    by concerned parents and educators.'
+  climateChange: 0
+  moneyChange: 0
+  reachChange: 1.5
+  articleArt: {fileID: 0}
+  articleCategory: 1

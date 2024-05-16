@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
+  m_Name: Article1
+  m_EditorClassIdentifier: 
+  headline: Divisions Emerge as Town Debates New Highway Through Historic District
+  bodyText: 'A packed town hall meeting last night revealed deep divisions among
+    residents of Palmer Springs over the proposed construction of a new highway intended
+    to ease city congestion but which would cut through the heart of our historic
+    Eastside neighborhood. City officials argue that the new highway will shorten
+    commute times and boost economic growth by connecting Palmer Springs more directly
+    with neighboring cities. "We are committed to the development of our infrastructure
+    to meet the needs of our growing population," stated Mayor Helen Brooks in her
+    address.
+
+    However, local preservationists and many Eastside residents are
+    rallying against the proposal, fearing that it will destroy the character of
+    their community and lead to displacement of long-time residents. "It''s not just
+    about buildings; it''s about the soul of our community," argued Sarah Jennings,
+    city council official from Eastside. Evironmental groups have also voiced concerns
+    over potential impacts on local wildlife and increased pollution. Dr. Emily Chang,
+    an environmental science professor at the Palmer University of Science, highlighted
+    that "Building a new highway could disrupt local ecosystems and increase our
+    carbon footprint dramatically."
+
+    As the debate continues, the Green Herald
+    (placeholder name) remains dedicated to bringing all sides of this critical discussion
+    to the forefront of community consciousness.'
+  climateChange: 0
+  moneyChange: -1
+  reachChange: 1.5
+  articleArt: {fileID: 0}
+  articleCategory: 1

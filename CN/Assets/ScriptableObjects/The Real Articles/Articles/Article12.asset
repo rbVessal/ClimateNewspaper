@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
+  m_Name: Article12
+  m_EditorClassIdentifier: 
+  headline: 'Green Space vs. Workspace: Controversial Development Plans Divide Palmer
+    Springs'
+  bodyText: 'A heated debate is unfolding in Palmer Springs over the proposed development
+    of a new industrial park on the outskirts of the city, a project that threatens
+    to pave over one of the last remaining green spaces in the area.
+
+    
+
+    Supporters
+    of the industrial park, including several high-profile business leaders and city
+    planners, argue that the development will bring much-needed jobs to the area
+    and stimulate economic growth. "We are talking about potentially hundreds of
+    jobs and increased revenue for the city," stated Michael Broford, CEO of TechBro
+    Industries.
+
+    
+
+    Opponents, however, fear the irreversible damage to
+    the local environment and the loss of public green spaces, which serve as vital
+    lungs for the city and a habitat for local wildlife. "Once these green spaces
+    are gone, they''re gone forever," warned Lisa Gold, an activist with the Cleaner
+    Springs Coalition.
+
+    
+
+    The city council has promised a series of public
+    consultations to gather feedback from residents before making a final decision.'
+  climateChange: 1.5
+  moneyChange: -1
+  reachChange: 0
+  articleArt: {fileID: 0}
+  articleCategory: 1

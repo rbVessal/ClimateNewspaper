@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
+  m_Name: Article6
+  m_EditorClassIdentifier: 
+  headline: 'Under the Radar: Homelessness on the Rise in Palmer Springs Amid Economic
+    Uncertainty'
+  bodyText: 'A recent report by Palmer Spring Social Services reveals a disturbing
+    increase in homelessness rates within our community, highlighting a crisis that
+    continues to grow amidst economic uncertainty and insufficient public resources.
+
+    
+
+    The
+    report indicates a 20% rise in the homeless population over the past year alone,
+    with many of the affected being families with young children. Local shelters
+    like House Hope are struggling to meet demand. "We are at capacity every night,"
+    says shelter manager Helen Clark. "The need is greater than ever, and we simply
+    don''t have enough resources."
+
+    
+
+    The rise in homelessness has been
+    attributed to a combination of factors, including high unemployment rates, lack
+    of affordable housing, and cuts to public assistance programs. Local officials
+    are calling for urgent action. "We need comprehensive solutions that address
+    the root causes of homelessness," stated city council member Raj Singh.
+
+    
+
+    This
+    issue not only affects those directly impacted but also influences the broader
+    social fabric of Palmer Springs, with implications for public health, crime rates,
+    and overall quality of life.'
+  climateChange: 0
+  moneyChange: 0
+  reachChange: 1.5
+  articleArt: {fileID: 0}
+  articleCategory: 1

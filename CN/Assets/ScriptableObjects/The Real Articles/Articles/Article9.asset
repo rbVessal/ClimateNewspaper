@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
+  m_Name: Article9
+  m_EditorClassIdentifier: 
+  headline: Going Green or Just for Show? Local Recycling Program Underperforms
+  bodyText: "The Green Herald's investigation into Palmer Spring's recently launched
+    municipal recycling initiative has uncovered significant shortcomings, casting
+    doubts on its effectiveness and the town's commitment to genuine environmental
+    sustainability.\r\n\r\nLaunched six months ago amidst much fanfare, the initiative
+    promised to dramatically reduce waste and improve recycling rates. However, data
+    obtained through freedom of information requests show that less than 20% of recyclables
+    are being properly processed, with the majority ending up in landfills.\r\n\r\nExperts
+    attribute the program's underperformance to a combination of inadequate funding,
+    poor public education on recycling practices, and insufficient infrastructure.
+    \"Without serious adjustments, we're merely scratching the surface of what could
+    truly be achieved,\" commented Dr. Emily Chang, an environmental science professor
+    at the Palmer Springs University of Science.\r\n\r\nResidents express frustration
+    and disillusionment. \"We were so hopeful. We thought we were making a difference,
+    but it turns out it\u2019s all been a bit of a fa\xE7ade,\" said local resident
+    Tommi Pilhnonnen."
+  climateChange: 1.5
+  moneyChange: -2
+  reachChange: 0
+  articleArt: {fileID: 0}
+  articleCategory: 1

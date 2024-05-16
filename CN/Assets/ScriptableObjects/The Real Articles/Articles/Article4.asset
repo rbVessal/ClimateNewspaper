@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
+  m_Name: Article4
+  m_EditorClassIdentifier: 
+  headline: 'Exposed: Mismanagement and Misuse of Funds in Our Schools'
+  bodyText: 'In an extensive investigation conducted over several months, the Green
+    Herald has uncovered significant financial discrepancies and apparent mismanagement
+    in the Palmer Springs School District''s handling of public funds.
+
+
+    Documents
+    obtained through Freedom of Information requests, along with interviews with
+    anonymous district employees, reveal a troubling pattern of overspending and
+    potentially fraudulent allocations of school resources.
+
+
+    Highlights from
+    the findings include:
+
+    
+
+    - **Unapproved Bonuses:** Top district officials
+    received substantial bonuses that were never approved by the school board, amounting
+    to over $200,000 in the last fiscal year.
+
+
+    - **Misallocated Technology Funds:**
+    Nearly $500,000 earmarked for classroom technology was instead spent on administrative
+    software and systems, with little to no direct benefit to students.
+
+
+    - **Questionable
+    Contracting Practices:** The district awarded a no-bid contract worth $1.5 million
+    to a consulting firm owned by a former board member, raising serious conflict
+    of interest concerns.
+
+
+    "This is an unacceptable betrayal of public trust
+    and a disservice to our students and teachers who deserve much better," said
+    an employee who wished to remain anonymous for fear of retaliation.
+
+    
+
+    The
+    Palmer Springs School District Superintendent, Mrs. Samantha Richardson, has
+    declined multiple requests for comment.
+
+    
+
+    As this story develops,
+    the Green Herald remains committed to bringing transparency to this critical
+    issue affecting our community''s educational integrity and financial health.'
+  climateChange: 0
+  moneyChange: -1
+  reachChange: 1.5
+  articleArt: {fileID: 0}
+  articleCategory: 1

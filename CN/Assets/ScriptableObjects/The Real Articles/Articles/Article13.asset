@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
+  m_Name: Article13
+  m_EditorClassIdentifier: 
+  headline: 'Growing Together: Community Garden Initiative Blossoms in Palmer Springs'
+  bodyText: "In an inspiring move towards sustainability and community spirit, the
+    new Palmer Springs Community Garden has become a vibrant hub for local residents.
+    Located in the heart of downtown, this initiative is transforming unused urban
+    space into a lush, productive garden.\r\n\r\nLaunched just six months ago, the
+    community garden now features a variety of vegetables, fruits, and herbs, all
+    cultivated by dedicated volunteers. \"This garden is about more than just growing
+    food; it's about growing community,\" says project coordinator Vanya Artemova.
+    \"We\u2019ve seen people of all ages come together to learn, share, and support
+    each other.\"\r\n\r\nNot only does the garden provide fresh, organic produce
+    to residents, but it also promotes environmental education. Weekly workshops
+    on topics like composting, water conservation, and urban farming have been well-attended.
+    \"It's a fantastic way to learn sustainable practices and make new friends,\"
+    notes participant Jonathan Kim.\r\n\r\nMoreover, the garden contributes to the
+    town\u2019s green space, improving air quality and providing a habitat for local
+    wildlife. Plans are already underway to expand the initiative to other neighborhoods."
+  climateChange: 1
+  moneyChange: 0
+  reachChange: 1
+  articleArt: {fileID: 0}
+  articleCategory: 1

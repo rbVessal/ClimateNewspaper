@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
+  m_Name: Article18
+  m_EditorClassIdentifier: 
+  headline: 'Running for a Cause: Charity Run Draws Record Participation'
+  bodyText: 'The annual Palmer Springs Charity Run saw record participation this
+    year, with over 2,000 runners hitting the streets to raise funds for local causes.
+    The event, which included a 5K, 10K, and a fun run for children, brought together
+    people of all ages in a spirited display of community solidarity.
+
+    
+
+    Organized
+    by the Palmer Community Foundation, the run aimed to support a variety of local
+    charities, including the Palmer Food Bank, the Children''s Hospital, and environmental
+    conservation projects like the Greener Springs Coalition. "We''re thrilled by
+    the turnout and the generosity of our community," said foundation president Todd
+    Walles. "Every step taken today helps make Palmer Springs a better place."
+
+    
+
+    Participants
+    enjoyed a festive atmosphere with live music, food stalls, and wellness booths
+    offering free health screenings and fitness tips. Local businesses sponsored
+    the event, providing water stations, prizes, and promotional materials.
+
+    
+
+    "We
+    wanted to create an event that not only raises funds but also promotes health
+    and well-being," said event coordinator James Brown. "It''s heartening to see
+    so many people come together for a good cause."'
+  climateChange: 0
+  moneyChange: 0
+  reachChange: 1
+  articleArt: {fileID: 0}
+  articleCategory: 1

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
+  m_Name: Ad1
+  m_EditorClassIdentifier: 
+  headline: Drive Your Dream - Mega Sale Event at Palmer Spring Autos!
+  bodyText: Conquer all terrains with the all-new 2024 Apex Predator SUV! Experience
+    luxury and power like never before. With advanced 4x4 capabilities and unmatched
+    comfort, the road is yours to own. Visit Palmer Spring Autos this weekend for
+    a test drive and leave with a new car.
+  climateChange: -2
+  moneyChange: 1.5
+  reachChange: -1
+  articleArt: {fileID: 0}
+  articleCategory: 0

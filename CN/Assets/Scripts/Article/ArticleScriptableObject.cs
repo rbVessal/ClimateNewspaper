@@ -20,8 +20,8 @@ public class ArticleScriptableObject : ScriptableObject
     public string headline;
     [TextArea] public string bodyText;
     public float climateChange;
-    public int moneyChange;
-    public int reachChange;
+    public float moneyChange;
+    public float reachChange;
     public Sprite articleArt;
     public ArticleCategory articleCategory;
     

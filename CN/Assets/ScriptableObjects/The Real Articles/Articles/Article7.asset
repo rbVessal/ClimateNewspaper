@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
+  m_Name: Article7
+  m_EditorClassIdentifier: 
+  headline: 'Turning the Page: Severe Budget Cuts Threaten Palmer Springs Library''s
+    Future'
+  bodyText: 'In a troubling development for book lovers and lifelong learners, the
+    Palmer Springs Public Library faces significant budget cuts that could lead to
+    reduced services, fewer new books, and shorter opening hours.
+
+    
+
+    The
+    proposed cuts, amounting to 30% of the library''s annual funding, come as the
+    city council struggles to close a widening budget deficit. "We must make difficult
+    choices, and unfortunately, the library''s funding is part of the necessary cuts,"
+    said city council member Raj Singh.
+
+    
+
+    Local librarians and patrons
+    are rallying to save the library services that many deem essential. "The library
+    is more than just a place to borrow books; it''s a community hub, a place of
+    learning, and a safe haven for many," argues head librarian Maria Gonzalez.
+
+    
+
+    Activists
+    warn that the cuts could disproportionately affect the town''s most vulnerable
+    populations, including children and the elderly, who rely on the library for
+    access to educational resources and community programs.'
+  climateChange: 0
+  moneyChange: 0
+  reachChange: 0
+  articleArt: {fileID: 0}
+  articleCategory: 1

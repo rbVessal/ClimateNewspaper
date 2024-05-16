@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
+  m_Name: Article3
+  m_EditorClassIdentifier: 
+  headline: 'Rare Discovery: Endangered Owl Spotted in Palmer Woods'
+  bodyText: 'Wildlife enthusiasts and ecologists are buzzing with excitement after
+    the recent sighting of the Short Eared Owl, thought to be nearly extinct, in
+    the dense woodlands of Palmer Woods. The rare owl was spotted by local birdwatcher,
+    Jamie Horton, who managed to capture stunning photographs of the bird perched
+    in the lower branches during an early morning hike. "I couldn''t believe my eyes,"
+    Horton said. "It was a magical moment to see such a rare creature in its natural
+    habitat."
+
+
+    Experts confirm that this sighting is significant as it indicates
+    that Palmer Woods still harbor diverse wildlife ecosystems that are crucial for
+    biodiversity. Conservation groups are now calling for increased protection measures
+    for the forest, urging local authorities to halt any development projects that
+    could threaten its integrity.
+
+
+    "This sighting is a stark reminder of what
+    we stand to lose if we don''t act to protect our natural environments," said
+    Dr. Rachel Ramora, a conservation biologist at the Palmer University of Science.
+
+'
+  climateChange: 1
+  moneyChange: -1
+  reachChange: 0
+  articleArt: {fileID: 0}
+  articleCategory: 1

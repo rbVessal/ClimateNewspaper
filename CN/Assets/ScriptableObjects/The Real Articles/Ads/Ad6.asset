@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
+  m_Name: Ad6
+  m_EditorClassIdentifier: 
+  headline: Crave the Save at Burger Oligarchs!
+  bodyText: Dive into deliciousness with our new Mega Burger Combo at just $5.99!
+    More taste, more value. Why wait? Hurry to your nearest Burger Oligarchs and
+    satisfy your cravings without emptying your wallet!
+  climateChange: 0
+  moneyChange: 1
+  reachChange: -2
+  articleArt: {fileID: 0}
+  articleCategory: 0

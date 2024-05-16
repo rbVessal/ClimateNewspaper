@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
+  m_Name: Article17
+  m_EditorClassIdentifier: 
+  headline: 'Coloring Our Future: Community Art Project Brings Vibrancy to South
+    Side Palmer Springs'
+  bodyText: 'South Side Palmer Springs has undergone a stunning transformation thanks
+    to a community art project that brought together local artists, residents, and
+    businesses to create vibrant murals and public art installations.
+
+    
+
+    The
+    project, titled "Coloring Our Future," was spearheaded by the Palmer Arts Council
+    and funded through a combination of local business sponsorships and a city arts
+    grant. Over the past month, volunteers and artists have worked tirelessly to
+    turn previously bland and neglected walls into colorful canvases that celebrate
+    the town''s history, diversity, and natural beauty.
+
+    
+
+    "The response
+    from the community has been overwhelmingly positive," said project coordinator
+    Sonya Liotiris. "People are excited to see their stories and heritage reflected
+    in these beautiful artworks."
+
+    
+
+    Local businesses have reported an
+    increase in foot traffic as residents and visitors flock to see the new murals.
+    "It''s amazing how art can bring people together and create such a positive buzz
+    around town," said shop owner Greg Simmons.
+
+    
+
+    The project also included
+    workshops and art classes for local youth, fostering a new generation of artists
+    and encouraging community engagement.'
+  climateChange: 0
+  moneyChange: 0
+  reachChange: 1.5
+  articleArt: {fileID: 0}
+  articleCategory: 1

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
+  m_Name: Article15
+  m_EditorClassIdentifier: 
+  headline: 'Flowing Clean: Community Effort Revitalizes Palmer River'
+  bodyText: 'Over the past weekend, hundreds of Palmer Springs residents joined forces
+    to clean up the Palmer River, marking a significant step towards restoring the
+    health and beauty of this vital waterway.
+
+    
+
+    The event, organized by
+    the Cleaner Springs Coalition, saw volunteers from all walks of life gather to
+    remove trash, debris, and invasive plant species from the riverbanks. "Our river
+    is a precious resource, and it''s our responsibility to protect and preserve
+    it," said Coalition leader Lisa Gold.
+
+    
+
+    In total, volunteers collected
+    over 2,000 pounds of waste, including discarded tires, plastic bottles, and other
+    pollutants. The cleanup effort not only improved the river''s appearance but
+    also its ecosystem, providing a cleaner habitat for local wildlife.
+
+    
+
+    The
+    initiative received strong support from local businesses and government officials,
+    who provided supplies, refreshments, and logistical assistance. Mayor Helen Brooks,
+    who participated in the cleanup, remarked, "This is a fantastic example of community
+    spirit and environmental stewardship."'
+  climateChange: 0
+  moneyChange: 1
+  reachChange: 1
+  articleArt: {fileID: 0}
+  articleCategory: 1
