@@ -69,8 +69,13 @@ public class CoDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
         if (isDraggable)
         {
             canvasGroup.blocksRaycasts = true;
-            
-            onEndDragDelegate();
+
+            // It's possible to get a null error if we don't check
+            // to see if there are any subscribers to this delegate
+            if (onEndDragDelegate != null)
+            {
+                onEndDragDelegate();
+            }
         }
     }
 }
