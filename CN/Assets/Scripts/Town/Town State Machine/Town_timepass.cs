@@ -8,7 +8,7 @@ public class Town_timepass : TownStateBase
     {
         Debug.Log("Entered " + town.state + " state.");
         Debug.Log("Beginning passage of time.");
-        town.econManager.SetEconomy(0,0,town.climateImpact);
+        //town.econManager.SetEconomy(0,0,town.climateImpact);
         town.AdjustFog();
     }
 

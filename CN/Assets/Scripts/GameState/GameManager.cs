@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    
+    public static event Action StartDay;
     [SerializeField] private int dayNumber = 1;
     [SerializeField] public int articlesToAddPerDay = 4;
 
@@ -26,5 +27,7 @@ public class GameManager : MonoBehaviour
         
         //pop up any text menus, other stuff if required
         
+        //Send out day started event.
+        StartDay?.Invoke();
     }
 }

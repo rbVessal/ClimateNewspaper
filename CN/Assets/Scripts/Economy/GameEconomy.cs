@@ -15,6 +15,16 @@ public class GameEconomy
         Money         = money;
         Reach         = mediaReach;
         ClimateImpact = climateImpact;
+
+        // Ensure ClimateImpact stays within the range of 0 to 100
+        if (ClimateImpact > 100)
+        {
+            ClimateImpact = 100;
+        }
+        else if (ClimateImpact < 0)
+        {
+            ClimateImpact = 0;
+        }
     }
 
     //Debug method
@@ -33,5 +43,15 @@ public class GameEconomy
         Money         += moneyChanges;
         Reach         += reachChanges;
         ClimateImpact += climateChanges;
+
+        // Ensure ClimateImpact stays within the range of 0 to 100
+        if (ClimateImpact > 100)
+        {
+            ClimateImpact = 100;
+        }
+        else if (ClimateImpact < 0)
+        {
+            ClimateImpact = 0;
+        }
     }
 }
