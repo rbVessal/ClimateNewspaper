@@ -32,6 +32,7 @@ public class SoundManager : MonoBehaviour
 	
 	[Space] [Header("Music")] 
 	public AudioClip[] MainGameMusic;
+	public AudioClip currentMusic;
 	
 	
 	[Space] [Header("Ambience")] 
@@ -54,6 +55,8 @@ public class SoundManager : MonoBehaviour
 	public AudioSource musicSource;
 	public AudioSource sfxSource;
 	public AudioSource ambienceSource;
+
+	private EconomyManager econManager;
 
 	#region Properties
 
@@ -153,7 +156,7 @@ public class SoundManager : MonoBehaviour
 					{
 						current = 0;
 					}
-					musicSource.clip = MainGameMusic[Random.Range(0,MainGameMusic.Length)];
+					musicSource.clip = currentMusic;
 				}
 				else
 				{
@@ -199,6 +202,9 @@ public class SoundManager : MonoBehaviour
 		}
 	}
 	
-	
-	
+	//function to set music. Town Calculate state calls this function.
+	public void DetermineMusic(AudioClip music)
+	{
+		currentMusic = music;
+	}
 }

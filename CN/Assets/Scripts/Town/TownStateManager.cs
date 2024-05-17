@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,14 +39,23 @@ public class TownStateManager : MonoBehaviour
     public AudioClip AmbientSFX;
     public EconomyManager econManager;
 
-    
+    private void OnEnable()
+    {
+        GameManager.StartDay += ChangeToCalculate;
+        NewspaperEditor.PublishClicked += ChangeToTimePass;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.StartDay -= ChangeToCalculate;
+        NewspaperEditor.PublishClicked -= ChangeToTimePass;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        state = idle;
+        state = calculate;
         state.EnterState(this);
-        climateImpact = econManager.GetEconomy().ClimateImpact;
         AdjustFog();
     }
 
@@ -59,7 +69,7 @@ public class TownStateManager : MonoBehaviour
         DebugStateChange(); //Allows us to change the state manually in editor for debug purposes, it skips exit conditions.
         state.UpdateState(this);
     }
-    void ChangeState(TownStateBase newState)
+    public void ChangeState(TownStateBase newState)
     {
         state = newState;
         newState.EnterState(this);
@@ -154,6 +164,23 @@ public class TownStateManager : MonoBehaviour
     public void PublishButtonEvent()
     {
         if(state == idle)
+        {
+            ChangeState(timepass);
+        }
+    }
+
+    void ChangeToCalculate()
+    {
+        if (state != calculate)
+        {
+            ChangeState(calculate);
+        }
+        
+    }
+
+    void ChangeToTimePass()
+    {
+        if (state != timepass)
         {
             ChangeState(timepass);
         }

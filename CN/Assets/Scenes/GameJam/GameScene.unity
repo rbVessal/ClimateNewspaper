@@ -158,6 +158,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4505258256864533468, guid: aeae095162c6cba47a950fe73e095313, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6269630903483519232, guid: aeae095162c6cba47a950fe73e095313, type: 3}
       propertyPath: fadeDuration
       value: 0.25
@@ -1050,7 +1054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1116798815181176, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1116798815181176, guid: 878ab3072b054f64697b91b6619e5de8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1583,7 +1587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8336400770574450002, guid: a59e17797e2b242499c7f8a7704e765a, type: 3}
       propertyPath: impactBase
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

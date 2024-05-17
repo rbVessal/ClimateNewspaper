@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class NewspaperEditor : MonoBehaviour
 {
+    public static event Action PublishClicked;
     [SerializeField] public GameObject FrontPage;
     [SerializeField] public GameObject BackPage;
 
@@ -66,13 +67,16 @@ public class NewspaperEditor : MonoBehaviour
         {
             articleManager.ClearAllComputerArticles();
         }
-        
+
         // Now we can finally start the new day
-        GameManager gameManager = FindObjectOfType<GameManager>();
-        if (gameManager != null)
-        {
-            gameManager.StartNewDay();
-        }
+        //GameManager gameManager = FindObjectOfType<GameManager>();
+        //if (gameManager != null)
+        //{
+        //    gameManager.StartNewDay();
+        //}
+        //Change state to town
+        GameStateManager.Main.ChangeStateToTown();
+        PublishClicked?.Invoke();
     }
 
     public void UpdateEconomyUI(GameObject articleGameObject, GameObject articleSlotGameObject, bool wasArticleAdded)
