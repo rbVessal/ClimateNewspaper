@@ -32,4 +32,9 @@ public class GameManager : MonoBehaviour
         //Send out day started event.
         StartDay?.Invoke();
     }
+
+    public void SetDay(int newDayNumber)
+    {
+        dayNumber = newDayNumber;
+    }
 }
