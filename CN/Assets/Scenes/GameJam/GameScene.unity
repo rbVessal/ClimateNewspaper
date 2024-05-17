@@ -501,7 +501,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3319949906184002557, guid: 205a0d8eb777c134a9ff952545874d97, type: 3}
       propertyPath: dayNumber
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3805026577829980160, guid: 205a0d8eb777c134a9ff952545874d97, type: 3}
       propertyPath: m_LocalPosition.x
