@@ -20,6 +20,8 @@ public class ArticleManager : MonoBehaviour
     [Tooltip("Articles that are on the PC")] 
     [SerializeField] private List<ArticleScriptableObject> computerArticles;
 
+    [SerializeField] private List<ArticleScriptableObject> dayZeroArticles;
+
     [SerializeField] private int billBoardArticleMax;
 
     [SerializeField] private BulletinManager billBoard;
@@ -57,6 +59,13 @@ public class ArticleManager : MonoBehaviour
         }
     }
 
+    public void ChooseTutorialArticles()
+    {
+        foreach (var article in dayZeroArticles)
+        {
+            AddToBillBoard(article);
+        }
+    }
 
     //called when the day starts to add articles to the ones on the billboard
     //can be used for just adding back from the computer as well

@@ -6,20 +6,22 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static event Action StartDay;
-    [SerializeField] private int dayNumber = 1;
+    [SerializeField] private int dayNumber = -1;
     [SerializeField] public int articlesToAddPerDay = 4;
 
     // Start is called before the first frame update
     void Start()
     {
         //StartNewDay();
+        
     }
     
     public void StartNewDay()
     {
-        
+        dayNumber += 1;
         //allocate articles on billboard
-        FindObjectOfType<ArticleManager>().ChooseArticlesRandomlyForBillboard(articlesToAddPerDay);
+        if(dayNumber==0) FindObjectOfType<ArticleManager>().ChooseTutorialArticles(); // if its tutorial day
+        else FindObjectOfType<ArticleManager>().ChooseArticlesRandomlyForBillboard(articlesToAddPerDay);
 
         //begin at the billboard
         GameStateManager.Main.ChangeStateToBillboard(true);
