@@ -46,6 +46,7 @@ public class GameStateManager : MonoBehaviour
             TownCanvas.SetActive(false);
             BillboardCanvas.SetActive(false);
             FindObjectOfType<NewspaperManager>().UpdateArticles();
+            SoundManager.main.PlayAmbientNoise(SoundManager.main.Office);
             Debug.Log("Game state changed to editing");
         }
     }
@@ -62,6 +63,7 @@ public class GameStateManager : MonoBehaviour
             {
                 FindObjectOfType<BulletinManager>().ResetButtons();
             }
+            SoundManager.main.PlayAmbientNoise(SoundManager.main.Office);
             Debug.Log("Game state changed to Billboard");
         }
     }
@@ -73,6 +75,7 @@ public class GameStateManager : MonoBehaviour
             EditorCanvas.SetActive(false);
             TownCanvas.SetActive(true);
             BillboardCanvas.SetActive(false);
+            SoundManager.main.PlayAmbientNoise(SoundManager.main.Town[0]);
             Debug.Log("Game state changed to town");
         }
     }

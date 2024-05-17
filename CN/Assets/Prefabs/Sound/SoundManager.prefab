@@ -341,17 +341,19 @@ MonoBehaviour:
   musicVolume: 0
   sfxVolume: 0
   ambienceVolume: 0
-  MainGameMusic: []
-  Office: {fileID: 0}
-  Town: []
+  MainGameMusic:
+  - {fileID: 8300000, guid: 524e48d0e2022794694aabe6ded096f1, type: 3}
+  Office: {fileID: 8300000, guid: 9b1434092c1fe55409324e1afa1b2227, type: 3}
+  Town:
+  - {fileID: 8300000, guid: a15b0b8aba0db95409b351041731b901, type: 3}
   isInMainMenuScene: 0
   Scanner_Buzz: {fileID: 0}
-  PC_Startup: {fileID: 0}
+  PC_Startup: {fileID: 8300000, guid: a179ac500a39d684392ef914c6f00865, type: 3}
   Keyboard_Typing: {fileID: 0}
   UI_Confirm: {fileID: 0}
   UI_Select: {fileID: 0}
   UI_Pause: {fileID: 0}
   Printing: {fileID: 0}
-  musicSource: {fileID: 0}
-  sfxSource: {fileID: 0}
-  ambienceSource: {fileID: 0}
+  musicSource: {fileID: 4505258256864533468}
+  sfxSource: {fileID: 2084393013794914836}
+  ambienceSource: {fileID: 1602471791410460218}
