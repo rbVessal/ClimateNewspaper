@@ -1,4 +1,5 @@
 ﻿
+using DG.Tweening;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -36,6 +37,7 @@ public class SoundManager : MonoBehaviour
 	[Space] [Header("Ambience")] 
 	public AudioClip Office;
 	public AudioClip[] Town;
+	public float fadeDuration;
 
 	
 	[SerializeField] private bool isInMainMenuScene;
@@ -138,7 +140,7 @@ public class SoundManager : MonoBehaviour
 		int current = 0;
 		if (!mainMenu)
 		{
-			yield return new WaitForSeconds(5);
+			yield return new WaitForSeconds(1);
 		}
 		while (gameObject.activeSelf)
 		{
@@ -164,6 +166,38 @@ public class SoundManager : MonoBehaviour
 		}
 	}
 	
+	public void PlayAmbientNoise(AudioClip ambientSound)
+	{
+		//Check if an audio is playing
+		if (ambienceSource.isPlaying)
+		{
+			AudioClip currentClip = ambienceSource.clip;
+			//Check if the clip we want to play is different
+			if(currentClip == ambientSound)
+			{
+				return; //If clip is the same don't do anything
+			}
+			else
+			{
+                // Fade out the current sound, set the new clip, and fade in the new sound
+                DOTween.To(() => ambienceSource.volume, x => ambienceSource.volume = x, 0f, fadeDuration).OnComplete(() =>
+                {
+                    ambienceSource.Stop();
+                    ambienceSource.clip = ambientSound;
+                    ambienceSource.Play();
+                    DOTween.To(() => ambienceSource.volume, x => ambienceSource.volume = x, 1f, fadeDuration);
+                });
+			}
+		}
+		else
+		{
+            // Set the clip, start playing with volume set to 0, and fade in
+            ambienceSource.clip = ambientSound;
+            ambienceSource.volume = 0f;
+            ambienceSource.Play();
+            DOTween.To(() => ambienceSource.volume, x => ambienceSource.volume = x, 1f, fadeDuration);
+		}
+	}
 	
 	
 	

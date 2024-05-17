@@ -121,7 +121,7 @@ public class TownStateManager : MonoBehaviour
         var mainModule = fogParticleSystem.main;
         mainModule.startColor = fogColor;
 
-        Debug.Log("Alpha value " + alpha);
+        //Debug.Log("Alpha value " + alpha);
     }
 
     public void AdjustFog()
@@ -146,7 +146,7 @@ public class TownStateManager : MonoBehaviour
         }, alpha, duration)
         .OnUpdate(() =>
         {
-            Debug.Log("Alpha value " + initialAlpha);
+            //Debug.Log("Alpha value " + initialAlpha);
         });
         
     }
