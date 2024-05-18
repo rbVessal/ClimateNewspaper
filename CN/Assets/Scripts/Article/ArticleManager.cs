@@ -143,9 +143,16 @@ public class ArticleManager : MonoBehaviour
         
     }
 
-    public void ClearUsedBillBoardArticles()
+    public void ClearUsedBillBoardArticlesOnDayZero()
     {
-        
+        if (FindObjectOfType<GameManager>().GetDay() == 0)
+        {
+            billBoardArticles.Clear();
+            foreach (var article in dayZeroArticles)
+            {
+                billBoard.RemoveArticle(article);
+            }
+        }
     }
 
 }

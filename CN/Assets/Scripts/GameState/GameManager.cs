@@ -37,4 +37,6 @@ public class GameManager : MonoBehaviour
     {
         dayNumber = newDayNumber;
     }
+
+    public int GetDay() => dayNumber;
 }

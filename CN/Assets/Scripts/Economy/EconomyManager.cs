@@ -10,6 +10,7 @@ public class EconomyManager : MonoBehaviour
     public static event Action<GameEconomy> Link;
     
     private GameEconomy economy;
+    private GameEconomy temporaryEconomy;//temporary change variable
 
     [Header("Starting Values")]
     //base values
@@ -20,6 +21,8 @@ public class EconomyManager : MonoBehaviour
     {
         //instantiate Economy class
         economy = new GameEconomy(moneyBase, reachBase, impactBase);
+        temporaryEconomy = new GameEconomy(moneyBase, reachBase, impactBase);
+
     }
     // Start is called before the first frame update
     void Start()
@@ -41,7 +44,7 @@ public class EconomyManager : MonoBehaviour
     //Sends economy values to UI
     public void SendToUI()
     {
-        Link?.Invoke(economy);
+        Link?.Invoke(temporaryEconomy);
     }
 
     //Updates the economy additively 
@@ -66,4 +69,67 @@ public class EconomyManager : MonoBehaviour
     {
         return economy;
     }
+    
+    public ArticleValues CalculateArticleValues(ArticleScriptableObject articleSO, GameObject pageGameObject, GameObject articleSlotGameObject)
+    {
+        ArticleValues articleValues = new ArticleValues();
+
+        float pageMultiplier = 1.0f;
+        CoBonusStats pageMultiplierBonusStats = pageGameObject.GetComponent<CoBonusStats>();
+        if(pageMultiplierBonusStats != null) 
+        {
+            pageMultiplier = pageMultiplierBonusStats.multiplier;
+        }
+
+        float articleSlotMultiplier = 1.0f;
+        CoBonusStats articleBonusStats = articleSlotGameObject.GetComponent<CoBonusStats>();
+        if(articleBonusStats != null) 
+        {
+            articleSlotMultiplier = articleBonusStats.multiplier;
+        }
+
+
+        int finalReachChange = articleSO.reachChange + economy.Reach;
+        int finalMoneyChange = articleSO.moneyChange>0?articleSO.moneyChange * (1 + economy.Reach / 100):articleSO.moneyChange;
+        float finalClimateChange = articleSO.climateChange>0?articleSO.climateChange * (1 + economy.Reach / 100):articleSO.climateChange;
+
+        articleValues.money = (int)(finalMoneyChange * pageMultiplier * articleSlotMultiplier);
+        articleValues.reach = (int)(finalReachChange * pageMultiplier * articleSlotMultiplier);
+        articleValues.climate = finalClimateChange * pageMultiplier * articleSlotMultiplier;
+
+        return articleValues;
+    }
+
+    public void AddToTemporaryEconomy(ArticleValues articleValues)
+    {
+        temporaryEconomy.Money += articleValues.money;
+        temporaryEconomy.Reach += articleValues.reach;
+        temporaryEconomy.ClimateImpact += articleValues.climate;
+        SendToUI();
+    }
+
+    public void SubtractFromTemporaryEconomy(ArticleValues articleValues)
+    {
+        temporaryEconomy.Money -= articleValues.money;
+        temporaryEconomy.Reach -= articleValues.reach;
+        temporaryEconomy.ClimateImpact -= articleValues.climate;
+        SendToUI();
+    }
+
+    public void changeEconomyPermanently()
+    {
+        if (FindObjectOfType<GameManager>().GetDay() > 0)//does not apply on tutorial days
+        {
+            
+            economy.Money = temporaryEconomy.Money;
+            economy.ClimateImpact = temporaryEconomy.ClimateImpact;
+            economy.Reach = temporaryEconomy.Reach;
+        }
+
+        temporaryEconomy.Money = economy.Money;
+        temporaryEconomy.Reach = economy.Reach;
+        temporaryEconomy.ClimateImpact = economy.ClimateImpact;
+        SendToUI();
+    }
+
 }

@@ -81,6 +81,7 @@ public class NewspaperEditor : MonoBehaviour
 
     public void UpdateEconomyUI(GameObject articleGameObject, GameObject articleSlotGameObject, bool wasArticleAdded)
     {
+        
         // Make the economy UI update based on whatever article just dropped
         if (articleGameObject != null)
         {
@@ -95,15 +96,17 @@ public class NewspaperEditor : MonoBehaviour
                     {
                         //Debug.Log("Editor - economy manager");
 
-                        ArticleValues articleValues = CalculateArticleValues(articleSO, articleSlotGameObject.transform.parent.gameObject, articleSlotGameObject);
+                        ArticleValues articleValues = economyManager.CalculateArticleValues(articleSO, articleSlotGameObject.transform.parent.gameObject, articleSlotGameObject);
 
-                        if (wasArticleAdded)
+                        if (wasArticleAdded)//dragged in
                         {
-                            economyManager.UpdateEconomy(articleValues.money, articleValues.reach, articleValues.climate);
+                            //economyManager.UpdateEconomy(articleValues.money, articleValues.reach, articleValues.climate);
+                            economyManager.AddToTemporaryEconomy(articleValues);
                         }
-                        else
+                        else//dragged out
                         {
-                            economyManager.UpdateEconomy(-articleValues.money, -articleValues.reach, -articleValues.climate);
+                            //economyManager.UpdateEconomy(-articleValues.money, -articleValues.reach, -articleValues.climate);
+                            economyManager.SubtractFromTemporaryEconomy(articleValues);
                         }
                     }
                 }
@@ -111,30 +114,6 @@ public class NewspaperEditor : MonoBehaviour
         }
     }
 
-    private ArticleValues CalculateArticleValues(ArticleScriptableObject articleSO, GameObject pageGameObject, GameObject articleSlotGameObject)
-    {
-        ArticleValues articleValues = new ArticleValues();
-
-        float pageMultiplier = 1.0f;
-        CoBonusStats pageMultiplierBonusStats = pageGameObject.GetComponent<CoBonusStats>();
-        if(pageMultiplierBonusStats != null) 
-        {
-            pageMultiplier = pageMultiplierBonusStats.multiplier;
-        }
-
-        float articleSlotMultiplier = 1.0f;
-        CoBonusStats articleBonusStats = articleSlotGameObject.GetComponent<CoBonusStats>();
-        if(articleBonusStats != null) 
-        {
-            articleSlotMultiplier = articleBonusStats.multiplier;
-        }
-
-        articleValues.money = (int)(articleSO.moneyChange * pageMultiplier * articleSlotMultiplier);
-        articleValues.reach = (int)(articleSO.reachChange * pageMultiplier * articleSlotMultiplier);
-        articleValues.climate = articleSO.climateChange * pageMultiplier * articleSlotMultiplier;
-
-        return articleValues;
-    }
 
     // Delegate method for on dropped article event from CoDropItemSlot
     public void OnDroppedArticle(GameObject articleGameObject, GameObject slotGameObject)
