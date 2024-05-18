@@ -17,8 +17,8 @@ MonoBehaviour:
     luxury and power like never before. With advanced 4x4 capabilities and unmatched
     comfort, the road is yours to own. Visit Palmer Spring Autos this weekend for
     a test drive and leave with a new car.
-  climateChange: -2
-  moneyChange: 1.5
-  reachChange: -1
+  climateChange: -20
+  moneyChange: 10
+  reachChange: -20
   articleArt: {fileID: 0}
   articleCategory: 0

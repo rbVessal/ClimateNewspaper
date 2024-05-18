@@ -17,7 +17,7 @@ MonoBehaviour:
     More taste, more value. Why wait? Hurry to your nearest Burger Oligarchs and
     satisfy your cravings without emptying your wallet!
   climateChange: 0
-  moneyChange: 1
-  reachChange: -2
+  moneyChange: 10
+  reachChange: -20
   articleArt: {fileID: 0}
   articleCategory: 0

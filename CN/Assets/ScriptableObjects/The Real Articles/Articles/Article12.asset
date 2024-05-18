@@ -39,8 +39,8 @@ MonoBehaviour:
 
     The city council has promised a series of public consultations
     to gather feedback from residents before making a final decision.'
-  climateChange: 1.5
-  moneyChange: -1
+  climateChange: 15
+  moneyChange: -10
   reachChange: 0
   articleArt: {fileID: 0}
   articleCategory: 1

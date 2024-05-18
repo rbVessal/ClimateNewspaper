@@ -34,8 +34,8 @@ MonoBehaviour:
     Dr. Rachel Ramora, a conservation biologist at the Palmer University of Science.
 
 '
-  climateChange: 1
-  moneyChange: -1
+  climateChange: 10
+  moneyChange: -10
   reachChange: 0
   articleArt: {fileID: 0}
   articleCategory: 1

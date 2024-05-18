@@ -17,15 +17,15 @@ MonoBehaviour:
     School has launched a comprehensive recycling program that promises to significantly
     reduce waste and educate students on sustainable practices.
 
-    
 
-    The
-    program, initiated by the school''s Green Club, includes a variety of activities
-    such as classroom recycling bins, educational workshops, and a weekly collection
-    drive for paper, plastics, and metals. "We want to empower students to make a
-    difference and lead by example," said Green Club advisor Mrs. Karen Lee.
 
-    
+    The program,
+    initiated by the school''s Green Club, includes a variety of activities such
+    as classroom recycling bins, educational workshops, and a weekly collection drive
+    for paper, plastics, and metals. "We want to empower students to make a difference
+    and lead by example," said Green Club advisor Mrs. Karen Lee.
+
+
 
     Already,
     the initiative has seen impressive results. In its first month, the school has
@@ -33,13 +33,13 @@ MonoBehaviour:
     "It''s amazing to see how much we can accomplish when we work together," shared
     student leader Jake Tomlin.
 
-    
 
-    The school plans to expand the program
-    to include composting organic waste from the cafeteria and collaborating with
-    local businesses to promote wider community recycling efforts.'
+
+    The school plans to expand the program to
+    include composting organic waste from the cafeteria and collaborating with local
+    businesses to promote wider community recycling efforts.'
   climateChange: 5
   moneyChange: 0
-  reachChange: 1
+  reachChange: 10
   articleArt: {fileID: 0}
   articleCategory: 1

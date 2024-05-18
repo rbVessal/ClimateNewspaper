@@ -17,14 +17,14 @@ MonoBehaviour:
     for a new commercial project that would encroach upon the delicate wetlands bordering
     Palmer Springs.
 
-    
 
-    The proposed development, which includes a shopping
-    complex and parking facilities, would require significant land clearing and alteration
+
+    The proposed development, which includes a shopping complex
+    and parking facilities, would require significant land clearing and alteration
     of the wetlands ecosystem, home to numerous plant and animal species. Local environmentalists
     warn that such disturbances could have far-reaching ecological consequences.
 
-    
+
 
     "Wetlands
     are essential for maintaining water quality, regulating flooding, and providing
@@ -32,21 +32,21 @@ MonoBehaviour:
     in wetland ecosystems. "Their destruction could have irreversible impacts on
     our local environment."
 
-    
 
-    Concerned citizens have organized petitions
-    and protests to oppose the project, urging city officials to prioritize environmental
+
+    Concerned citizens have organized petitions and
+    protests to oppose the project, urging city officials to prioritize environmental
     conservation over short-term economic gains. However, developers argue that the
     project will create jobs and stimulate economic growth in the area.
 
-    
+
 
     As
     debates rage on, the fate of Palmer Spring''s wetlands hangs in the balance,
     raising fundamental questions about the town''s commitment to environmental stewardship
     and sustainable development.'
-  climateChange: 1.5
-  moneyChange: -1
+  climateChange: 15
+  moneyChange: -10
   reachChange: 0
   articleArt: {fileID: 0}
   articleCategory: 1

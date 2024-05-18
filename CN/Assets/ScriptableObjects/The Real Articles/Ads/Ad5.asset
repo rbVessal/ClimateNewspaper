@@ -16,8 +16,8 @@ MonoBehaviour:
   bodyText: Dreaming of the perfect home? Reliable Constructions can make it happen!
     Special discounts for Palmer Springs residents this month. Contact us for a free
     consultation.
-  climateChange: -2
-  moneyChange: 2
-  reachChange: -1
+  climateChange: -20
+  moneyChange: 20
+  reachChange: -10
   articleArt: {fileID: 0}
   articleCategory: 0

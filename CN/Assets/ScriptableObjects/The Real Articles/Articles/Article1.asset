@@ -36,7 +36,7 @@ MonoBehaviour:
     (placeholder name) remains dedicated to bringing all sides of this critical discussion
     to the forefront of community consciousness.'
   climateChange: 0
-  moneyChange: -1
-  reachChange: 1.5
+  moneyChange: -10
+  reachChange: 15
   articleArt: {fileID: 0}
   articleCategory: 1

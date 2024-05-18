@@ -17,7 +17,7 @@ MonoBehaviour:
     Sign up today and get 20% off your first Botox session. Your secret to eternal
     youth awaits!
   climateChange: 0
-  moneyChange: 1
-  reachChange: -2
+  moneyChange: 10
+  reachChange: -20
   articleArt: {fileID: 0}
   articleCategory: 0

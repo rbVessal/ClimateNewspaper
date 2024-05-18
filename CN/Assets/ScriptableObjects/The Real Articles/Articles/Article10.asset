@@ -17,7 +17,7 @@ MonoBehaviour:
     Palmer Springs finds itself at the forefront of a growing movement to address
     the plastic pollution crisis and reduce reliance on single-use plastics.
 
-    
+
 
     Local
     environmental organizations have sounded the alarm, citing the detrimental effects
@@ -25,28 +25,28 @@ MonoBehaviour:
     to ignore the devastating impact of plastic waste on our environment," emphasized
     Maria Markou, founder of Plastic-Free Palmer.
 
-    
 
-    In response, community
-    leaders and businesses are taking action to curb plastic consumption. Several
-    local restaurants and cafes have pledged to eliminate single-use plastics such
-    as straws, utensils, and takeout containers, while grocery stores are encouraging
-    customers to use reusable bags and containers.
 
-    
+    In response, community leaders
+    and businesses are taking action to curb plastic consumption. Several local restaurants
+    and cafes have pledged to eliminate single-use plastics such as straws, utensils,
+    and takeout containers, while grocery stores are encouraging customers to use
+    reusable bags and containers.
 
-    Additionally, city
-    officials are considering implementing a ban on single-use plastics in public
-    facilities and events, following the lead of neighboring towns and cities.
 
-    
 
-    While
-    these initiatives represent significant progress in the fight against plastic
-    pollution, advocates stress the need for broader systemic changes and consumer
-    education to create a truly plastic-free future for Palmer Springs.'
-  climateChange: 1.5
+    Additionally, city officials are considering
+    implementing a ban on single-use plastics in public facilities and events, following
+    the lead of neighboring towns and cities.
+
+
+
+    While these initiatives represent
+    significant progress in the fight against plastic pollution, advocates stress
+    the need for broader systemic changes and consumer education to create a truly
+    plastic-free future for Palmer Springs.'
+  climateChange: 15
   moneyChange: 0
-  reachChange: 1
+  reachChange: 10
   articleArt: {fileID: 0}
   articleCategory: 1

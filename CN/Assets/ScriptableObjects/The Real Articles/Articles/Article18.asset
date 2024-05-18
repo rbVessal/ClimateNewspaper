@@ -18,7 +18,7 @@ MonoBehaviour:
     The event, which included a 5K, 10K, and a fun run for children, brought together
     people of all ages in a spirited display of community solidarity.
 
-    
+
 
     Organized
     by the Palmer Community Foundation, the run aimed to support a variety of local
@@ -27,14 +27,14 @@ MonoBehaviour:
     the turnout and the generosity of our community," said foundation president Todd
     Walles. "Every step taken today helps make Palmer Springs a better place."
 
-    
+
 
     Participants
     enjoyed a festive atmosphere with live music, food stalls, and wellness booths
     offering free health screenings and fitness tips. Local businesses sponsored
     the event, providing water stations, prizes, and promotional materials.
 
-    
+
 
     "We
     wanted to create an event that not only raises funds but also promotes health
@@ -42,6 +42,6 @@ MonoBehaviour:
     so many people come together for a good cause."'
   climateChange: 0
   moneyChange: 0
-  reachChange: 1
+  reachChange: 10
   articleArt: {fileID: 0}
   articleCategory: 1

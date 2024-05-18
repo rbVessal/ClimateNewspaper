@@ -28,8 +28,8 @@ MonoBehaviour:
     notes participant Jonathan Kim.\r\n\r\nMoreover, the garden contributes to the
     town\u2019s green space, improving air quality and providing a habitat for local
     wildlife. Plans are already underway to expand the initiative to other neighborhoods."
-  climateChange: 1
+  climateChange: 10
   moneyChange: 0
-  reachChange: 1
+  reachChange: 10
   articleArt: {fileID: 0}
   articleCategory: 1

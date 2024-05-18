@@ -16,8 +16,8 @@ MonoBehaviour:
   bodyText: Discover the pinnacle of luxury living in our new gated community. Crystal
     Lake Estates offers breathtaking views, unmatched amenities, and the finest finishes.
     Schedule a tour today!
-  climateChange: -1
-  moneyChange: 1.5
-  reachChange: -1
+  climateChange: -10
+  moneyChange: 10
+  reachChange: -10
   articleArt: {fileID: 0}
   articleCategory: 0

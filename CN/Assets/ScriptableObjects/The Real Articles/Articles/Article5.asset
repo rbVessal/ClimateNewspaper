@@ -30,7 +30,7 @@ MonoBehaviour:
     such as biodegradable utensils and packaging, and surplus food donation programs
     to local shelters."
   climateChange: 0
-  moneyChange: 1
-  reachChange: 1
+  moneyChange: 10
+  reachChange: 10
   articleArt: {fileID: 0}
   articleCategory: 1

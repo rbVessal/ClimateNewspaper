@@ -31,8 +31,8 @@ MonoBehaviour:
     Springs Coalition. Residents are also worried about the increase in traffic and
     noise pollution, with local community forums being organized to discuss these
     implications further and ensure that local voices are heard in the planning process.'
-  climateChange: 1
-  moneyChange: 0
-  reachChange: 1
+  climateChange: 10
+  moneyChange: -10
+  reachChange: 10
   articleArt: {fileID: 0}
   articleCategory: 1

@@ -30,8 +30,8 @@ MonoBehaviour:
     sales, installation, and maintenance. Local businesses like GreenTech Solutions
     have reported a boom in demand. \"We\u2019ve hired more staff and expanded our
     operations,\" says CEO Laura Somerton."
-  climateChange: 1
-  moneyChange: 0
-  reachChange: 1
+  climateChange: 10
+  moneyChange: 10
+  reachChange: 0
   articleArt: {fileID: 0}
   articleCategory: 1

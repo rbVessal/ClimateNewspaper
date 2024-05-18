@@ -18,22 +18,22 @@ MonoBehaviour:
     Palmer Springs Public Library faces significant budget cuts that could lead to
     reduced services, fewer new books, and shorter opening hours.
 
-    
 
-    The
-    proposed cuts, amounting to 30% of the library''s annual funding, come as the
-    city council struggles to close a widening budget deficit. "We must make difficult
-    choices, and unfortunately, the library''s funding is part of the necessary cuts,"
-    said city council member Raj Singh.
 
-    
+    The proposed
+    cuts, amounting to 30% of the library''s annual funding, come as the city council
+    struggles to close a widening budget deficit. "We must make difficult choices,
+    and unfortunately, the library''s funding is part of the necessary cuts," said
+    city council member Raj Singh.
 
-    Local librarians and patrons
-    are rallying to save the library services that many deem essential. "The library
-    is more than just a place to borrow books; it''s a community hub, a place of
-    learning, and a safe haven for many," argues head librarian Maria Gonzalez.
 
-    
+
+    Local librarians and patrons are rallying
+    to save the library services that many deem essential. "The library is more than
+    just a place to borrow books; it''s a community hub, a place of learning, and
+    a safe haven for many," argues head librarian Maria Gonzalez.
+
+
 
     Activists
     warn that the cuts could disproportionately affect the town''s most vulnerable
@@ -41,6 +41,6 @@ MonoBehaviour:
     access to educational resources and community programs.'
   climateChange: 0
   moneyChange: 0
-  reachChange: 0
+  reachChange: 10
   articleArt: {fileID: 0}
   articleCategory: 1

@@ -15,8 +15,8 @@ MonoBehaviour:
   headline: Win the War on Weeds with GreenKill!
   bodyText: Got weed problems? Trust GreenKill to eliminate unwanted garden invaders!
     Now available at local retailers. Save 10% with promo code WEEDFREE.
-  climateChange: -1.5
-  moneyChange: 1
+  climateChange: -15
+  moneyChange: 10
   reachChange: 0
   articleArt: {fileID: 0}
   articleCategory: 0

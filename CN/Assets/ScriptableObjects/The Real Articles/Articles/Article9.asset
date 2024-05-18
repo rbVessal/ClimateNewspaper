@@ -28,8 +28,8 @@ MonoBehaviour:
     and disillusionment. \"We were so hopeful. We thought we were making a difference,
     but it turns out it\u2019s all been a bit of a fa\xE7ade,\" said local resident
     Tommi Pilhnonnen."
-  climateChange: 1.5
-  moneyChange: -2
-  reachChange: 0
+  climateChange: 15
+  moneyChange: -20
+  reachChange: 15
   articleArt: {fileID: 0}
   articleCategory: 1
