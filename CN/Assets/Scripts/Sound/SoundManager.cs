@@ -38,6 +38,7 @@ public class SoundManager : MonoBehaviour
 	[Space] [Header("Ambience")] 
 	public AudioClip Office;
 	public AudioClip[] Town;
+	public AudioClip currentTownAmbience;
 	public float fadeDuration;
 
 	
@@ -206,5 +207,9 @@ public class SoundManager : MonoBehaviour
 	public void DetermineMusic(AudioClip music)
 	{
 		currentMusic = music;
+	}
+	public void DetermineTownAmbience(AudioClip ambience)
+	{
+		currentTownAmbience = ambience;
 	}
 }

@@ -75,7 +75,7 @@ public class GameStateManager : MonoBehaviour
             EditorCanvas.SetActive(false);
             TownCanvas.SetActive(true);
             BillboardCanvas.SetActive(false);
-            SoundManager.main.PlayAmbientNoise(SoundManager.main.Town[0]);
+            SoundManager.main.PlayAmbientNoise(SoundManager.main.currentTownAmbience);
             Debug.Log("Game state changed to town");
         }
     }
