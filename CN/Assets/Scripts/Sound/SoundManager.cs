@@ -97,7 +97,7 @@ public class SoundManager : MonoBehaviour
 
 	private void Start()
 	{
-		//StartCoroutine(musicLoop(isInMainMenuScene));
+		StartCoroutine(musicLoop(isInMainMenuScene));
 	}
 
 	private void getMixerVolumes()
