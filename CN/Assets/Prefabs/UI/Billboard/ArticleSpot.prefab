@@ -580,9 +580,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 477924359549065528}
     m_Modifications:
+    - target: {fileID: 964067247699541244, guid: 93d8d6a02cace9845b48699c0b6063a7, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 964067247699541244, guid: 93d8d6a02cace9845b48699c0b6063a7, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964067247699541244, guid: 93d8d6a02cace9845b48699c0b6063a7, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9315096
+      objectReference: {fileID: 0}
+    - target: {fileID: 964067247699541244, guid: 93d8d6a02cace9845b48699c0b6063a7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3626443073069906687, guid: 93d8d6a02cace9845b48699c0b6063a7, type: 3}
       propertyPath: m_Name
       value: ArticleHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676870241311175176, guid: 93d8d6a02cace9845b48699c0b6063a7, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.31446534
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676870241311175176, guid: 93d8d6a02cace9845b48699c0b6063a7, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.09177511
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676870241311175176, guid: 93d8d6a02cace9845b48699c0b6063a7, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.050433073
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676870241311175176, guid: 93d8d6a02cace9845b48699c0b6063a7, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4283438861
       objectReference: {fileID: 0}
     - target: {fileID: 4346607860830732953, guid: 93d8d6a02cace9845b48699c0b6063a7, type: 3}
       propertyPath: m_Pivot.x
