@@ -1550,7 +1550,7 @@ PrefabInstance:
       objectReference: {fileID: 601783825}
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: billBoardArticleMax
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: allArticles.Array.size
@@ -1657,6 +1657,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
+      propertyPath: allAdvertisements.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: dayZeroArticles.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 93cfecbce403c5d4c8557013bd7de808, type: 2}
@@ -1680,6 +1684,30 @@ PrefabInstance:
       propertyPath: dayZeroArticles.Array.data[5]
       value: 
       objectReference: {fileID: 11400000, guid: 8ddf8a7e6ca78204b8f0f8288a3af8da, type: 2}
+    - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
+      propertyPath: allAdvertisements.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6405779aac824b34b867a58c1ca1533c, type: 2}
+    - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
+      propertyPath: allAdvertisements.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4328c0dbc53ab9a45bca257cb6a130e6, type: 2}
+    - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
+      propertyPath: allAdvertisements.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 11f8d6ea2bf2f2c4f9462d1cfb96d3a5, type: 2}
+    - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
+      propertyPath: allAdvertisements.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: d8cc3811da47f474a904fc7348637061, type: 2}
+    - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
+      propertyPath: allAdvertisements.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 091a51eeb167a0446a57e62172d8beab, type: 2}
+    - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
+      propertyPath: allAdvertisements.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4f356e0a94bd5ab40b3f2a05d88bd6f8, type: 2}
     - target: {fileID: 2529420786676380589, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: m_Name
       value: ArticleManager

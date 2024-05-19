@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         dayNumber += 1;
         //allocate articles on billboard
         if(dayNumber==0) FindObjectOfType<ArticleManager>().ChooseTutorialArticles(); // if its tutorial day
-        else FindObjectOfType<ArticleManager>().ChooseArticlesRandomlyForBillboard(articlesToAddPerDay);
+        else FindObjectOfType<ArticleManager>().ChooseArticlesRandomlyForBillboard();
 
         //begin at the billboard
         GameStateManager.Main.ChangeStateToBillboard(true);

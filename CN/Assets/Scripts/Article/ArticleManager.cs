@@ -10,9 +10,13 @@ public class ArticleManager : MonoBehaviour
 
     [Tooltip("Articles for the entire game")]
     [SerializeField] private List<ArticleScriptableObject> allArticles;
+    
+    [Tooltip("Ads for the entire game")]
+    [SerializeField] private List<ArticleScriptableObject> allAdvertisements;
+    
+    [SerializeField] private List<ArticleScriptableObject> leftOverAdvertisements;
 
-    [SerializeField]
-    private List<ArticleScriptableObject> leftOverArticles;
+    [SerializeField] private List<ArticleScriptableObject> leftOverArticles;
 
     [Tooltip("Articles that go to the billboard")]
     [SerializeField] List<ArticleScriptableObject> billBoardArticles;
@@ -31,6 +35,7 @@ public class ArticleManager : MonoBehaviour
     private void Awake()
     {
         leftOverArticles = new List<ArticleScriptableObject>(allArticles);
+        leftOverAdvertisements = new List<ArticleScriptableObject>(allAdvertisements);
     }
 
     // Start is called before the first frame update
@@ -44,7 +49,39 @@ public class ArticleManager : MonoBehaviour
     //randomly add articles to the billboard
     public void ChooseArticlesRandomlyForBillboard(int numberToAdd = 1)
     {
-        for (int i = 1; i <= numberToAdd; i++)
+        int countAds=0;
+        int countArticles=0;
+
+        //count the current number
+        foreach (var article in billBoardArticles)
+        {
+            if (article.articleCategory == ArticleCategory.Article)
+            {
+                countArticles++;
+            }
+            else
+            {
+                countAds++;
+            }
+        }
+        //do ads first
+        for (; countAds < 2; countAds++)
+        {
+            if (leftOverAdvertisements.Count > 0)
+            {
+                ArticleScriptableObject article = leftOverAdvertisements[Random.Range(0, leftOverAdvertisements.Count)];
+                if (AddToBillBoard(article))
+                    leftOverAdvertisements.Remove(article);
+            }
+            else
+            {
+                Debug.Log("No more ads remaining!");
+            }
+        }
+        
+        //then do articles
+        
+        for (int i = countArticles; i <= 6; i++)
         {
             if (leftOverArticles.Count > 0)
             {
@@ -57,6 +94,11 @@ public class ArticleManager : MonoBehaviour
                 Debug.Log("No more articles remaining!");
             }
         }
+    }
+
+    public void ChooseAdsRandomlyForBillBoard(int numberToAdd = 1)
+    {
+        
     }
 
     public void ChooseTutorialArticles()
