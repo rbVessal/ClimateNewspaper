@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,11 +10,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int dayNumber = -1;
     [SerializeField] public int articlesToAddPerDay = 4;
 
+    [SerializeField] private GameObject lossCanvas;
+    [SerializeField] private GameObject gameMenuCanvas;
+    
     // Start is called before the first frame update
     void Start()
     {
         //StartNewDay();
-        
+        lossCanvas.SetActive(false);
     }
     
     public void StartNewDay()
@@ -39,4 +43,22 @@ public class GameManager : MonoBehaviour
     }
 
     public int GetDay() => dayNumber;
+
+    public void CheckForLossCondition()
+    {
+
+        GameEconomy economy = FindObjectOfType<EconomyManager>().GetEconomy();
+        Debug.Log(economy.Money);
+        if (economy.Money <= 0)
+        {
+            lossCanvas.SetActive(true);
+            gameMenuCanvas.SetActive(false);
+            Debug.Log("Loss condition reached");
+        }
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
