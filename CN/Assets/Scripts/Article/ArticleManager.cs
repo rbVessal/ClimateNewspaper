@@ -64,7 +64,19 @@ public class ArticleManager : MonoBehaviour
                 countAds++;
             }
         }
-        //do ads first
+        for (int i = countArticles; i < 6; i++)
+        {
+            if (leftOverArticles.Count > 0)
+            {
+                ArticleScriptableObject article = leftOverArticles[Random.Range(0, leftOverArticles.Count)];
+                if (AddToBillBoard(article))
+                    leftOverArticles.Remove(article);
+            }
+            else
+            {
+                Debug.Log("No more articles remaining!");
+            }
+        }
         for (; countAds < 2; countAds++)
         {
             if (leftOverAdvertisements.Count > 0)
@@ -78,22 +90,7 @@ public class ArticleManager : MonoBehaviour
                 Debug.Log("No more ads remaining!");
             }
         }
-        
-        //then do articles
-        
-        for (int i = countArticles; i <= 6; i++)
-        {
-            if (leftOverArticles.Count > 0)
-            {
-                ArticleScriptableObject article = leftOverArticles[Random.Range(0, leftOverArticles.Count)];
-                if (AddToBillBoard(article))
-                    leftOverArticles.Remove(article);
-            }
-            else
-            {
-                Debug.Log("No more articles remaining!");
-            }
-        }
+
     }
 
     public void ChooseAdsRandomlyForBillBoard(int numberToAdd = 1)
