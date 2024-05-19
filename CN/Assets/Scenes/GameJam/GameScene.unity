@@ -951,7 +951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 477924359549065528, guid: 000daf5e75d72e74f9e14ebbdf9d46b3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 18.3
+      value: 55.1
       objectReference: {fileID: 0}
     - target: {fileID: 477924359549065528, guid: 000daf5e75d72e74f9e14ebbdf9d46b3, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3875,7 +3875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 477924359549065528, guid: 000daf5e75d72e74f9e14ebbdf9d46b3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 18.300003
+      value: 55.09999
       objectReference: {fileID: 0}
     - target: {fileID: 477924359549065528, guid: 000daf5e75d72e74f9e14ebbdf9d46b3, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5845,6 +5845,10 @@ PrefabInstance:
       value: -137
       objectReference: {fileID: 0}
     - target: {fileID: 1730391135416305450, guid: 1a611fb48d1660742bb250702b539899, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 15.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730391135416305450, guid: 1a611fb48d1660742bb250702b539899, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -14.100002
       objectReference: {fileID: 0}
@@ -6007,6 +6011,10 @@ PrefabInstance:
     - target: {fileID: 5960000226977815215, guid: 1a611fb48d1660742bb250702b539899, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6945089192604631114, guid: 1a611fb48d1660742bb250702b539899, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 15.799995
       objectReference: {fileID: 0}
     - target: {fileID: 7224493979503577003, guid: 1a611fb48d1660742bb250702b539899, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
