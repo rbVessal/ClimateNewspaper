@@ -17,6 +17,12 @@ public class EconomyManager : MonoBehaviour
     public int moneyBase;
     public int reachBase;
     public float impactBase;
+
+    [Header("Debug: Set Values Directly")]
+    public bool useDebug = false;
+    public int debug_Money;
+    public int debug_Reach;
+    public float debug_climateImpact;
     private void Awake()
     {
         //instantiate Economy class
@@ -39,6 +45,11 @@ public class EconomyManager : MonoBehaviour
         {
             UpdateEconomy(-20, 100, 5);
             Debug.Log("Debug input 'space' detected.");
+        }
+
+        if(useDebug)
+        {
+            SetEconomy(0,0, debug_climateImpact);
         }
     }
     //Sends economy values to UI

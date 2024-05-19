@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,8 @@ public class Town_timepass : TownStateBase
     {
         Debug.Log("Entered " + town.state + " state.");
         Debug.Log("Beginning passage of time.");
-        //town.econManager.SetEconomy(0,0,town.climateImpact);
         town.AdjustFog();
+        FadeInTown(town);
     }
 
     public override void UpdateState(TownStateManager town)
@@ -17,5 +18,17 @@ public class Town_timepass : TownStateBase
         //Check for exit condition back to idle.
     }
 
+    void FadeInTown(TownStateManager town)
+    {
+        // Fade this image out
+        town.currentTownImage.DOFade(0, town.duration).OnComplete(() => {
+            // This will execute on completion of the DOFade tween
+            town.currentTownImage.texture = town.nextImage;
+            Color color = town.currentTownImage.color;
+            color.a = 1;
+            town.currentTownImage.color = color;
+            Debug.Log("Passage of Time Complete");
+        });
+    }
 
 }

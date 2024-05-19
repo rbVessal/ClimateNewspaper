@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEngine.Rendering.DebugUI;
 
 public enum TownState
@@ -35,6 +36,13 @@ public class TownStateManager : MonoBehaviour
     [Header("Visual Effects")]
     public ParticleSystem fogParticleSystem;
     public Gradient fogGradient;
+    public RawImage currentTownImage;
+    public RawImage tempImageHolder;
+    public Texture2D nextImage;
+    public Texture2D VeryBadTown;
+    public Texture2D badTown;
+    public Texture2D normalTown;
+    public Texture2D goodTown;
     [Header("Audio Effects")]
     public AudioClip AmbientSFX;
     public EconomyManager econManager;
@@ -184,5 +192,10 @@ public class TownStateManager : MonoBehaviour
         {
             ChangeState(timepass);
         }
+    }
+
+    public void FadeTown()
+    {
+
     }
 }
