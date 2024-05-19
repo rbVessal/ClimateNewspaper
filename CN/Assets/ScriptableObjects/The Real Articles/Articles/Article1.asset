@@ -38,5 +38,5 @@ MonoBehaviour:
   climateChange: 0
   moneyChange: -10
   reachChange: 15
-  articleArt: {fileID: 21300000, guid: 3c2a0be1ae367374ea2376f439f25091, type: 3}
+  articleArt: {fileID: 21300000, guid: 53302b1e3f506ef4b82060d96be771f2, type: 3}
   articleCategory: 1
