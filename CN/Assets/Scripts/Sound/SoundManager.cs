@@ -2,6 +2,7 @@
 using DG.Tweening;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using Random = UnityEngine.Random;
@@ -59,6 +60,9 @@ public class SoundManager : MonoBehaviour
 
 	private EconomyManager econManager;
 
+
+	private bool canPlay=true;
+	
 	#region Properties
 
 	public float MusicVolume
@@ -110,34 +114,59 @@ public class SoundManager : MonoBehaviour
 
 	public void PlaySoundEffect(SoundEffects effect)
 	{
-		
-		switch (effect)
+		if (canPlay)
 		{
-			case SoundEffects.Scanner_Buzz:
-				sfxSource.PlayOneShot(Scanner_Buzz);
-				break;
-			case SoundEffects.PC_Startup:
-				sfxSource.PlayOneShot(PC_Startup);
-				break;
-			case SoundEffects.Keyboard_Typing:
-				sfxSource.PlayOneShot(Keyboard_Typing);
-				break;
-			case SoundEffects.Printing:
-				sfxSource.PlayOneShot(Printing);
-				break;
-			case SoundEffects.UI_Select: 
-				sfxSource.PlayOneShot(UI_Select[Random.Range(0,UI_Confirm.Length-1)]);
-				break;
-			case SoundEffects.UI_Confirm:
-				sfxSource.PlayOneShot(UI_Confirm[Random.Range(0,UI_Confirm.Length-1)]);
-				break;
-			case SoundEffects.UI_Pause:
-				sfxSource.PlayOneShot(UI_Pause);
-				break;
-			
-			default: break;
+			AudioClip clip=UI_Confirm[0];//dummy clip that will definitely not play
+
+			switch (effect)
+			{
+				case SoundEffects.Scanner_Buzz:
+					clip = Scanner_Buzz;
+					//sfxSource.PlayOneShot(Scanner_Buzz);
+					break;
+				case SoundEffects.PC_Startup:
+					clip = PC_Startup;
+					//sfxSource.PlayOneShot(PC_Startup);
+					break;
+				case SoundEffects.Keyboard_Typing:
+					clip = Keyboard_Typing;
+					//sfxSource.PlayOneShot(Keyboard_Typing);
+					break;
+				case SoundEffects.Printing:
+					clip = Printing;
+					//sfxSource.PlayOneShot(Printing);
+					break;
+				case SoundEffects.UI_Select:
+					clip = UI_Select[Random.Range(0, UI_Select.Length - 1)];
+					break;
+				case SoundEffects.UI_Confirm:
+					clip = UI_Confirm[Random.Range(0, UI_Confirm.Length - 1)];
+					break;
+				case SoundEffects.UI_Pause:
+					clip = UI_Pause;
+					//sfxSource.PlayOneShot(UI_Pause);
+					break;
+
+
+				default: break;
+			}
+
+			if (canPlay)
+			{
+				sfxSource.PlayOneShot(clip);
+				StartCoroutine(WaitForSFXToPlay(clip));
+			}
+
 		}
 	}
+
+	IEnumerator WaitForSFXToPlay(AudioClip clip)
+	{
+		canPlay = false;
+		yield return new WaitForSeconds(clip.length/2);
+		canPlay = true;
+	}
+	
 
 	IEnumerator musicLoop(bool mainMenu)
 	{
@@ -215,7 +244,12 @@ public class SoundManager : MonoBehaviour
 
 	public void PlaySFXClip(AudioClip clip)
 	{
-		sfxSource.PlayOneShot(clip);
+		
+		if (canPlay)
+		{
+			sfxSource.PlayOneShot(clip);
+			StartCoroutine(WaitForSFXToPlay(clip));
+		}
 	}
 
 	public void PlayConfirmSFX()
@@ -225,6 +259,6 @@ public class SoundManager : MonoBehaviour
 
 	public void PlaySelectSFX()
 	{
-		PlaySoundEffect(SoundEffects.UI_Select);
+			PlaySoundEffect(SoundEffects.UI_Select);
 	}
 }
