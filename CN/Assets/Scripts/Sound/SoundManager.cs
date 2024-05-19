@@ -47,8 +47,8 @@ public class SoundManager : MonoBehaviour
 	public AudioClip Scanner_Buzz;
 	public AudioClip PC_Startup;
 	public AudioClip Keyboard_Typing;
-	public AudioClip UI_Confirm;
-	public AudioClip UI_Select;
+	public AudioClip[] UI_Confirm;
+	public AudioClip[] UI_Select;
 	public AudioClip UI_Pause;
 	public AudioClip Printing;
 
@@ -125,11 +125,11 @@ public class SoundManager : MonoBehaviour
 			case SoundEffects.Printing:
 				sfxSource.PlayOneShot(Printing);
 				break;
-			case SoundEffects.UI_Select:
-				sfxSource.PlayOneShot(UI_Select);
+			case SoundEffects.UI_Select: 
+				sfxSource.PlayOneShot(UI_Select[Random.Range(0,UI_Confirm.Length-1)]);
 				break;
 			case SoundEffects.UI_Confirm:
-				sfxSource.PlayOneShot(UI_Confirm);
+				sfxSource.PlayOneShot(UI_Confirm[Random.Range(0,UI_Confirm.Length-1)]);
 				break;
 			case SoundEffects.UI_Pause:
 				sfxSource.PlayOneShot(UI_Pause);
@@ -211,5 +211,20 @@ public class SoundManager : MonoBehaviour
 	public void DetermineTownAmbience(AudioClip ambience)
 	{
 		currentTownAmbience = ambience;
+	}
+
+	public void PlaySFXClip(AudioClip clip)
+	{
+		sfxSource.PlayOneShot(clip);
+	}
+
+	public void PlayConfirmSFX()
+	{
+		PlaySoundEffect(SoundEffects.UI_Confirm);
+	}
+
+	public void PlaySelectSFX()
+	{
+		PlaySoundEffect(SoundEffects.UI_Select);
 	}
 }

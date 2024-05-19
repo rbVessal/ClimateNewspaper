@@ -26,6 +26,12 @@ public class CoDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,
     // Interfaces for pointer
     public void OnPointerDown(PointerEventData eventData)
     {
+        if(isDraggable)
+            SoundManager.main.PlayConfirmSFX();
+        else
+            SoundManager.main.PlaySelectSFX();
+        
+        
         if (isDebug)
         {
             Debug.Log("OnPointerDown");
