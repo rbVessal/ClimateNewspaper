@@ -1761,7 +1761,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1971921315ef4ab4995819eca2033c07, type: 2}
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: dayZeroArticles.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: allAdvertisements.Array.size
@@ -1791,6 +1791,10 @@ PrefabInstance:
       propertyPath: dayZeroArticles.Array.data[5]
       value: 
       objectReference: {fileID: 11400000, guid: 8ddf8a7e6ca78204b8f0f8288a3af8da, type: 2}
+    - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
+      propertyPath: dayZeroArticles.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9b747e35c48f12b49ac3f69be95b092a, type: 2}
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: allAdvertisements.Array.data[0]
       value: 
