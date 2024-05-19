@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NewspaperEditor : MonoBehaviour
 {
     public static event Action PublishClicked;
     [SerializeField] public GameObject FrontPage;
     [SerializeField] public GameObject BackPage;
+    [SerializeField] private GameObject PublishButton;
 
     private void Start()
     {
@@ -18,65 +20,69 @@ public class NewspaperEditor : MonoBehaviour
             slot.onDroppedItemEvent.AddListener(OnDroppedArticle);
             slot.onRemovedItemEvent.AddListener(OnRemovedArticle);
         }
+
+        SetPublishButtonInteractability(false);
     }
 
     public void OnPublishButtonClicked()
     {
-
-        NewspaperManager newsPaperManager = FindObjectOfType<NewspaperManager>();
-        ArticleManager articleManager = FindObjectOfType<ArticleManager>();
-        CoDropItemSlot[] dropItemSlots = GetComponentsInChildren<CoDropItemSlot>();
-        List<ArticleScriptableObject> articlesOnComputer =new List<ArticleScriptableObject>( newsPaperManager.GetArticles());
-        List<ArticleScriptableObject> slottedArticles=new List<ArticleScriptableObject>();
-        
-        // Do proper cleanup of resetting the article display and removing events
-        foreach (CoDropItemSlot dropItemSlot in dropItemSlots)
+        if (AreAllArticleSlotsFilled())
         {
-            GameObject articleObject = dropItemSlot.GetSlottedArticle();
-            if (articleObject != null)
+            NewspaperManager newsPaperManager = FindObjectOfType<NewspaperManager>();
+            ArticleManager articleManager = FindObjectOfType<ArticleManager>();
+            CoDropItemSlot[] dropItemSlots = GetComponentsInChildren<CoDropItemSlot>();
+            List<ArticleScriptableObject> articlesOnComputer = new List<ArticleScriptableObject>(newsPaperManager.GetArticles());
+            List<ArticleScriptableObject> slottedArticles = new List<ArticleScriptableObject>();
+
+            // Do proper cleanup of resetting the article display and removing events
+            foreach (CoDropItemSlot dropItemSlot in dropItemSlots)
             {
-                slottedArticles.Add(articleObject.GetComponent<ArticleDisplay>().article);
+                GameObject articleObject = dropItemSlot.GetSlottedArticle();
+                if (articleObject != null)
+                {
+                    slottedArticles.Add(articleObject.GetComponent<ArticleDisplay>().article);
+                }
+                dropItemSlot.ClearItemInSlot();
             }
-            dropItemSlot.ClearItemInSlot();
-        }
-        Debug.Log("---------------SLOTTED--------------");
-        foreach (var article in slottedArticles)
-        {
-            Debug.Log("ARTICLE IN SLOT: "+article.name);
-        }
-        Debug.Log("---------------SLOTTED--------------");
-        foreach (var article in articlesOnComputer)
-        {
-            Debug.Log(article.name);
-            if (!slottedArticles.Contains(article))
+            Debug.Log("---------------SLOTTED--------------");
+            foreach (var article in slottedArticles)
             {
-                Debug.Log("Article removed");
-                articleManager.RemoveFromComputer(article);
-
+                Debug.Log("ARTICLE IN SLOT: " + article.name);
             }
-        }
-        
-        // Clear all of the newspaper article display properly
-        if (newsPaperManager != null)
-        {
-            newsPaperManager.ClearAllArticles();
-        }
+            Debug.Log("---------------SLOTTED--------------");
+            foreach (var article in articlesOnComputer)
+            {
+                Debug.Log(article.name);
+                if (!slottedArticles.Contains(article))
+                {
+                    Debug.Log("Article removed");
+                    articleManager.RemoveFromComputer(article);
 
-        // Clear all of the computer articles stored in the article manager
-        if (articleManager != null) 
-        {
-            articleManager.ClearAllComputerArticles();
-        }
+                }
+            }
 
-        // Now we can finally start the new day
-        //GameManager gameManager = FindObjectOfType<GameManager>();
-        //if (gameManager != null)
-        //{
-        //    gameManager.StartNewDay();
-        //}
-        //Change state to town
-        GameStateManager.Main.ChangeStateToTown();
-        PublishClicked?.Invoke();
+            // Clear all of the newspaper article display properly
+            if (newsPaperManager != null)
+            {
+                newsPaperManager.ClearAllArticles();
+            }
+
+            // Clear all of the computer articles stored in the article manager
+            if (articleManager != null)
+            {
+                articleManager.ClearAllComputerArticles();
+            }
+
+            // Now we can finally start the new day
+            //GameManager gameManager = FindObjectOfType<GameManager>();
+            //if (gameManager != null)
+            //{
+            //    gameManager.StartNewDay();
+            //}
+            //Change state to town
+            GameStateManager.Main.ChangeStateToTown();
+            PublishClicked?.Invoke();
+        }
     }
 
     public void UpdateEconomyUI(GameObject articleGameObject, GameObject articleSlotGameObject, bool wasArticleAdded)
@@ -121,6 +127,12 @@ public class NewspaperEditor : MonoBehaviour
         Debug.Log("NewspaperEditor - dropped article");
         // Make the economy UI update based on whatever article just dropped
         UpdateEconomyUI(articleGameObject, slotGameObject, true);
+
+        // Check to see if we should enable the publish button based on if all of the article slots are full or not
+        if (AreAllArticleSlotsFilled())
+        { 
+           SetPublishButtonInteractability(true);
+        }
     }
 
     // Delegate method for when an article is unslotted from CoDropItemSlot
@@ -129,6 +141,42 @@ public class NewspaperEditor : MonoBehaviour
         Debug.Log("NewspaperEditor - removed article");
 
         UpdateEconomyUI(articleGameObject, slotGameObject, false);
+
+        if (!AreAllArticleSlotsFilled())
+        {
+            SetPublishButtonInteractability(false);
+        }
+    }
+
+    private void SetPublishButtonInteractability(bool interactable)
+    {
+        Button button = PublishButton.GetComponent<Button>();
+        if (button != null)
+        {
+            button.interactable = interactable;
+        }
+    }
+
+    private bool AreAllArticleSlotsFilled()
+    {
+        bool areAllArticleSlotsFilled = false;
+
+        int numberOfSlotsFilled = 0;
+        CoDropItemSlot[] dropItemSlots = GetComponentsInChildren<CoDropItemSlot>();
+        foreach (CoDropItemSlot slot in dropItemSlots)
+        {
+            if (slot.isOccupied)
+            {
+                numberOfSlotsFilled++;
+            }
+        }
+
+        if(numberOfSlotsFilled == dropItemSlots.Length) 
+        {
+            areAllArticleSlotsFilled = true;
+        }
+
+        return areAllArticleSlotsFilled;
     }
 
     public int GetMaxSlots()
