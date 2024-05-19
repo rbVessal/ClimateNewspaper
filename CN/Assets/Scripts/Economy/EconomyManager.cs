@@ -17,6 +17,9 @@ public class EconomyManager : MonoBehaviour
     public int moneyBase;
     public int reachBase;
     public float impactBase;
+    
+    [Header("Change values on article drag and drop?")]
+    [SerializeField] bool changeValuesOnDragDrop;
     private void Awake()
     {
         //instantiate Economy class
@@ -105,7 +108,8 @@ public class EconomyManager : MonoBehaviour
         temporaryEconomy.Money += articleValues.money;
         temporaryEconomy.Reach += articleValues.reach;
         temporaryEconomy.ClimateImpact += articleValues.climate;
-        SendToUI();
+        if(changeValuesOnDragDrop)
+            SendToUI();
     }
 
     public void SubtractFromTemporaryEconomy(ArticleValues articleValues)
@@ -113,7 +117,8 @@ public class EconomyManager : MonoBehaviour
         temporaryEconomy.Money -= articleValues.money;
         temporaryEconomy.Reach -= articleValues.reach;
         temporaryEconomy.ClimateImpact -= articleValues.climate;
-        SendToUI();
+        if(changeValuesOnDragDrop)  
+            SendToUI();
     }
 
     public void changeEconomyPermanently()
