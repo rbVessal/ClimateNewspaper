@@ -15,17 +15,10 @@ public class GameMenu : MonoBehaviour
     [SerializeField]
     private Button EditorButton;
 
-    // Start is called before the first frame update
-    void Start()
+    public void EnableNavigationButtons(bool enable)
     {
-        TownButton.gameObject.SetActive(true);
-        BoardButton.gameObject.SetActive(true);
-        EditorButton.gameObject.SetActive(true);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        TownButton.gameObject.SetActive(enable);
+        BoardButton.gameObject.SetActive(enable);
+        EditorButton.gameObject.SetActive(enable);
     }
 }

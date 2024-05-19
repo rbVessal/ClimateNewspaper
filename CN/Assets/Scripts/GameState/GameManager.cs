@@ -29,10 +29,14 @@ public class GameManager : MonoBehaviour
 
         //begin at the billboard
         GameStateManager.Main.ChangeStateToBillboard(true);
-        
-        
+
+
         //pop up any text menus, other stuff if required
-        
+
+        Debug.Log("Day Started");
+        GameMenu gameMenu = gameMenuCanvas.GetComponent<GameMenu>();
+        gameMenu.EnableNavigationButtons(true);
+
         //Send out day started event.
         StartDay?.Invoke();
     }
