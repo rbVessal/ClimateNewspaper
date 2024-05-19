@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Article6
   m_EditorClassIdentifier: 
   headline: Player learns to press publish!
-  bodyText: "Once you've selected and moved your articles to the right spot, press
-    publish. Their effects will be shown the next week! \n\nThis article changes
-    ENVIRONMENT and REACH"
+  bodyText: 'Once you''ve selected and moved your articles to the right spot, press
+    publish. Their final effects will be shown in the top right!
+
+
+    This article
+    changes ENVIRONMENT positively and REACH negatively'
   climateChange: 10
   moneyChange: 0
   reachChange: 10

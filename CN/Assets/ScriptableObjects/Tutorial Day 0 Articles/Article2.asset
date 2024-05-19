@@ -16,29 +16,30 @@ MonoBehaviour:
   bodyText: 'By publishing articles, you can change some things in the world.
 
 
-    This
-    article changes the ENVIRONMENT
+    1.
+    MONEY
 
-    1. MONEY
-
-    You need money to survive.
-    If this becomes too low, your newspaper can no longer function. Make sure to
-    keep this up!
+    You need money to survive. If this becomes zero, your newspaper can
+    no longer function and you will be out of business. Make sure to keep this up!
 
 
-    2. REACH
+    2.
+    REACH
 
-    The more people who read your paper, the more
-    impact your news has on MONEY and ENVIRONMENT!
+    The more people who read your paper, the more impact your news has
+    on MONEY and ENVIRONMENT!
 
 
     3. ENVIRONMENT
 
-    Your
-    articles will change public perception of the environment! If this is too low,
-    the public may not respect their environment. Keep this high to maintain environmental
-    awareness and conservation!'
-  climateChange: 10
+    Your articles will change
+    public perception! If this is too low, the public may not respect their environment.
+    Keep this high to maintain environmental awareness and conservation efforts!
+
+
+    This
+    article changes the ENVIRONMENT negatively'
+  climateChange: -10
   moneyChange: 0
   reachChange: 0
   articleArt: {fileID: 0}
