@@ -12,16 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article4
   m_EditorClassIdentifier: 
-  headline: Player learns more about article consequences!
-  bodyText: 'Be careful when choosing your articles. While some can help spread awareness
+  headline: Player Learns More About Article Consequences!
+  bodyText: Be careful when choosing your articles. While some can help spread awareness
     to the public in a good way, they may hurt possible sponsorships or monetary
-    business in turn. Choosing articles that provide you money may hurt your public
-    reach. Choose wisely!
-
-
-    This article changes nothing.'
+    business in turn. Also, remember that there are costs to running a newspaper
+    and that the world won't wait for you; each week, you will lose some money and
+    the environment will get worse so choose wisely!
   climateChange: 0
   moneyChange: 0
   reachChange: 0
-  articleArt: {fileID: 0}
+  articleArt: {fileID: 21300000, guid: 2e0c04d4b92155f44893a7b937bd91e1, type: 3}
   articleCategory: 1
