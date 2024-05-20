@@ -19,6 +19,10 @@ public class EconomyManager : MonoBehaviour
     public int reachBase;
     public float impactBase;
 
+    [Header("Economy Decay")]
+    public int moneyDecay = -5;
+    public float climateDecay = -5.0f;
+
     [Header("Debug: Set Values Directly")]
     public bool useDebug = false;
     public int debug_Money;
@@ -35,6 +39,7 @@ public class EconomyManager : MonoBehaviour
 
     }
 
+    //Subscribe to publishing event
     private void OnEnable()
     {
         NewspaperEditor.PublishClicked += changeEconomyPermanently;
@@ -54,13 +59,6 @@ public class EconomyManager : MonoBehaviour
 
     public void Update()
     {
-        //Testing only
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            UpdateEconomy(-20, 100, 5);
-            Debug.Log("Debug input 'space' detected.");
-        }
-
         if(useDebug)
         {
             SetEconomy(0,0, debug_climateImpact);
@@ -126,7 +124,8 @@ public class EconomyManager : MonoBehaviour
     }
 
 
-    public void SetTemporaryEconomy(int money, int reach, float climate)
+    //Set the temporary economy additively.  
+    public void UpdateTemporaryEconomy(int money, int reach, float climate)
     {
         temporaryEconomy.Money += money;
         temporaryEconomy.Reach += reach;
@@ -135,6 +134,8 @@ public class EconomyManager : MonoBehaviour
         ClampEconomy();
 
     }
+
+    //Clamp the values between 0 and 100.
     private void ClampEconomy()
     {
         if (temporaryEconomy.Money > 100)
@@ -167,7 +168,7 @@ public class EconomyManager : MonoBehaviour
 
     public void AddToTemporaryEconomy(ArticleValues articleValues)
     {
-        SetTemporaryEconomy(articleValues.money, articleValues.reach, articleValues.climate);
+        UpdateTemporaryEconomy(articleValues.money, articleValues.reach, articleValues.climate);
         //temporaryEconomy.Money += articleValues.money;
         //temporaryEconomy.Reach += articleValues.reach;
         //temporaryEconomy.ClimateImpact += articleValues.climate;
@@ -177,11 +178,10 @@ public class EconomyManager : MonoBehaviour
 
     public void SubtractFromTemporaryEconomy(ArticleValues articleValues)
     {
-        temporaryEconomy.Money -= articleValues.money;
-        temporaryEconomy.Reach -= articleValues.reach;
-        temporaryEconomy.ClimateImpact -= articleValues.climate;
-
-        ClampEconomy();
+        UpdateTemporaryEconomy(-articleValues.money, -articleValues.reach, -articleValues.climate);
+        //temporaryEconomy.Money -= articleValues.money;
+        //temporaryEconomy.Reach -= articleValues.reach;
+        //temporaryEconomy.ClimateImpact -= articleValues.climate;
         if(changeValuesOnDragDrop)  
             SendToUI();
     }
@@ -190,7 +190,7 @@ public class EconomyManager : MonoBehaviour
     {
         if (FindObjectOfType<GameManager>().GetDay() > 0)//does not apply on tutorial days
         {
-            
+            DailyDecay(moneyDecay, climateDecay); //Money and climate decay before permanent changes. 
             economy.Money = temporaryEconomy.Money;
             economy.ClimateImpact = temporaryEconomy.ClimateImpact;
             economy.Reach = temporaryEconomy.Reach;
@@ -204,4 +204,8 @@ public class EconomyManager : MonoBehaviour
         Debug.Log("Economy Changed " + temporaryEconomy.Money + temporaryEconomy.Reach + temporaryEconomy.ClimateImpact);
     }
 
+    void DailyDecay(int decay, float decayClimate)
+    {
+        UpdateTemporaryEconomy(decay, 0, decayClimate);
+    }
 }
