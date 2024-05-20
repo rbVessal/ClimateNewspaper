@@ -12,7 +12,7 @@ public enum CurrentCamera
 }
 public class CameraManager : MonoBehaviour
 {
-    public CurrentCamera camera;
+    public CurrentCamera _camera;
     public List<CinemachineVirtualCamera> cameras;
 
     public CinemachineVirtualCamera currentCamera;
@@ -28,7 +28,7 @@ public class CameraManager : MonoBehaviour
     void Update()
     {
         //Debug Only
-        switch (camera)
+        switch (_camera)
         {
             case CurrentCamera.Office:
                 SetCamera(cameras[0]);
@@ -80,6 +80,6 @@ public class CameraManager : MonoBehaviour
     public void ChangeCam(int camNumber) //mapped to the enum 
     {
         CurrentCamera changedCam = (CurrentCamera)(camNumber);
-        camera = changedCam;
+        _camera = changedCam;
     }
 }

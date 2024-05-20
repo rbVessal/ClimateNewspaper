@@ -59,6 +59,7 @@ public class EconomyManager : MonoBehaviour
 
     public void Update()
     {
+        //Used to set climate values directly in inspector. 
         if(useDebug)
         {
             SetEconomy(0,0, debug_climateImpact);
