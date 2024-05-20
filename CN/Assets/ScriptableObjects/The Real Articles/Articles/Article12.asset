@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article12
   m_EditorClassIdentifier: 
-  headline: 'Green Space vs. Workspace: Controversial Development Plans Divide Palmer
-    Springs'
+  headline: Controversial Development Plans Divide Palmer Springs
   bodyText: 'A heated debate is unfolding in Palmer Springs over the proposed development
     of a new industrial park on the outskirts of the city, a project that threatens
     to pave over one of the last remaining green spaces in the area.

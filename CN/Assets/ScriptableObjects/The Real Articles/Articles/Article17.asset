@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article17
   m_EditorClassIdentifier: 
-  headline: 'Coloring Our Future: Community Art Project Brings Vibrancy to South
-    Side Palmer Springs'
+  headline: Community Art Project Brings Vibrancy to South Side Palmer Springs
   bodyText: 'South Side Palmer Springs has undergone a stunning transformation thanks
     to a community art project that brought together local artists, residents, and
     businesses to create vibrant murals and public art installations.

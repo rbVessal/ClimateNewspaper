@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article18
   m_EditorClassIdentifier: 
-  headline: 'Running for a Cause: Charity Run Draws Record Participation'
+  headline: Charity Run Draws Record Participation
   bodyText: 'The annual Palmer Springs Charity Run saw record participation this
     year, with over 2,000 runners hitting the streets to raise funds for local causes.
     The event, which included a 5K, 10K, and a fun run for children, brought together

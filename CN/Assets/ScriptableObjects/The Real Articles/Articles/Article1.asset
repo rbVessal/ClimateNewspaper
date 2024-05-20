@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article1
   m_EditorClassIdentifier: 
-  headline: Divisions Emerge as Town Debates New Highway Through Historic District
+  headline: Town Debates New Highway Through Historic District
   bodyText: 'A packed town hall meeting last night revealed deep divisions among
     residents of Palmer Springs over the proposed construction of a new highway intended
     to ease city congestion but which would cut through the heart of our historic

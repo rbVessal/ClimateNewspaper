@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article10
   m_EditorClassIdentifier: 
-  headline: 'Beyond the Bag: Palmer Springs Confronts Plastic Pollution Epidemic'
+  headline: Palmer Springs Confronts Plastic Pollution Epidemic
   bodyText: 'As plastic waste continues to inundate our waterways and landscapes,
     Palmer Springs finds itself at the forefront of a growing movement to address
     the plastic pollution crisis and reduce reliance on single-use plastics.

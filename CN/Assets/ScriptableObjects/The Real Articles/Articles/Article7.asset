@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article7
   m_EditorClassIdentifier: 
-  headline: 'Turning the Page: Severe Budget Cuts Threaten Palmer Springs Library''s
-    Future'
+  headline: Severe Budget Cuts Threaten Palmer Springs Library's Future
   bodyText: 'In a troubling development for book lovers and lifelong learners, the
     Palmer Springs Public Library faces significant budget cuts that could lead to
     reduced services, fewer new books, and shorter opening hours.
