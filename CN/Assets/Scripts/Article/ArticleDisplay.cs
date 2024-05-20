@@ -19,6 +19,10 @@ public class ArticleDisplay : MonoBehaviour
 
     [SerializeField] private ArticleScriptableObject emptyArticle;
 
+    [SerializeField] private Image panel;
+    [SerializeField] private Color32 articleColor;
+    [SerializeField] private Color32 adColor;
+    
     public bool added = false;
     [SerializeField] private GameObject addButton;
     [SerializeField] private GameObject removeButton;
@@ -43,6 +47,14 @@ public class ArticleDisplay : MonoBehaviour
             artUI.sprite = article.articleArt;
             bodyUI.text = article.bodyText;
             headlineUI.text = article.headline;
+            if (article.articleCategory == ArticleCategory.Article)
+            {
+                panel.color = articleColor;
+            }
+            else if(article.articleCategory==ArticleCategory.Advertisement)
+            {
+                panel.color = adColor;
+            }
         }
         
 

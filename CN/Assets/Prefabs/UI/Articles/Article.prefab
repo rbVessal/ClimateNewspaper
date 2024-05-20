@@ -330,6 +330,16 @@ MonoBehaviour:
   headlineUI: {fileID: 3676870241311175176}
   bodyUI: {fileID: 3898908707027764800}
   emptyArticle: {fileID: 11400000, guid: 85c5a32c74c8f894ab7aa693373407f9, type: 2}
+  panel: {fileID: 964067247699541244}
+  articleColor:
+    serializedVersion: 2
+    rgba: 4278255606
+  adColor:
+    serializedVersion: 2
+    rgba: 4294962944
+  added: 0
+  addButton: {fileID: 0}
+  removeButton: {fileID: 0}
 --- !u!114 &8119421959253410667
 MonoBehaviour:
   m_ObjectHideFlags: 0
