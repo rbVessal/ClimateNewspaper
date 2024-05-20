@@ -2411,6 +2411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plane
       objectReference: {fileID: 0}
+    - target: {fileID: 1404069283343409060, guid: dd92ae900b03d3646a5b7b056c727efd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4926663833397019229, guid: dd92ae900b03d3646a5b7b056c727efd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -3706,6 +3710,14 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8336400770574450002, guid: a59e17797e2b242499c7f8a7704e765a, type: 3}
+      propertyPath: moneyDecay
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336400770574450002, guid: a59e17797e2b242499c7f8a7704e765a, type: 3}
+      propertyPath: climateDecay
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336400770574450002, guid: a59e17797e2b242499c7f8a7704e765a, type: 3}
       propertyPath: changeValuesOnDragDrop
       value: 1
       objectReference: {fileID: 0}
@@ -4025,9 +4037,17 @@ PrefabInstance:
       value: TownManager
       objectReference: {fileID: 0}
     - target: {fileID: 7886500658747829327, guid: c14d532f8c0d72b49a4a5d70148f0d73, type: 3}
+      propertyPath: duration
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886500658747829327, guid: c14d532f8c0d72b49a4a5d70148f0d73, type: 3}
       propertyPath: econManager
       value: 
       objectReference: {fileID: 1527254251}
+    - target: {fileID: 7886500658747829327, guid: c14d532f8c0d72b49a4a5d70148f0d73, type: 3}
+      propertyPath: climateImpact
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7886500658747829327, guid: c14d532f8c0d72b49a4a5d70148f0d73, type: 3}
       propertyPath: tempImageHolder
       value: 
