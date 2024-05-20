@@ -7,9 +7,11 @@ public class Town_timepass : TownStateBase
 {
     public override void EnterState(TownStateManager town)
     {
+        town.doTimePass = false;
         Debug.Log("Entered " + town.state + " state.");
         Debug.Log("Beginning passage of time.");
         town.AdjustFog();
+        //SoundManager.main.PlayMusic();
         FadeInTown(town);
     }
 

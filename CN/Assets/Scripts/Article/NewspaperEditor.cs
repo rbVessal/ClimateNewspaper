@@ -24,6 +24,15 @@ public class NewspaperEditor : MonoBehaviour
         SetPublishButtonInteractability(false);
     }
 
+    private void UpdateHeader()
+    {
+        Page page = FrontPage.GetComponent<Page>();
+        if (page != null) 
+        {
+            page.UpdateDay();
+        }
+    }
+
     public void OnPublishButtonClicked()
     {
         if (AreAllArticleSlotsFilled())
@@ -72,6 +81,9 @@ public class NewspaperEditor : MonoBehaviour
             {
                 articleManager.ClearAllComputerArticles();
             }
+
+            // Update the day text on the newspaper
+            UpdateHeader();
 
             // Now we can finally start the new day
             //GameManager gameManager = FindObjectOfType<GameManager>();

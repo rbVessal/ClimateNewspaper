@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Page : MonoBehaviour
@@ -17,5 +18,13 @@ public class Page : MonoBehaviour
     {
         headerText.SetActive(shouldShowHeaderText);
         dayText.SetActive(shouldShowDayText);
+    }
+
+    public void UpdateDay()
+    {
+        GameManager gameManager = FindObjectOfType<GameManager>();
+
+        TextMeshProUGUI textMeshPro = dayText.GetComponent<TextMeshProUGUI>();
+        textMeshPro.text = "Day " + (gameManager.GetDay() + 1);
     }
 }
