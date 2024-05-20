@@ -8,6 +8,7 @@ public class EconomyManager : MonoBehaviour
 {
     //Updates Economy Display UI
     public static event Action<GameEconomy> Link;
+    public static event Action EconomyProcessed;
     
     private GameEconomy economy;
     private GameEconomy temporaryEconomy;//temporary change variable
@@ -32,6 +33,16 @@ public class EconomyManager : MonoBehaviour
         economy = new GameEconomy(moneyBase, reachBase, impactBase);
         temporaryEconomy = new GameEconomy(moneyBase, reachBase, impactBase);
 
+    }
+
+    private void OnEnable()
+    {
+        NewspaperEditor.PublishClicked += changeEconomyPermanently;
+    }
+
+    private void OnDisable()
+    {
+        NewspaperEditor.PublishClicked -= changeEconomyPermanently;
     }
     // Start is called before the first frame update
     void Start()
@@ -114,11 +125,52 @@ public class EconomyManager : MonoBehaviour
         return articleValues;
     }
 
+
+    public void SetTemporaryEconomy(int money, int reach, float climate)
+    {
+        temporaryEconomy.Money += money;
+        temporaryEconomy.Reach += reach;
+        temporaryEconomy.ClimateImpact += climate;
+
+        ClampEconomy();
+
+    }
+    private void ClampEconomy()
+    {
+        if (temporaryEconomy.Money > 100)
+        {
+            temporaryEconomy.Money = 100;
+        }
+        if (temporaryEconomy.Money < 0)
+        {
+            temporaryEconomy.Money = 0;
+        }
+
+        if (temporaryEconomy.Reach > 100)
+        {
+            temporaryEconomy.Reach = 100;
+        }
+        if (temporaryEconomy.Reach < 0)
+        {
+            temporaryEconomy.Reach = 0;
+        }
+
+        if (temporaryEconomy.ClimateImpact > 100)
+        {
+            temporaryEconomy.ClimateImpact = 100;
+        }
+        if (temporaryEconomy.ClimateImpact < 0)
+        {
+            temporaryEconomy.ClimateImpact = 0;
+        }
+    }
+
     public void AddToTemporaryEconomy(ArticleValues articleValues)
     {
-        temporaryEconomy.Money += articleValues.money;
-        temporaryEconomy.Reach += articleValues.reach;
-        temporaryEconomy.ClimateImpact += articleValues.climate;
+        SetTemporaryEconomy(articleValues.money, articleValues.reach, articleValues.climate);
+        //temporaryEconomy.Money += articleValues.money;
+        //temporaryEconomy.Reach += articleValues.reach;
+        //temporaryEconomy.ClimateImpact += articleValues.climate;
         if(changeValuesOnDragDrop)
             SendToUI();
     }
@@ -128,6 +180,8 @@ public class EconomyManager : MonoBehaviour
         temporaryEconomy.Money -= articleValues.money;
         temporaryEconomy.Reach -= articleValues.reach;
         temporaryEconomy.ClimateImpact -= articleValues.climate;
+
+        ClampEconomy();
         if(changeValuesOnDragDrop)  
             SendToUI();
     }
@@ -146,6 +200,8 @@ public class EconomyManager : MonoBehaviour
         temporaryEconomy.Reach = economy.Reach;
         temporaryEconomy.ClimateImpact = economy.ClimateImpact;
         SendToUI();
+        EconomyProcessed?.Invoke();
+        Debug.Log("Economy Changed " + temporaryEconomy.Money + temporaryEconomy.Reach + temporaryEconomy.ClimateImpact);
     }
 
 }

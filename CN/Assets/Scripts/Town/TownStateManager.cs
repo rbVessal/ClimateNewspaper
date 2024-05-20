@@ -47,16 +47,20 @@ public class TownStateManager : MonoBehaviour
     public AudioClip AmbientSFX;
     public EconomyManager econManager;
 
+    [HideInInspector] public bool doTimePass = false;
+
     private void OnEnable()
     {
         GameManager.StartDay += ChangeToCalculate;
-        NewspaperEditor.PublishClicked += ChangeToTimePass;
+        EconomyManager.EconomyProcessed += SetUpTimePass;
+        EconomyManager.EconomyProcessed += ChangeToCalculate;
     }
 
     private void OnDisable()
     {
         GameManager.StartDay -= ChangeToCalculate;
-        NewspaperEditor.PublishClicked -= ChangeToTimePass;
+        EconomyManager.EconomyProcessed -= SetUpTimePass;
+        EconomyManager.EconomyProcessed -= ChangeToCalculate;
     }
 
     // Start is called before the first frame update
@@ -192,6 +196,11 @@ public class TownStateManager : MonoBehaviour
         {
             ChangeState(timepass);
         }
+    }
+
+    public void SetUpTimePass()
+    {
+        doTimePass = true;
     }
 
     public void FadeTown()

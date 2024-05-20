@@ -14,4 +14,7 @@ public class Town_idle : TownStateBase
         
     }
 
+
+
+
 }

@@ -84,6 +84,13 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  currentTownImage: {fileID: 0}
+  tempImageHolder: {fileID: 0}
+  nextImage: {fileID: 0}
+  VeryBadTown: {fileID: 2800000, guid: 31b8a4303a260a64fb6a823031acaf69, type: 3}
+  badTown: {fileID: 2800000, guid: a9c5aa08b03dc9945bd7c1043b8baa88, type: 3}
+  normalTown: {fileID: 2800000, guid: beacf5c976cbe6b45be97cf1f87df2a4, type: 3}
+  goodTown: {fileID: 2800000, guid: 03b08063116db914b803c3a91cdd7e0e, type: 3}
   AmbientSFX: {fileID: 0}
   econManager: {fileID: 0}
 --- !u!1 &8215376249117463127

@@ -20,10 +20,22 @@ public class Town_calculate : TownStateBase
         Debug.Log("Entered " + town.state + " state.");
         //Get the current climate impact
         GetClimate(town);
+        Debug.Log("Climate metric: " + town.econManager.GetEconomy().ClimateImpact);
         //Determine changes on the town.
         DetermineChanges(town);
-        //Go to idle state
-        town.ChangeState(town.idle);
+        //Check state to go to
+        if (town.doTimePass)
+        {
+            //Go to time pass state
+            town.ChangeState(town.timepass);
+            Debug.Log("Going to time pass from calculate");
+        }
+        else
+        {
+            //Go to idle state
+            town.ChangeState(town.idle);
+        }
+        
     }
 
     public override void UpdateState(TownStateManager town)
@@ -45,7 +57,7 @@ public class Town_calculate : TownStateBase
             DetermineTownImage(town, veryBad);
 
             //NO MUSIC FOR THIS LEVEL
-
+            SoundManager.main.DetermineMusic(null);
             //Setting town ambience
             SoundManager.main.DetermineTownAmbience(SoundManager.main.Town[0]);
 
