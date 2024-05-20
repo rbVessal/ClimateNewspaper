@@ -2627,7 +2627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4530221572693211230, guid: 1fa8a91dfaf3bff4eb7e01e8cd67a29c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2644,6 +2644,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 477924359549065528, guid: 000daf5e75d72e74f9e14ebbdf9d46b3, type: 3}
   m_PrefabInstance: {fileID: 310951841}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1150592986 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3727882541641462202, guid: 1fa8a91dfaf3bff4eb7e01e8cd67a29c, type: 3}
+  m_PrefabInstance: {fileID: 1129553955}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1165271087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3595,6 +3606,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1494190977 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1821078050681551815, guid: 1fa8a91dfaf3bff4eb7e01e8cd67a29c, type: 3}
+  m_PrefabInstance: {fileID: 1129553955}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1527254250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3982,6 +4004,14 @@ PrefabInstance:
       propertyPath: econManager
       value: 
       objectReference: {fileID: 1527254251}
+    - target: {fileID: 7886500658747829327, guid: c14d532f8c0d72b49a4a5d70148f0d73, type: 3}
+      propertyPath: tempImageHolder
+      value: 
+      objectReference: {fileID: 1150592986}
+    - target: {fileID: 7886500658747829327, guid: c14d532f8c0d72b49a4a5d70148f0d73, type: 3}
+      propertyPath: currentTownImage
+      value: 
+      objectReference: {fileID: 1494190977}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

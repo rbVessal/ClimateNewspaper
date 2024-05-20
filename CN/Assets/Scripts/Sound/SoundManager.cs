@@ -97,8 +97,9 @@ public class SoundManager : MonoBehaviour
 
 	private void Start()
 	{
-		StartCoroutine(musicLoop(isInMainMenuScene));
-	}
+        //StartCoroutine(musicLoop(isInMainMenuScene));
+        PlayMusic();	
+    }
 
 	private void getMixerVolumes()
 	{
@@ -159,8 +160,69 @@ public class SoundManager : MonoBehaviour
 
 		}
 	}
+	public void PlayMusic()
+	{
+		if(currentMusic != null)
+		{
+			Debug.Log("Playing music");
+			if (!musicSource.isPlaying)
+			{
+				musicSource.clip = currentMusic;
+				FadeMusicIn(musicSource.clip, 2.0f);
+            }
+			else
+			{
+				AudioClip clip = musicSource.clip;
+				if (clip != currentMusic)
+				{
+					Debug.Log("New music coming");
+                    FadeMusicOut(musicSource.clip,true);
+                }
+			}
+            
+        }
+		else
+		{
+			Debug.LogWarning("No audio clip referenced for music source");
+			if (musicSource.isPlaying)
+			{
+				Debug.Log("Turning music off");
+				FadeMusicOut(musicSource.clip);
+			}
+		}
+        
+    }
 
-	IEnumerator WaitForSFXToPlay(AudioClip clip)
+    void FadeMusicOut(AudioClip music, bool FadeInAfter = false)
+    {
+        // Fade out the current music
+        musicSource.DOFade(0, 1).OnComplete(() => {
+            // Set the new music clip and fade in
+            
+			if(FadeInAfter)
+			{
+				Debug.Log("Fading music out");
+				musicSource.Stop();
+                musicSource.clip = currentMusic;
+                FadeMusicIn(currentMusic);
+            }
+			else
+			{
+                musicSource.Stop();
+            }
+            
+        });
+    }
+
+    void FadeMusicIn(AudioClip music, float duration = 1)
+    {
+		// Fade in the new music
+		musicSource.volume = 0;
+        musicSource.Play();
+        musicSource.DOFade(1, duration);
+    }
+
+    IEnumerator WaitForSFXToPlay(AudioClip clip)
 	{
 		canPlay = false;
 		yield return new WaitForSeconds(clip.length/2);
@@ -198,6 +260,10 @@ public class SoundManager : MonoBehaviour
 			yield return new WaitForEndOfFrame();
 		}
 	}
+
+
+
+
 	
 	public void PlayAmbientNoise(AudioClip ambientSound)
 	{
@@ -236,6 +302,7 @@ public class SoundManager : MonoBehaviour
 	public void DetermineMusic(AudioClip music)
 	{
 		currentMusic = music;
+		PlayMusic();
 	}
 	public void DetermineTownAmbience(AudioClip ambience)
 	{

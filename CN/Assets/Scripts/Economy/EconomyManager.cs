@@ -8,6 +8,7 @@ public class EconomyManager : MonoBehaviour
 {
     //Updates Economy Display UI
     public static event Action<GameEconomy> Link;
+    public static event Action EconomyProcessed;
     
     private GameEconomy economy;
     private GameEconomy temporaryEconomy;//temporary change variable
@@ -32,6 +33,16 @@ public class EconomyManager : MonoBehaviour
         economy = new GameEconomy(moneyBase, reachBase, impactBase);
         temporaryEconomy = new GameEconomy(moneyBase, reachBase, impactBase);
 
+    }
+
+    private void OnEnable()
+    {
+        NewspaperEditor.PublishClicked += changeEconomyPermanently;
+    }
+
+    private void OnDisable()
+    {
+        NewspaperEditor.PublishClicked -= changeEconomyPermanently;
     }
     // Start is called before the first frame update
     void Start()
@@ -146,6 +157,8 @@ public class EconomyManager : MonoBehaviour
         temporaryEconomy.Reach = economy.Reach;
         temporaryEconomy.ClimateImpact = economy.ClimateImpact;
         SendToUI();
+        EconomyProcessed?.Invoke();
+        Debug.Log("Economy Changed " + temporaryEconomy.Money + temporaryEconomy.Reach + temporaryEconomy.ClimateImpact);
     }
 
 }
