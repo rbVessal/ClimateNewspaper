@@ -149,14 +149,10 @@ public class CoDropItemSlot : MonoBehaviour, IDropHandler
     {
         if (occupiedGameObject != null)
         {
-            CoDragDrop coDragDrop = occupiedGameObject.GetComponent<CoDragDrop>();
-            if (coDragDrop != null)
-            {
-                coDragDrop.onEndDragDelegate -= OnOccupiedObjectEndDrag;
-            }
-
             // Reset the position otherwise it will look like it's still in the slot
             occupiedGameObject.transform.localPosition = Vector3.zero;
+
+            occupiedGameObject = null;
         }
 
         isOccupied = false;

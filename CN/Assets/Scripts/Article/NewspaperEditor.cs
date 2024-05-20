@@ -85,6 +85,8 @@ public class NewspaperEditor : MonoBehaviour
             // Update the day text on the newspaper
             UpdateHeader();
 
+            SetPublishButtonInteractability(false);
+
             // Now we can finally start the new day
             //GameManager gameManager = FindObjectOfType<GameManager>();
             //if (gameManager != null)
