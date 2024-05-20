@@ -862,7 +862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3df375902ff6449979751f54769ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: 3
+  _camera: 0
   cameras:
   - {fileID: 1970645408}
   - {fileID: 988233714}
@@ -3882,7 +3882,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!224 &1585144167
 RectTransform:
