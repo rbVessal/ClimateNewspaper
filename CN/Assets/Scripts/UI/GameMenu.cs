@@ -15,6 +15,10 @@ public class GameMenu : MonoBehaviour
     [SerializeField]
     private Button EditorButton;
 
+    public void EnableStartButton(bool enable)
+    { 
+        StartDayButton.gameObject.SetActive(enable);
+    }
     public void EnableNavigationButtons(bool enable)
     {
         TownButton.gameObject.SetActive(enable);

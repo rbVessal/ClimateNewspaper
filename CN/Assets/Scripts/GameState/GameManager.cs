@@ -36,9 +36,16 @@ public class GameManager : MonoBehaviour
         Debug.Log("Day Started");
         GameMenu gameMenu = gameMenuCanvas.GetComponent<GameMenu>();
         gameMenu.EnableNavigationButtons(true);
+        gameMenu.EnableStartButton(false);
 
         //Send out day started event.
         StartDay?.Invoke();
+    }
+
+    public void EnableStartDayButton(bool enable)
+    {
+        GameMenu gameMenu = gameMenuCanvas.GetComponent<GameMenu>();
+        gameMenu.EnableStartButton(enable);
     }
 
     public void SetDay(int newDayNumber)

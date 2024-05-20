@@ -81,6 +81,10 @@ public class NewspaperEditor : MonoBehaviour
             //}
             //Change state to town
             GameStateManager.Main.ChangeStateToTown();
+
+            GameManager gameManager = FindObjectOfType<GameManager>();
+            gameManager.EnableStartDayButton(true);
+
             PublishClicked?.Invoke();
         }
     }
