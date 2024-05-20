@@ -332,7 +332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start Day
+  m_text: Start Week
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 71dd9d9a07f036a44b79b2ca2c4b1d5f, type: 2}
   m_sharedMaterial: {fileID: 1267745414690082811, guid: 71dd9d9a07f036a44b79b2ca2c4b1d5f, type: 2}
