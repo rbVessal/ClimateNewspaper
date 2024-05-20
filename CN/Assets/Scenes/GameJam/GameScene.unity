@@ -2502,7 +2502,7 @@ PrefabInstance:
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: dayZeroArticles.Array.data[7]
       value: 
-      objectReference: {fileID: 11400000, guid: 9b747e35c48f12b49ac3f69be95b092a, type: 2}
+      objectReference: {fileID: 11400000, guid: 0dd7d44f3278bd14a967af1ba29b9316, type: 2}
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: allAdvertisements.Array.data[0]
       value: 
