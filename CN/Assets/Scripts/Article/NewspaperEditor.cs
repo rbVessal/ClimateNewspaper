@@ -97,7 +97,15 @@ public class NewspaperEditor : MonoBehaviour
             GameStateManager.Main.ChangeStateToTown();
 
             GameManager gameManager = FindObjectOfType<GameManager>();
-            gameManager.EnableStartDayButton(true);
+            if (gameManager.TryShowEndScreen())
+            {
+                gameManager.EnableStartDayButton(false);
+            }
+            else
+            {
+                gameManager.EnableStartDayButton(true);
+            }
+
             articleManager.ClearUsedBillBoardArticlesOnDayZero();
             PublishClicked?.Invoke();
         }
