@@ -333,10 +333,10 @@ MonoBehaviour:
   panel: {fileID: 964067247699541244}
   articleColor:
     serializedVersion: 2
-    rgba: 4278255606
+    rgba: 4291358458
   adColor:
     serializedVersion: 2
-    rgba: 4294962944
+    rgba: 4294693543
   added: 0
   addButton: {fileID: 0}
   removeButton: {fileID: 0}
