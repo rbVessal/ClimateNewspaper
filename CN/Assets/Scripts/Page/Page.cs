@@ -20,11 +20,11 @@ public class Page : MonoBehaviour
         dayText.SetActive(shouldShowDayText);
     }
 
-    public void UpdateDay()
+    public void UpdateWeek()
     {
         GameManager gameManager = FindObjectOfType<GameManager>();
 
         TextMeshProUGUI textMeshPro = dayText.GetComponent<TextMeshProUGUI>();
-        textMeshPro.text = "Day " + (gameManager.GetDay() + 1);
+        textMeshPro.text = "Week " + (gameManager.GetDay() + 1);
     }
 }

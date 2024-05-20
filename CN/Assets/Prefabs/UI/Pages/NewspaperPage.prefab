@@ -199,7 +199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: THE GREEN HERALD
+  m_text: WEATHERING WEEKLY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b35fb19049ec6ca4fb87d39f5ee23bc8, type: 2}
   m_sharedMaterial: {fileID: 2754171627036886350, guid: b35fb19049ec6ca4fb87d39f5ee23bc8, type: 2}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 327953460938772921}
   - component: {fileID: 3576165683091439360}
   m_Layer: 0
-  m_Name: DayText
+  m_Name: WeekText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Day 1
+  m_text: Week 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b35fb19049ec6ca4fb87d39f5ee23bc8, type: 2}
   m_sharedMaterial: {fileID: 2754171627036886350, guid: b35fb19049ec6ca4fb87d39f5ee23bc8, type: 2}
