@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article4
   m_EditorClassIdentifier: 
-  headline: 'Exposed: Mismanagement and Misuse of Funds in Our Schools'
+  headline: "Expos\xE9: Mismanagement and Misuse of Funds in Our Schools"
   bodyText: 'In an extensive investigation conducted over several months, the Green
     Herald has uncovered significant financial discrepancies and apparent mismanagement
     in the Palmer Springs School District''s handling of public funds.

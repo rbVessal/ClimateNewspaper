@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article11
   m_EditorClassIdentifier: 
-  headline: 'Under Threat: Palmer Spring''s Vital Wetlands Face Development Pressure'
+  headline: Palmer Spring's Vital Wetlands Face Development Pressure
   bodyText: 'A cherished natural resource is under threat as developers seek approval
     for a new commercial project that would encroach upon the delicate wetlands bordering
     Palmer Springs.

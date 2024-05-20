@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article3
   m_EditorClassIdentifier: 
-  headline: 'Rare Discovery: Endangered Owl Spotted in Palmer Woods'
+  headline: Endangered Owl Spotted in Palmer Woods
   bodyText: 'Wildlife enthusiasts and ecologists are buzzing with excitement after
     the recent sighting of the Short Eared Owl, thought to be nearly extinct, in
     the dense woodlands of Palmer Woods. The rare owl was spotted by local birdwatcher,

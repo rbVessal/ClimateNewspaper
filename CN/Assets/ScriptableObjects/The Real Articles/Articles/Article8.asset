@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article8
   m_EditorClassIdentifier: 
-  headline: 'Unprepared and at Risk: Local Schools Lacking in Severe Weather Safety
-    Measures'
+  headline: Local Schools Lacking in Severe Weather Safety Measures
   bodyText: 'A recent survey conducted by the Green Herald has revealed a concerning
     lack of preparedness for severe weather events in schools across Palmer Springs,
     putting students and staff at potential risk.

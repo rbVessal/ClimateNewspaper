@@ -6,7 +6,6 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.Events;
 using System;
-using static UnityEditor.Rendering.FilterWindow;
 
 public class EconomyUIManager : MonoBehaviour
 {

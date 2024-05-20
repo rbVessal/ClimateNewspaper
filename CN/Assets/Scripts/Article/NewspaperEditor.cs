@@ -98,7 +98,7 @@ public class NewspaperEditor : MonoBehaviour
 
             GameManager gameManager = FindObjectOfType<GameManager>();
             gameManager.EnableStartDayButton(true);
-
+            articleManager.ClearUsedBillBoardArticlesOnDayZero();
             PublishClicked?.Invoke();
         }
     }

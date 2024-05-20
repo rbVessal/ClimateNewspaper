@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article16
   m_EditorClassIdentifier: 
-  headline: 'Youth Lead the Way: Palmer High Kicks Off Ambitious Recycling Program'
+  headline: Palmer High Kicks Off Ambitious Recycling Program
   bodyText: 'In an inspiring move towards environmental stewardship, Palmer High
     School has launched a comprehensive recycling program that promises to significantly
     reduce waste and educate students on sustainable practices.

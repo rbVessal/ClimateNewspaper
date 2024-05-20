@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article2
   m_EditorClassIdentifier: 
-  headline: Tech Boom or Environmental Doom? Tech Giant to Build New Data Center
-    in Palmer Springs
+  headline: Tech Giant to Build New Data Center in Palmer Springs
   bodyText: 'In a major announcement yesterday, X Corp, one of the world''s leading
     technology companies, confirmed plans to establish a new data center right here
     in Palmer Springs, promising to create hundreds of jobs and significantly boost

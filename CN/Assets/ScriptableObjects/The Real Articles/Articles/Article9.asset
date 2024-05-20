@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article9
   m_EditorClassIdentifier: 
-  headline: Going Green or Just for Show? Local Recycling Program Underperforms
+  headline: Local Recycling Program Underperforms
   bodyText: "The Green Herald's investigation into Palmer Spring's recently launched
     municipal recycling initiative has uncovered significant shortcomings, casting
     doubts on its effectiveness and the town's commitment to genuine environmental

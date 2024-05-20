@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article14
   m_EditorClassIdentifier: 
-  headline: 'Shining Bright: Solar Energy Surge in Palmer Springs'
+  headline: Solar Energy Surge in Palmer Springs
   bodyText: "In a remarkable stride towards sustainability, Palmer Springs has become
     a beacon of green energy with a record number of solar panel installations this
     year. Thanks to a combination of government incentives and community-driven initiatives,

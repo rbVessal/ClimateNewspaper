@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article5
   m_EditorClassIdentifier: 
-  headline: 'A Feast for the Senses: Palmer Spring''s Annual Food Festival Set to
-    Break Records'
+  headline: Palmer Spring's Food Festival Set to Break Records
   bodyText: "The streets of Palmer Springs are set to transform into a culinary paradise
     as the much-anticipated annual Food Festival returns next week, promising to
     be the biggest and most diverse yet. \r\n\r\nNow in its 10th year, the festival

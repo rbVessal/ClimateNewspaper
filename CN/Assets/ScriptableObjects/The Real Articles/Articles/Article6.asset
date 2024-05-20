@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article6
   m_EditorClassIdentifier: 
-  headline: 'Under the Radar: Homelessness on the Rise in Palmer Springs Amid Economic
-    Uncertainty'
+  headline: Homelessness on the Rise in Palmer Springs Amid Economic Uncertainty
   bodyText: 'A recent report by Palmer Spring Social Services reveals a disturbing
     increase in homelessness rates within our community, highlighting a crisis that
     continues to grow amidst economic uncertainty and insufficient public resources.
