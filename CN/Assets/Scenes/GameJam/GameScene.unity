@@ -3727,7 +3727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8336400770574450002, guid: a59e17797e2b242499c7f8a7704e765a, type: 3}
       propertyPath: changeValuesOnDragDrop
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
