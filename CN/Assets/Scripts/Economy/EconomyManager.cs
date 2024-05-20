@@ -125,11 +125,52 @@ public class EconomyManager : MonoBehaviour
         return articleValues;
     }
 
+
+    public void SetTemporaryEconomy(int money, int reach, float climate)
+    {
+        temporaryEconomy.Money += money;
+        temporaryEconomy.Reach += reach;
+        temporaryEconomy.ClimateImpact += climate;
+
+        ClampEconomy();
+
+    }
+    private void ClampEconomy()
+    {
+        if (temporaryEconomy.Money > 100)
+        {
+            temporaryEconomy.Money = 100;
+        }
+        if (temporaryEconomy.Money < 0)
+        {
+            temporaryEconomy.Money = 0;
+        }
+
+        if (temporaryEconomy.Reach > 100)
+        {
+            temporaryEconomy.Reach = 100;
+        }
+        if (temporaryEconomy.Reach < 0)
+        {
+            temporaryEconomy.Reach = 0;
+        }
+
+        if (temporaryEconomy.ClimateImpact > 100)
+        {
+            temporaryEconomy.ClimateImpact = 100;
+        }
+        if (temporaryEconomy.ClimateImpact < 0)
+        {
+            temporaryEconomy.ClimateImpact = 0;
+        }
+    }
+
     public void AddToTemporaryEconomy(ArticleValues articleValues)
     {
-        temporaryEconomy.Money += articleValues.money;
-        temporaryEconomy.Reach += articleValues.reach;
-        temporaryEconomy.ClimateImpact += articleValues.climate;
+        SetTemporaryEconomy(articleValues.money, articleValues.reach, articleValues.climate);
+        //temporaryEconomy.Money += articleValues.money;
+        //temporaryEconomy.Reach += articleValues.reach;
+        //temporaryEconomy.ClimateImpact += articleValues.climate;
         if(changeValuesOnDragDrop)
             SendToUI();
     }
@@ -139,6 +180,8 @@ public class EconomyManager : MonoBehaviour
         temporaryEconomy.Money -= articleValues.money;
         temporaryEconomy.Reach -= articleValues.reach;
         temporaryEconomy.ClimateImpact -= articleValues.climate;
+
+        ClampEconomy();
         if(changeValuesOnDragDrop)  
             SendToUI();
     }
