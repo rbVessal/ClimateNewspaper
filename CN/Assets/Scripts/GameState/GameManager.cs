@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject winEnvCanvas;
     [SerializeField] private GameObject loseEnvCanvas;
     [SerializeField] private GameObject gameMenuCanvas;
+    [SerializeField] private GameObject economyCanvas;
     
     // Start is called before the first frame update
     void Start()
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
         {
             lossCanvas.SetActive(true);
             gameMenuCanvas.SetActive(false);
+            economyCanvas.SetActive(false);
 
             return true;
         }
@@ -68,6 +70,7 @@ public class GameManager : MonoBehaviour
             {
                 winEnvCanvas.SetActive(true);
                 gameMenuCanvas.SetActive(false);
+                economyCanvas.SetActive(false);
 
                 return true;
             }
@@ -75,6 +78,7 @@ public class GameManager : MonoBehaviour
             {
                 loseEnvCanvas.SetActive(true);
                 gameMenuCanvas.SetActive(false);
+                economyCanvas.SetActive(false);
 
                 return true;
             }
