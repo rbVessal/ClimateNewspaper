@@ -1895,7 +1895,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1971921315ef4ab4995819eca2033c07, type: 2}
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: dayZeroArticles.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: allAdvertisements.Array.size
@@ -1908,7 +1908,7 @@ PrefabInstance:
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: dayZeroArticles.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: ed5f738ff9e5b1144a310a95138d13cc, type: 2}
+      objectReference: {fileID: 11400000, guid: 1ba67bfdff443ab41a0fe183a7287af0, type: 2}
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: dayZeroArticles.Array.data[2]
       value: 
@@ -1916,17 +1916,21 @@ PrefabInstance:
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: dayZeroArticles.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 1ba67bfdff443ab41a0fe183a7287af0, type: 2}
+      objectReference: {fileID: 11400000, guid: be76d1015dd0b11429770b199a9d6da5, type: 2}
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: dayZeroArticles.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: be76d1015dd0b11429770b199a9d6da5, type: 2}
+      objectReference: {fileID: 11400000, guid: ed5f738ff9e5b1144a310a95138d13cc, type: 2}
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: dayZeroArticles.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 8ddf8a7e6ca78204b8f0f8288a3af8da, type: 2}
+      objectReference: {fileID: 11400000, guid: 9f50ca8d7b7f1364b8fdab171864b83b, type: 2}
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
       propertyPath: dayZeroArticles.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ddf8a7e6ca78204b8f0f8288a3af8da, type: 2}
+    - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
+      propertyPath: dayZeroArticles.Array.data[7]
       value: 
       objectReference: {fileID: 11400000, guid: 9b747e35c48f12b49ac3f69be95b092a, type: 2}
     - target: {fileID: 1295251169170012506, guid: cf06e19255537db42b171c900581ad3d, type: 3}
