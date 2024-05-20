@@ -29,7 +29,7 @@ public class NewspaperEditor : MonoBehaviour
         Page page = FrontPage.GetComponent<Page>();
         if (page != null) 
         {
-            page.UpdateDay();
+            page.UpdateWeek();
         }
     }
 
