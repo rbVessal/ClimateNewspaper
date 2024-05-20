@@ -12,13 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article1
   m_EditorClassIdentifier: 
-  headline: Player enters game!
-  bodyText: 'Welcome to <game name>! You are running the local news for your community
-    of Palmer Springs. Your job is to choose articles and advertisements to publish
-    every week.
-
-
-    This article changes MONEY!'
+  headline: Click Me!
+  bodyText: Welcome to Weathering Weekly! You are the editor-in-chief of The Green
+    Herald, the local environment-first newspaper for the town of Palmer Springs.
+    Your job is to choose articles and advertisements to publish every week.
   climateChange: 0
   moneyChange: 10
   reachChange: 0

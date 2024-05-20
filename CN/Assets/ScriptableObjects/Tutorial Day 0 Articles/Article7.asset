@@ -12,14 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article7
   m_EditorClassIdentifier: 
-  headline: Player learns more about article consequences!
-  bodyText: 'Be careful when choosing your articles. While some can help spread awareness
-    to the public in a good way, they may hurt possible sponsorships or monetary
-    business in turn. Choosing articles that provide you money may hurt your public
-    reach. Choose wisely!
-
-
-    This article changes nothing.'
+  headline: Player Learns About Publishing!
+  bodyText: 
   climateChange: 0
   moneyChange: 0
   reachChange: 0

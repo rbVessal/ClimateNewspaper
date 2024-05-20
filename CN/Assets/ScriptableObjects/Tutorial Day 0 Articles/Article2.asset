@@ -12,35 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article2
   m_EditorClassIdentifier: 
-  headline: Player learns articles have consequences!
-  bodyText: 'By publishing articles, you can change some things in the world.
-
-
-    1.
-    MONEY
-
-    You need money to survive. If this becomes zero, your newspaper can
-    no longer function and you will be out of business. Make sure to keep this up!
-
-
-    2.
-    REACH
-
-    The more people who read your paper, the more impact your news has
-    on MONEY and ENVIRONMENT!
-
-
-    3. ENVIRONMENT
-
-    Your articles will change
-    public perception! If this is too low, the public may not respect their environment.
-    Keep this high to maintain environmental awareness and conservation efforts!
-
-
-    This
-    article changes the ENVIRONMENT negatively'
-  climateChange: -10
-  moneyChange: 0
-  reachChange: 0
+  headline: Click on an Article to Read More
+  bodyText: "When you click on an article on the bulletin board, it pops up a close
+    up view to read more. By reading its contents, you can discern the impact it
+    may have on the public and decide whether to publish it or not. If you aren't
+    sure what may change, just remember that while reading an article, the dots on
+    the top right provide sneak peek! \nFor example, the article you are currently
+    reading will affect all 3 Resources!"
+  climateChange: 10
+  moneyChange: 10
+  reachChange: 10
   articleArt: {fileID: 0}
   articleCategory: 1

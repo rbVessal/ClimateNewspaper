@@ -12,14 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795ba622e1dcfef488d2c4d51f0a6d7b, type: 3}
   m_Name: Article3
   m_EditorClassIdentifier: 
-  headline: Click on an article to learn!
-  bodyText: "When you click on an article in the billboard, it pops up a close up
-    view to read more. By reading its contents, you can discern the impact it may
-    have on the public and decide whether to publish it or not. If you aren't sure
-    what may change, look to the **dots** on the top left to find out what may change.
-    \n\nThis article changes EVERYTHING positively"
-  climateChange: 10
-  moneyChange: 10
-  reachChange: 10
+  headline: Player Learns About Resources!
+  bodyText: 'By publishing articles, you can change some things in the world.
+
+
+    1.
+    MONEY
+
+    You need money to survive. If this becomes zero, your newspaper can
+    no longer function and you will be out of business. Make sure to keep this up!
+
+
+    2.
+    REACH
+
+    The more people who read your paper, the more impact your news has
+    on MONEY and ENVIRONMENT!
+
+
+    3. ENVIRONMENT
+
+    Your articles will change
+    public perception! If this is too low, the public may not respect their environment.
+    Keep this high to maintain environmental awareness and conservation efforts!'
+  climateChange: 0
+  moneyChange: 0
+  reachChange: 0
   articleArt: {fileID: 0}
   articleCategory: 1
