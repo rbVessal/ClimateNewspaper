@@ -627,7 +627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3df375902ff6449979751f54769ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: 3
+  _camera: 0
   cameras:
   - {fileID: 1970645408}
   - {fileID: 988233714}
@@ -811,6 +811,10 @@ PrefabInstance:
       propertyPath: winEnvCanvas
       value: 
       objectReference: {fileID: 7169411894595895116}
+    - target: {fileID: 3319949906184002557, guid: 205a0d8eb777c134a9ff952545874d97, type: 3}
+      propertyPath: economyCanvas
+      value: 
+      objectReference: {fileID: 1921437292}
     - target: {fileID: 3319949906184002557, guid: 205a0d8eb777c134a9ff952545874d97, type: 3}
       propertyPath: loseEnvCanvas
       value: 
@@ -4733,6 +4737,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a46017ba299a6154f9608045e3cd5bdd, type: 3}
+--- !u!1 &1921437292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2567473216099775258, guid: a46017ba299a6154f9608045e3cd5bdd, type: 3}
+  m_PrefabInstance: {fileID: 1921437291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1970645406
 GameObject:
   m_ObjectHideFlags: 0
@@ -5440,8 +5449,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086776521}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 2.5, z: -4}
+  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
+  m_LocalPosition: {x: 0, y: 2.5, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
